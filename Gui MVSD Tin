@@ -25,7 +25,7 @@ local ScreenGui = Instance.new("ScreenGui")
     -- Toggle Button
     ToggleButton.Parent = ScreenGui
     ToggleButton.Size = UDim2.new(0, 44, 0, 44) -- Button size
-    ToggleButton.Position = UDim2.new(0.5, 165, 0.015, -50) -- Initial position
+    ToggleButton.Position = UDim2.new(0.5, 166, 0.014, -50) -- Initial position
     ToggleButton.BackgroundColor3 = Color3.new(0, 0, 0) -- White background
     ToggleButton.Transparency = 0.35
      
@@ -122,13 +122,104 @@ ButtonUICorner.CornerRadius = UDim.new(0, 12)  -- Adjust the corner radius for r
 
 -- Define the function that will be run when the button is clicked
 Button1.MouseButton1Click:Connect(function()
-    _G.HeadSize = 8
-    _G.Disabled = true
+    ------MVSD------
 
-    game:GetService('RunService').RenderStepped:connect(function()
-        if _G.Disabled then
-            for i, v in next, Players:GetPlayers() do
-                if v.Name ~= LocalPlayer.Name and v.Name ~= "lIIllIIIllllIIlIl" and v.Name ~= "khoaAmazed" then
+
+
+
+
+
+
+
+
+
+
+
+local function executeScripts()
+
+
+
+--
+
+_G.HeadSize = 8
+_G.Disabled = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.9
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("White")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
+
+---
+
+local gui = Instance.new("ScreenGui")
+gui.Name = "patrickGui"
+gui.Parent = game.CoreGui
+
+-- Create the TextButton
+local TextButton = Instance.new("TextButton")
+-- Initial Text
+TextButton.Text = "Hitbox\n8"
+TextButton.TextSize = 14
+-- Color
+TextButton.TextColor3 = Color3.new(1, 1, 1)
+TextButton.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton.BorderColor3 = Color3.new(0, 0, 0)
+-- Transparency
+TextButton.BackgroundTransparency = 0.5
+-- Thickness
+TextButton.BorderSizePixel = 4
+-- Text Code
+TextButton.Font = Enum.Font.Code
+-- Size (making it a small square)
+TextButton.Size = UDim2.new(0, 50, 0, 50)  -- 50×50 pixels
+-- Position
+TextButton.Position = UDim2.new(1, -110, 0, 10)  -- Center of the screen
+TextButton.Parent = gui
+TextButton.Draggable = true
+
+-- Adding UICorner for rounded corners
+local cornerUI = Instance.new("UICorner")
+cornerUI.CornerRadius = UDim.new(0, 5)
+cornerUI.Parent = TextButton
+
+-- Adding UIStroke for border
+local uiStroke = Instance.new("UIStroke")
+uiStroke.Color = Color3.new(0, 0, 0)
+uiStroke.Thickness = 2
+uiStroke.Parent = TextButton
+
+-- Variables to track the state
+local headSize = 8
+local toggled = false
+
+-- Function to update hitbox and text
+local function updateHitbox()
+    _G.HeadSize = headSize
+    _G.Disabled = false
+    
+    -- Update the text on the button
+    if toggled then
+        TextButton.Text = "Hitbox\n5"
+    else
+        TextButton.Text = "Hitbox\n8"
+    end
+    
+    -- Update the hitbox size of all players
+    game:GetService('RunService').RenderStepped:Connect(function()
+        if not _G.Disabled then
+            for i, v in pairs(game:GetService('Players'):GetPlayers()) do
+                if v.Name ~= game:GetService('Players').LocalPlayer.Name then
                     pcall(function()
                         v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize, _G.HeadSize, _G.HeadSize)
                         v.Character.HumanoidRootPart.Transparency = 0.9
@@ -140,72 +231,24 @@ Button1.MouseButton1Click:Connect(function()
             end
         end
     end)
+end
 
-    local gui = Instance.new("ScreenGui")
-    gui.Name = "patrickGui"
-    gui.Parent = game.CoreGui
-
-    local TextButton = Instance.new("TextButton")
-    TextButton.Text = "Hitbox\n8"
-    TextButton.TextSize = 14
-    TextButton.TextColor3 = Color3.new(1, 1, 1)
-    TextButton.BackgroundColor3 = Color3.new(0, 0, 0)
-    TextButton.BorderColor3 = Color3.new(0, 0, 0)
-    TextButton.BackgroundTransparency = 0.5
-    TextButton.BorderSizePixel = 4
-    TextButton.Font = Enum.Font.Code
-    TextButton.Size = UDim2.new(0, 50, 0, 50)
-    TextButton.Position = UDim2.new(1, -110, 0, 10)
-    TextButton.Parent = gui
-    TextButton.Draggable = true
-
-    local cornerUI = Instance.new("UICorner")
-    cornerUI.CornerRadius = UDim.new(0, 5)
-    cornerUI.Parent = TextButton
-
-    local uiStroke = Instance.new("UIStroke")
-    uiStroke.Color = Color3.new(0, 0, 0)
-    uiStroke.Thickness = 2
-    uiStroke.Parent = TextButton
-
-    local headSize = 8
-    local toggled = false
-
-    local function updateHitbox()
-        _G.HeadSize = headSize
-        _G.Disabled = false
-
-        if toggled then
-            TextButton.Text = "Hitbox\n5"
-        else
-            TextButton.Text = "Hitbox\n8"
-        end
-
-        game:GetService('RunService').RenderStepped:Connect(function()
-            if not _G.Disabled then
-                for i, v in pairs(Players:GetPlayers()) do
-                    if v.Name ~= LocalPlayer.Name and v.Name ~= "lIIllIIIllllIIlIl" and v.Name ~= "khoaAmazed" then
-                        pcall(function()
-                            v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize, _G.HeadSize, _G.HeadSize)
-                            v.Character.HumanoidRootPart.Transparency = 0.9
-                            v.Character.HumanoidRootPart.BrickColor = BrickColor.new("White")
-                            v.Character.HumanoidRootPart.Material = "Neon"
-                            v.Character.HumanoidRootPart.CanCollide = false
-                        end)
-                    end
-                end
-            end
-        end)
-    end
-
-    TextButton.MouseButton1Click:Connect(function()
-        toggled = not toggled
-        headSize = toggled and 5 or 8
-        updateHitbox()
-    end)
-
+-- Connect button click to toggle functionality
+TextButton.MouseButton1Click:Connect(function()
+    toggled = not toggled
+    headSize = toggled and 5 or 8
     updateHitbox()
-   end)
+end)
+
+-- Initial hitbox setup
+updateHitbox()
+
+
+end
+
+-- Call the function to run the scripts
+executeScripts()
+end)
 
 
 -- Create the button and set its properties
