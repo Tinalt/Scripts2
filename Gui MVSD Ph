@@ -25,7 +25,7 @@ local ScreenGui = Instance.new("ScreenGui")
     -- Toggle Button
     ToggleButton.Parent = ScreenGui
     ToggleButton.Size = UDim2.new(0, 44, 0, 44) -- Button size
-    ToggleButton.Position = UDim2.new(0.5, 165, 0.015, -50) -- Initial position
+    ToggleButton.Position = UDim2.new(0.5, 166, 0.014, -50) -- Initial position
     ToggleButton.BackgroundColor3 = Color3.new(0, 0, 0) -- White background
     ToggleButton.Transparency = 0.35
      
@@ -70,10 +70,16 @@ Frame.Visible = false
 UICorner.Parent = Frame
 UICorner.CornerRadius = UDim.new(0, 10) -- Rounded corners for the frame
 
+local FrameOutline = Instance.new("UIStroke")
+FrameOutline.Parent = Frame  -- Apply the outline to Button1
+FrameOutline.Thickness = 2  -- Set the thickness of the outline
+FrameOutline.Color = Color3.new(1, 1, 1)  -- Set the outline color to white
+FrameOutline.ApplyStrokeMode = Enum.ApplyStrokeMode.Border  -- Apply the stroke to the border
+
 -- Create the Title Label for "Hitbox & ESP" text
 TitleLabel.Parent = Frame
 TitleLabel.Size = UDim2.new(0, 300, 0, 30)  -- The width is the same as the frame, and the height is 30
-TitleLabel.Position = UDim2.new(0, 0, 0.05, 0)  -- Position it at the top middle of the frame
+TitleLabel.Position = UDim2.new(0, 0, 0.06, 0)  -- Position it at the top middle of the frame
 TitleLabel.BackgroundTransparency = 1  -- Transparent background for the title label
 TitleLabel.Text = "Hitbox & ESP"  -- The title text
 TitleLabel.TextColor3 = Color3.new(1, 1, 1)  -- White text color
@@ -84,7 +90,7 @@ TitleLabel.Font = Enum.Font.FredokaOne  -- Set the font to FredokaOne
 -- Create the Button1 with rounded corners and a transparent background
 Button1.Parent = Frame
 Button1.Size = UDim2.new(0, 200, 0, 40)  -- Button size (200x40)
-Button1.Position = UDim2.new(0.5, -100, 0.1, 40)  -- Position it below the title label
+Button1.Position = UDim2.new(0.5, -100, 0.11, 40)  -- Position it below the title label
 Button1.BackgroundColor3 = Color3.new(0, 0, 0)  -- Button background color (black)
 Button1.BackgroundTransparency = 0.7  -- Set the background transparency (0.2)
 Button1.Text = "Hitbox"  -- Button text
@@ -142,7 +148,7 @@ end)
 local Button2 = Instance.new("TextButton")
 Button2.Parent = Frame
 Button2.Size = UDim2.new(0, 200, 0, 40)  -- Button size (200x40)
-Button2.Position = UDim2.new(0.5, -100, 0.4, 40)  -- Position it below the title label
+Button2.Position = UDim2.new(0.5, -100, 0.45, 40)  -- Position it below the title label
 Button2.BackgroundColor3 = Color3.new(0, 0, 0)  -- Button background color (black)
 Button2.BackgroundTransparency = 0.7  -- Set the background transparency (0.7)
 Button2.Text = "ESP"  -- Button text
