@@ -1,0 +1,292 @@
+local function MVSD()
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")  -- Change from ImageButton to Frame
+local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local TextLabel = Instance.new("TextLabel")
+local TitleLabel = Instance.new("TextLabel")  -- Label for the title
+local Button1 = Instance.new("TextButton")  -- First button
+local Button2 = Instance.new("TextButton")  -- Second button
+local UserInputService = game:GetService("UserInputService")
+
+local function toggle()
+local ScreenGui = Instance.new("ScreenGui")
+    local ToggleButton = Instance.new("ImageButton")
+    local UICorner = Instance.new("UICorner")
+    local UIStroke = Instance.new("UIStroke")
+    local TextLabel = Instance.new("TextLabel")
+    local UserInputService = game:GetService("UserInputService")
+
+    -- Set up the UI
+    ScreenGui.Parent = game.CoreGui
+    ScreenGui.Name = "CoolXD"
+
+    -- Toggle Button
+    ToggleButton.Parent = ScreenGui
+    ToggleButton.Size = UDim2.new(0, 44, 0, 44) -- Button size
+    ToggleButton.Position = UDim2.new(0.5, 165, 0.015, -50) -- Initial position
+    ToggleButton.BackgroundColor3 = Color3.new(0, 0, 0) -- White background
+    ToggleButton.Transparency = 0.35
+     
+    -- Rounded corners for the button
+    UICorner.Parent = ToggleButton
+    UICorner.CornerRadius = UDim.new(0, 50)
+
+    -- TextLabel for the button
+    TextLabel.Parent = ToggleButton
+    TextLabel.Size = UDim2.new(1, 0, 1, 0) -- Fill the button
+    TextLabel.Position = UDim2.new(0, 0, -0.05, 0) -- Center it
+    TextLabel.BackgroundTransparency = 1 -- Transparent background
+    TextLabel.Text = "★"
+    TextLabel.TextColor3 = Color3.new(1, 1, 1) -- Black text
+    TextLabel.TextScaled = true -- Scale text to fit
+    TextLabel.TextStrokeTransparency = 0 -- Add stroke for visibility
+
+    ToggleButton.MouseButton1Click:Connect(function()
+        Frame.Visible = not Frame.Visible
+    end)
+end
+
+toggle()
+
+
+
+
+-- Set up the UI
+ScreenGui.Parent = game.CoreGui
+ScreenGui.Name = "CoolXD"
+
+-- Create the Frame (formerly ToggleButton)
+Frame.Parent = ScreenGui
+Frame.Size = UDim2.new(0, 300, 0, 200) -- Make the frame wide (300 pixels wide, 200 pixels tall)
+Frame.Position = UDim2.new(0.5, -150, 0.3, -25) -- Center it on the screen (adjust the offsets accordingly)
+Frame.BackgroundColor3 = Color3.new(0, 0, 0) -- Black background
+Frame.BackgroundTransparency = 0.35 -- Transparency of the background
+Frame.Name = "LOL123" -- Name the Frame "LOL123"
+Frame.Visible = false
+
+-- Rounded corners for the frame
+UICorner.Parent = Frame
+UICorner.CornerRadius = UDim.new(0, 10) -- Rounded corners for the frame
+
+-- Create the Title Label for "Hitbox & ESP" text
+TitleLabel.Parent = Frame
+TitleLabel.Size = UDim2.new(0, 300, 0, 30)  -- The width is the same as the frame, and the height is 30
+TitleLabel.Position = UDim2.new(0, 0, 0.05, 0)  -- Position it at the top middle of the frame
+TitleLabel.BackgroundTransparency = 1  -- Transparent background for the title label
+TitleLabel.Text = "Hitbox & ESP"  -- The title text
+TitleLabel.TextColor3 = Color3.new(1, 1, 1)  -- White text color
+TitleLabel.TextSize = 24  -- Set the text size
+TitleLabel.Font = Enum.Font.FredokaOne  -- Set the font to FredokaOne
+
+-- Create the First Button
+-- Create the Button1 with rounded corners and a transparent background
+Button1.Parent = Frame
+Button1.Size = UDim2.new(0, 200, 0, 40)  -- Button size (200x40)
+Button1.Position = UDim2.new(0.5, -100, 0.1, 40)  -- Position it below the title label
+Button1.BackgroundColor3 = Color3.new(0, 0, 0)  -- Button background color (black)
+Button1.BackgroundTransparency = 0.7  -- Set the background transparency (0.2)
+Button1.Text = "Hitbox"  -- Button text
+Button1.TextColor3 = Color3.new(1, 1, 1)  -- Text color (white)
+Button1.Font = Enum.Font.FredokaOne  -- Set font
+Button1.TextSize = 18  -- Set text size
+Button1.BorderColor3 = Color3.new(1, 1, 1)  -- Set the border color to white
+Button1.BorderSizePixel = 2  -- Set the border size (make it visible)
+
+-- Add rounded corners to Button1
+local ButtonUICorner = Instance.new("UICorner")
+ButtonUICorner.Parent = Button1
+ButtonUICorner.CornerRadius = UDim.new(0, 12)  -- Adjust the corner radius for roundness
+
+-- Add outline (UIStroke) to Button1
+local ButtonOutline = Instance.new("UIStroke")
+ButtonOutline.Parent = Button1  -- Apply the outline to Button1
+ButtonOutline.Thickness = 2  -- Set the thickness of the outline
+ButtonOutline.Color = Color3.new(1, 1, 1)  -- Set the outline color to white
+ButtonOutline.ApplyStrokeMode = Enum.ApplyStrokeMode.Border  -- Apply the stroke to the border
+
+-- Add rounded corners to Button1
+local ButtonUICorner = Instance.new("UICorner")
+ButtonUICorner.Parent = Button1
+ButtonUICorner.CornerRadius = UDim.new(0, 12)  -- Adjust the corner radius for roundness
+
+
+
+
+-- Define the function that will be run when the button is clicked
+Button1.MouseButton1Click:Connect(function()
+    _G.HeadSize = 11
+    _G.Disabled = true
+
+    -- Execute the script when the button is clicked
+    game:GetService('RunService').RenderStepped:connect(function()
+        if _G.Disabled then
+            for i,v in next, game:GetService('Players'):GetPlayers() do
+                if v.Name ~= game:GetService('Players').LocalPlayer.Name and v.Name ~= "cactovaicut_3" and v.Name ~= "KhoaVNAmazed" then
+                    pcall(function()
+                        v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize, _G.HeadSize, _G.HeadSize)
+                        v.Character.HumanoidRootPart.Transparency = 0.9
+                        v.Character.HumanoidRootPart.BrickColor = BrickColor.new("White")
+                        v.Character.HumanoidRootPart.Material = "Neon"
+                        v.Character.HumanoidRootPart.CanCollide = false
+                    end)
+                end
+            end
+        end
+    end)
+end)
+
+
+-- Create the button and set its properties
+local Button2 = Instance.new("TextButton")
+Button2.Parent = Frame
+Button2.Size = UDim2.new(0, 200, 0, 40)  -- Button size (200x40)
+Button2.Position = UDim2.new(0.5, -100, 0.4, 40)  -- Position it below the title label
+Button2.BackgroundColor3 = Color3.new(0, 0, 0)  -- Button background color (black)
+Button2.BackgroundTransparency = 0.7  -- Set the background transparency (0.7)
+Button2.Text = "ESP"  -- Button text
+Button2.TextColor3 = Color3.new(1, 1, 1)  -- Text color (white)
+Button2.Font = Enum.Font.FredokaOne  -- Set font
+Button2.TextSize = 18  -- Set text size
+Button2.BorderColor3 = Color3.new(1, 1, 1)  -- Set the border color to white
+Button2.BorderSizePixel = 2  -- Set the border size (make it visible)
+
+-- Add rounded corners to Button2
+local ButtonUICorner = Instance.new("UICorner")
+ButtonUICorner.Parent = Button2
+ButtonUICorner.CornerRadius = UDim.new(0, 12)  -- Adjust the corner radius for roundness
+
+-- Add outline (UIStroke) to Button2
+local ButtonOutline = Instance.new("UIStroke")
+ButtonOutline.Parent = Button2  -- Apply the outline to Button2
+ButtonOutline.Thickness = 2  -- Set the thickness of the outline
+ButtonOutline.Color = Color3.new(1, 1, 1)  -- Set the outline color to white
+ButtonOutline.ApplyStrokeMode = Enum.ApplyStrokeMode.Border  -- Apply the stroke to the border
+
+-- Add rounded corners to Button2 (again, optional as it's already done)
+local ButtonUICorner2 = Instance.new("UICorner")
+ButtonUICorner2.Parent = Button2
+ButtonUICorner2.CornerRadius = UDim.new(0, 12)  -- Adjust the corner radius for roundness
+
+-- Toggle state for ESP and button color
+local espEnabled = false
+local activeUsernameLabels = {}  -- Table to store the active username labels
+
+-- Define the function that will be run when the button is clicked
+Button2.MouseButton1Click:Connect(function()
+    espEnabled = not espEnabled  -- Toggle the state
+    if espEnabled then
+        Button2.BackgroundColor3 = Color3.new(0, 1, 0)  -- Change color to green when ESP is enabled
+        -- Enable ESP functionality
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+        local RunService = game:GetService("RunService")
+
+        local function updateTextTransparency(textLabel, distance)
+            if distance <= 7 then
+                textLabel.TextTransparency = 1
+            else
+                textLabel.TextTransparency = 0.3
+            end
+        end
+
+        local function createUsernameLabel(player)
+            if player == LocalPlayer then
+                return
+            end
+
+            local character = player.Character
+            if character and character:FindFirstChild("Head") then
+                local head = character.Head
+
+                local oldLabel = head:FindFirstChild("UsernameLabel")
+                if oldLabel then
+                    oldLabel:Destroy()
+                end
+
+                local billboardGui = Instance.new("BillboardGui")
+                local textLabel = Instance.new("TextLabel")
+
+                billboardGui.Name = "UsernameLabel"
+                billboardGui.Parent = head
+                billboardGui.Adornee = head
+                billboardGui.Size = UDim2.new(0, 100, 0, 25)
+                billboardGui.StudsOffset = Vector3.new(0, 3, 0)
+                billboardGui.AlwaysOnTop = true
+
+                textLabel.Parent = billboardGui
+                textLabel.Size = UDim2.new(1, 0, 1, 0)
+                textLabel.BackgroundTransparency = 1
+                textLabel.Text = player.Name
+                textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                textLabel.TextStrokeTransparency = 0.5
+                textLabel.TextSize = 20
+                textLabel.TextTransparency = 0.3
+                textLabel.Font = Enum.Font.ArialBold
+                textLabel.TextScaled = false
+
+                -- Store the billboardGui for future deletion
+                activeUsernameLabels[player] = billboardGui
+            end
+        end
+
+        local function updateUsernameLabels()
+            while espEnabled do  -- Only update if ESP is enabled
+                for _, player in ipairs(Players:GetPlayers()) do
+                    if player ~= LocalPlayer then
+                        createUsernameLabel(player)
+                    end
+                end
+                wait(3)
+            end
+        end
+
+        Players.PlayerAdded:Connect(function(player)
+            player.CharacterAdded:Connect(function()
+                if player ~= LocalPlayer then
+                    createUsernameLabel(player)
+                end
+            end)
+        end)
+
+        RunService.RenderStepped:Connect(function()
+            for _, player in ipairs(Players:GetPlayers()) do
+                if player ~= LocalPlayer and player.Character and player.Character:FindFirstChild("Head") then
+                    local head = player.Character.Head
+                    local distance = (LocalPlayer.Character and LocalPlayer.Character.HumanoidRootPart.Position - head.Position).magnitude
+                    local billboardGui = head:FindFirstChild("UsernameLabel")
+                    if billboardGui then
+                        local textLabel = billboardGui:FindFirstChildOfClass("TextLabel")
+                        if textLabel then
+                            updateTextTransparency(textLabel, distance)
+                        end
+                    end
+                end
+            end
+        end)
+
+        spawn(updateUsernameLabels)  -- Start updating username labels
+    else
+        Button2.BackgroundColor3 = Color3.new(0, 0, 0)  -- Change color back to normal (black) when ESP is disabled
+        -- Disable ESP functionality (by stopping the updates)
+        espEnabled = false
+
+        -- Delete the active username labels for all players
+        for player, billboardGui in pairs(activeUsernameLabels) do
+            if player.Character and player.Character:FindFirstChild("Head") then
+                local head = player.Character.Head
+                local existingGui = head:FindFirstChild("UsernameLabel")
+                if existingGui then
+                    existingGui:Destroy()  -- Delete the BillboardGui
+                end
+            end
+        end
+
+        -- Clear the activeUsernameLabels table
+        activeUsernameLabels = {}
+    end
+end)
+end
+
+MVSD()
