@@ -1,0 +1,108 @@
+-- Services
+local TweenService = game:GetService("TweenService")
+local UserInputService = game:GetService("UserInputService")
+
+-- Create the ScreenGui in CoreGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "VD"
+screenGui.Parent = game.CoreGui -- Change to CoreGui
+
+-- Create the TextButton
+local textButton = Instance.new("TextButton")
+textButton.Name = "VD"
+textButton.Size = UDim2.new(0, 73, 0, 23.8) -- Width: 73px, Height: 23.8px
+textButton.Position = UDim2.new(1, -165, 0, 1) -- Initial Position
+textButton.AnchorPoint = Vector2.new(0, 0) -- Anchor to top-left
+textButton.Parent = screenGui
+textButton.BackgroundColor3 = Color3.fromRGB(255, 255, 0) -- Yellow (255, 255, 0)
+textButton.TextColor3 = Color3.new(1, 1, 1) -- White text
+textButton.Font = Enum.Font.SourceSans
+textButton.TextSize = 24
+textButton.Text = "" -- Set button text to the original text
+
+-- Create a UIStroke for the button outline
+local buttonStroke = Instance.new("UIStroke")
+buttonStroke.Parent = textButton
+buttonStroke.Color = Color3.new(0, 0, 0) -- Black outline
+buttonStroke.Thickness = 10 -- Set thickness of the outline
+
+-- Create the bottom half frame (dark green)
+local bottomFrame = Instance.new("Frame")
+bottomFrame.Size = UDim2.new(1, 0, 0.5, 0) -- Half height
+bottomFrame.Position = UDim2.new(0, 0, 0.5, 0) -- Position it at the bottom half
+bottomFrame.BackgroundColor3 = Color3.fromRGB(255, 220, 0)
+bottomFrame.BorderSizePixel = 0
+bottomFrame.Parent = textButton
+
+-- Create the main text label (for the text itself)
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1, 0, 1, 0) -- Full size of the button
+textLabel.BackgroundTransparency = 1 -- Make it transparent
+textLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- White text
+textLabel.Font = Enum.Font.FredokaOne -- Set font to FredokaOne
+textLabel.TextSize = 16
+textLabel.Text = "Heal Altar" -- Set the text
+textLabel.Parent = textButton
+
+-- Add text stroke to the text label for outline effect
+local textStroke = Instance.new("UIStroke")
+textStroke.Parent = textLabel
+textStroke.Color = Color3.new(0, 0, 0) -- Black outline for text
+textStroke.Thickness = 0.3 -- Outline thickness for text
+
+-- Create the sound object
+local clickSound = Instance.new("Sound")
+clickSound.SoundId = "rbxassetid://YOUR_SOUND_ID" -- Replace with your sound asset ID
+clickSound.Parent = textButton -- Parent the sound to the button for easy reference
+
+-- Define the function to run the specified remote function
+local function activateRemote()
+    local args = {
+    [1] = game:GetService("ReplicatedStorage").ReplicatedStorage.Abilities.Elements.Angel.AwakenedMoves.HealAltar,
+    [2] = {
+        ["Direction"] = Vector3.new(0.6090496182441711, -0.5079014301300049, -0.6091753244400024),
+        ["Position"] = Vector3.new(-584.9539794921875, 61.99776077270508, -1603.61669921875),
+        ["Origin"] = Vector3.new(-612.1104125976562, 81.6782455444336, -1612.6168212890625)
+    },
+    [3] = "Start"
+}
+
+    
+    -- Fire the remote 5 times with a small delay between each
+    for i = 1, 5 do
+        game:GetService("ReplicatedStorage").ReplicatedStorage.Abilities.Templates.ToolTemplate:FindFirstChild("RemoteEvent "):FireServer(unpack(args))
+        wait(0.1) -- Adjust the delay as needed between each call
+    end
+end
+
+-- Variable to track cooldown state
+local isCooldown = false
+
+-- Connect the button click event to handle cooldown and run the remote function
+textButton.MouseButton1Click:Connect(function()
+    if not isCooldown then
+        clickSound:Play() -- Play the sound
+        
+        -- Start cooldown
+        isCooldown = true
+        
+        -- Call the remote function
+        activateRemote() 
+        textLabel.TextSize = 18
+
+        local startTime = tick() -- Get the current time
+        local cooldownDuration = 30 -- Set cooldown duration in seconds
+        
+        -- Cooldown loop
+        while (tick() - startTime) < cooldownDuration do
+            local remainingTime = cooldownDuration - (tick() - startTime)
+            textLabel.Text = string.format("%.1f", remainingTime) -- Update button text with countdown
+            wait(0.05) -- Wait a small amount to allow for UI updates
+        end
+        
+        -- Reset the button text and cooldown state
+        textLabel.TextSize = 16
+        textLabel.Text = "Heal Altar"
+        isCooldown = false
+    end
+end)
