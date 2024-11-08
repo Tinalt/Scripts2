@@ -1,0 +1,146 @@
+local function yes()
+
+    local ScreenGui = Instance.new("ScreenGui")
+    local Frame = Instance.new("Frame")
+    local UICorner = Instance.new("UICorner")
+    local UIStroke = Instance.new("UIStroke")
+    local TextLabel = Instance.new("TextLabel")
+    local TitleLabel = Instance.new("TextLabel")
+    local Button1 = Instance.new("TextButton")
+    local Button2 = Instance.new("TextButton")
+    local UserInputService = game:GetService("UserInputService")
+
+    -- Set up the UI
+    ScreenGui.Parent = game.CoreGui
+    ScreenGui.Name = "CoolXD"
+
+    -- Create the Frame
+    Frame.Parent = ScreenGui
+    Frame.Size = UDim2.new(0, 350, 0, 200)  -- Make the frame wide (300 pixels wide, 200 pixels tall)
+    Frame.Position = UDim2.new(0.5, -175, 0.5, -100)  -- Center it on the screen
+    Frame.BackgroundColor3 = Color3.new(0, 0, 0)  -- Black background
+    Frame.BackgroundTransparency = 0.35  -- Transparency of the background
+    Frame.Name = "LOL123"  -- Name the Frame "LOL123"
+    Frame.Visible = true  -- Make the Frame visible
+
+    -- Rounded corners for the frame
+    UICorner.Parent = Frame
+    UICorner.CornerRadius = UDim.new(0, 10)
+    
+    local FrameOutline = Instance.new("UIStroke")
+    FrameOutline.Parent = Frame
+    FrameOutline.Thickness = 2
+    FrameOutline.Color = Color3.new(1, 1, 1)
+    FrameOutline.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+    -- Create the Title Label for "Hitbox & ESP"
+    TitleLabel.Parent = Frame
+    TitleLabel.Size = UDim2.new(0, 300, 0, 30)  -- Width same as the frame, height 30
+    TitleLabel.Position = UDim2.new(0.5, -150, 0.2, 0)  -- Position it at the top middle
+    TitleLabel.BackgroundTransparency = 1  -- Transparent background
+    TitleLabel.Text = "Are you sure you want to\nexecute this script?"
+    TitleLabel.TextColor3 = Color3.new(1, 1, 1)
+    TitleLabel.TextSize = 24
+    TitleLabel.Font = Enum.Font.FredokaOne
+
+    -- Create Button1
+    Button1.Parent = Frame
+    Button1.Size = UDim2.new(0, 100, 0, 40)
+    Button1.Position = UDim2.new(0.5, 35, 0.45, 40)
+    Button1.BackgroundColor3 = Color3.new(0, 0, 0)
+    Button1.BackgroundTransparency = 0.7
+    Button1.Text = "Yes"
+    Button1.TextColor3 = Color3.new(1, 1, 1)
+    Button1.Font = Enum.Font.FredokaOne
+    Button1.TextSize = 18
+    Button1.BorderColor3 = Color3.new(1, 1, 1)
+    Button1.BorderSizePixel = 2
+
+    -- Add rounded corners to Button1
+    local ButtonUICorner1 = Instance.new("UICorner")
+    ButtonUICorner1.Parent = Button1
+    ButtonUICorner1.CornerRadius = UDim.new(0, 12)
+
+    -- Add outline (UIStroke) to Button1
+    local ButtonOutline1 = Instance.new("UIStroke")
+    ButtonOutline1.Parent = Button1
+    ButtonOutline1.Thickness = 2
+    ButtonOutline1.Color = Color3.new(1, 1, 1)
+    ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    
+    Button1.MouseButton1Click:Connect(function()
+    
+    
+    -- Find and delete all CoreGui elements with "Cool" in their name or "LOL123"
+for _, gui in pairs(game:GetService("CoreGui"):GetChildren()) do
+    if gui.Name:match("CoolXD") or gui.Name == "CoolXD" then
+        gui:Destroy()
+    end
+end
+
+    local StarterGui = game:GetService("StarterGui")
+
+local Notifications = {
+    "Enjoy!"
+}
+
+local NotificationDuration = 4 -- Duration of the notification (in seconds)
+
+-- Select a random notification to send
+local RandomNotification = Notifications[math.random(1, #Notifications)]
+
+-- Send the random notification
+StarterGui:SetCore("SendNotification", {
+    Title = "Script Made By Tin",
+    Text = RandomNotification,
+    Duration = NotificationDuration
+})
+
+    wait(0.1)
+    
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tinalt/Scripts2/refs/heads/main/Heal%20Blast"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tinalt/Scripts2/refs/heads/main/Heal%20Altar"))()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    end)
+
+    -- Create Button2
+    Button2.Parent = Frame
+    Button2.Size = UDim2.new(0, 100, 0, 40)
+    Button2.Position = UDim2.new(0.5, -130, 0.45, 40)
+    Button2.BackgroundColor3 = Color3.new(0, 0, 0)
+    Button2.BackgroundTransparency = 0.7
+    Button2.Text = "No"
+    Button2.TextColor3 = Color3.new(1, 1, 1)
+    Button2.Font = Enum.Font.FredokaOne
+    Button2.TextSize = 18
+    Button2.BorderColor3 = Color3.new(1, 1, 1)
+    Button2.BorderSizePixel = 2
+
+    -- Add rounded corners to Button2
+    local ButtonUICorner2 = Instance.new("UICorner")
+    ButtonUICorner2.Parent = Button2
+    ButtonUICorner2.CornerRadius = UDim.new(0, 12)
+
+    -- Add outline (UIStroke) to Button2
+    local ButtonOutline2 = Instance.new("UIStroke")
+    ButtonOutline2.Parent = Button2
+    ButtonOutline2.Thickness = 2
+    ButtonOutline2.Color = Color3.new(1, 1, 1)
+    ButtonOutline2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+end
+
+yes()
