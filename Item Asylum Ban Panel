@@ -1,0 +1,2365 @@
+local function IA()
+    local ScreenGui = Instance.new("ScreenGui")
+    local Frame = Instance.new("Frame")
+    local Frame2 = Instance.new("Frame")
+    local UICorner = Instance.new("UICorner")
+    local UIStroke = Instance.new("UIStroke")
+    local UICorner2 = Instance.new("UICorner")
+    local UIStroke2 = Instance.new("UIStroke")
+    local TextLabel2 = Instance.new("TextLabel")
+    local TitleLabel2 = Instance.new("TextLabel")
+    local TitleLabel3 = Instance.new("TextLabel")
+    local TextLabel = Instance.new("TextLabel")
+    local TitleLabel = Instance.new("TextLabel")
+    local Button103 = Instance.new("TextButton")
+    local Button104 = Instance.new("TextButton")
+    local Button105 = Instance.new("TextButton")
+    local Button106 = Instance.new("TextButton")
+    local Button107 = Instance.new("TextButton")
+    local Button108 = Instance.new("TextButton")
+    local Button109 = Instance.new("TextButton")
+    local Button110 = Instance.new("TextButton")
+    local Button1 = Instance.new("TextButton")
+    local Button2 = Instance.new("TextButton")
+    local Button10 = Instance.new("TextButton")
+    local Button11 = Instance.new("TextButton")
+    local UnbanButton = Instance.new("TextButton")
+    local UnbanButton2 = Instance.new("TextButton")
+    local UnbanButton3 = Instance.new("TextButton")
+    local UnbanButton4 = Instance.new("TextButton")
+    local TextBox = Instance.new("TextBox") -- Add the TextBox
+    local UserInputService = game:GetService("UserInputService")
+    
+    
+    
+    ----Toggle button
+
+
+
+    -- Toggle Button Setup
+    local ToggleButton1 = Instance.new("ImageButton")
+    local ToggleUICorner = Instance.new("UICorner")
+    local ToggleTextLabel = Instance.new("TextLabel")
+
+    ToggleButton1.Parent = ScreenGui
+    ToggleButton1.Size = UDim2.new(0, 44, 0, 44)
+    ToggleButton1.Position = UDim2.new(0.5, -195, 0.014, -50)
+    ToggleButton1.BackgroundColor3 = Color3.new(0, 0, 0)
+    ToggleButton1.Transparency = 0.35
+    ToggleButton1.Visible = true
+
+    ToggleUICorner.Parent = ToggleButton1
+    ToggleUICorner.CornerRadius = UDim.new(0, 50)
+
+    ToggleTextLabel.Parent = ToggleButton1
+    ToggleTextLabel.Size = UDim2.new(1, 0, 1, 0)
+    ToggleTextLabel.Position = UDim2.new(0, 0, -0.05, 0)
+    ToggleTextLabel.BackgroundTransparency = 1
+    ToggleTextLabel.Text = "★"
+    ToggleTextLabel.TextColor3 = Color3.new(1, 1, 1)
+    ToggleTextLabel.TextScaled = true
+    ToggleTextLabel.TextStrokeTransparency = 0
+
+    ToggleButton1.MouseButton1Click:Connect(function()
+    Frame.Visible = not Frame.Visible
+    Frame2.Visible = not Frame2.Visible
+   end)
+    
+
+    -- Set up the UI
+    ScreenGui.Parent = game.CoreGui
+    ScreenGui.Name = "CoolXD"
+
+    -- Create the Frame
+    Frame.Parent = ScreenGui
+    Frame.Size = UDim2.new(0, 425, 0, 300)
+    Frame.Position = UDim2.new(0.5, -210, 0.18, -25)
+    Frame.BackgroundColor3 = Color3.new(0, 0, 0)
+    Frame.BackgroundTransparency = 0.35
+    Frame.Name = "LOL123"
+    Frame.Visible = false
+
+    -- Rounded corners for the frame
+    UICorner.Parent = Frame
+    UICorner.CornerRadius = UDim.new(0, 10)
+
+    local FrameOutline = Instance.new("UIStroke")
+    FrameOutline.Parent = Frame
+    FrameOutline.Thickness = 2
+    FrameOutline.Color = Color3.new(1, 1, 1)
+    FrameOutline.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    
+    
+     Frame2.Parent = ScreenGui
+    Frame2.Size = UDim2.new(0, 100, 0, 300)
+    Frame2.Position = UDim2.new(0.5, 230, 0.18, -25)
+    Frame2.BackgroundColor3 = Color3.new(0, 0, 0)
+    Frame2.BackgroundTransparency = 0.35
+    Frame2.Name = "LOL123"
+    Frame2.Visible = false
+
+    -- Rounded corners for the frame
+    UICorner2.Parent = Frame2
+    UICorner2.CornerRadius = UDim.new(0, 10)
+
+    local FrameOutline2 = Instance.new("UIStroke")
+    FrameOutline2.Parent = Frame2
+    FrameOutline2.Thickness = 2
+    FrameOutline2.Color = Color3.new(1, 1, 1)
+    FrameOutline2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    
+    
+    
+    -- Create the Title Label
+    TitleLabel2.Parent = Frame2
+    TitleLabel2.Size = UDim2.new(0, 300, 0, 30)
+    TitleLabel2.Position = UDim2.new(0, -100, 0.05, 0) 
+    TitleLabel2.BackgroundTransparency = 1    
+    TitleLabel2.Text = "Select\nPlayer"
+    TitleLabel2.TextColor3 = Color3.new(1, 1, 1)
+    TitleLabel2.TextSize = 22
+    TitleLabel2.Font = Enum.Font.FredokaOne
+    
+    
+    
+    
+    local function notify(customText, customTextSize, waitTime)
+    -- Remove any existing notifications
+    local playerGui = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    for _, gui in ipairs(playerGui:GetChildren()) do
+        if gui:IsA("ScreenGui") and gui.Name == "NotificationGui" then
+            gui:Destroy()
+        end
+    end
+
+    -- Create the new notification GUI
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Name = "NotificationGui" -- Name it to easily identify
+    screenGui.Parent = playerGui
+
+    -- Create a TextLabel for the notification
+    local notification = Instance.new("TextLabel")
+    notification.Size = UDim2.new(0.21, 0, 0.2, 0)  -- Width and height of the notification
+    notification.Position = UDim2.new(-0.5, 0, 0.52, 0)  -- Start at the bottom of the screen
+    notification.BackgroundColor3 = Color3.new(0, 0, 0)
+    notification.BackgroundTransparency = 0.38
+    notification.BorderSizePixel = 3.5  -- Outline thickness
+    notification.BorderColor3 = Color3.new(0, 0, 0)  -- Black outline
+    notification.TextColor3 = Color3.new(1, 1, 1)  -- White text
+    notification.TextScaled = false
+    notification.TextWrapped = false
+    notification.Text = customText or "Notification"  -- Use the provided text or default
+    notification.Font = Enum.Font.FredokaOne
+    notification.Parent = screenGui
+    notification.TextSize = customTextSize or 18  -- Use the custom size or default
+
+    -- Add padding to the TextLabel
+    local ButtonUICorner1 = Instance.new("UICorner")
+    ButtonUICorner1.Parent = notification
+    ButtonUICorner1.CornerRadius = UDim.new(0, 12)
+
+    local ButtonOutline1 = Instance.new("UIStroke")
+    ButtonOutline1.Parent = notification
+    ButtonOutline1.Thickness = 2
+    ButtonOutline1.Color = Color3.new(1, 1, 1)
+    ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+    -- Use TweenService to create the slide animation
+    local TweenService = game:GetService("TweenService")
+
+    local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+    local targetPosition1 = UDim2.new(0.028, 0, 0.52, 0)  -- Middle of the screen
+    local targetPosition2 = UDim2.new(-2, -150, 0.52, 0)  -- Bottom of the screen
+
+    local slideUpTween = TweenService:Create(notification, tweenInfo, {Position = targetPosition1})
+    local slideDownTween = TweenService:Create(notification, tweenInfo, {Position = targetPosition2})
+
+    -- Play the slide up tween
+    slideUpTween:Play()
+
+    -- After the slide up tween completes, wait for the specified time and then play the slide down tween
+    slideUpTween.Completed:Connect(function()
+        wait(waitTime or 1.5) -- Use the provided wait time or default to 3 seconds
+        slideDownTween:Play()
+    end)
+
+    -- Destroy the screenGui after the slide down tween completes
+    slideDownTween.Completed:Connect(function()
+        screenGui:Destroy()
+    end)
+end
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    local Button100 = Instance.new("TextButton")
+    Button100.Parent = Frame2
+    Button100.Size = UDim2.new(0, 85, 0, 35)
+    Button100.Position = UDim2.new(0, 8, 0.2, 0)
+    Button100.BackgroundColor3 = Color3.new(0, 0, 0)
+    Button100.BackgroundTransparency = 0.7
+    Button100.Text = "KhoaAmazed"
+    Button100.TextColor3 = Color3.new(1, 1, 1)
+    Button100.Font = Enum.Font.FredokaOne
+    Button100.TextSize = 15
+
+    -- Add rounded corners to Button1
+    local ButtonUICorner1 = Instance.new("UICorner")
+    ButtonUICorner1.Parent = Button100
+    ButtonUICorner1.CornerRadius = UDim.new(0, 12)
+
+    -- Add outline to Button1
+    local ButtonOutline1 = Instance.new("UIStroke")
+    ButtonOutline1.Parent = Button100
+    ButtonOutline1.Thickness = 2
+    ButtonOutline1.Color = Color3.new(1,1,1)
+    ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+    -- Button1 functionality
+    Button100.MouseButton1Click:Connect(function()
+    notify("Selected\nKhoaAmazed", 24)
+        
+    local TitleLabel1 = Instance.new("TextLabel")
+    TitleLabel1.Parent = Frame
+    TitleLabel1.Size = UDim2.new(0, 300, 0, 30)
+    TitleLabel1.Position = UDim2.new(0, 60, 0.05, 0)
+    TitleLabel1.BackgroundTransparency = 1
+    TitleLabel1.Text = "Ban Player (khoaAmazed)"
+    TitleLabel1.TextColor3 = Color3.new(1, 1, 1)
+    TitleLabel1.TextSize = 24
+    TitleLabel1.Font = Enum.Font.FredokaOne
+    TitleLabel1.Visible = false
+    
+    
+    
+    ----
+    
+    local Button101 = Instance.new("TextButton")
+    Button101.Parent = Frame2
+    Button101.Size = UDim2.new(0, 85, 0, 35)
+    Button101.Position = UDim2.new(0, 8, 0.2, 0)
+    Button101.BackgroundColor3 = Color3.new(0, 25, 0)
+    Button101.BackgroundTransparency = 0.7
+    Button101.Text = "KhoaAmazed"
+    Button101.TextColor3 = Color3.new(1, 1, 1)
+    Button101.Font = Enum.Font.FredokaOne
+    Button101.TextSize = 15
+    Button101.Visible = false
+
+    -- Add rounded corners to Button1
+    local ButtonUICorner1 = Instance.new("UICorner")
+    ButtonUICorner1.Parent = Button101
+    ButtonUICorner1.CornerRadius = UDim.new(0, 12)
+
+    -- Add outline to Button1
+    local ButtonOutline1 = Instance.new("UIStroke")
+    ButtonOutline1.Parent = Button101
+    ButtonOutline1.Thickness = 2
+    ButtonOutline1.Color = Color3.new(1,1,1)
+    ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    
+    Button101.MouseButton1Click:Connect(function()
+--- 2th click 
+notify("Deselected\nKhoaAmazed", 24)
+
+    Button101.Visible = false
+    Button100.Visible = true
+    TitleLabel.Visible = true
+    TitleLabel1.Visible = false
+    Button1.Visible = false
+    Button2.Visible = false
+    TitleLabel3.Visible = true
+    Button103.Visible = true
+    Button104.Visible = false
+    Button105.Visible = false
+    Button109.Visible = true
+    Button110.Visible = true
+    UnbanButton.Visible = false
+    UnbanButton2.Visible = false
+    
+    
+end)
+    
+    
+    
+-- 1st click
+    TitleLabel.Visible = false
+    TitleLabel1.Visible = true
+    Button100.Visible = false
+    Button101.Visible = true
+    Button1.Visible = true
+    Button2.Visible = true
+    TitleLabel3.Visible = false
+    Button103.Visible = false
+    Button104.Visible = false
+    Button105.Visible = true
+    Button109.Visible = false
+    Button110.Visible = false
+    UnbanButton.Visible = true
+    UnbanButton2.Visible = true
+        
+        
+        
+        
+        
+    end)
+    
+    
+    
+    
+    Button103.Parent = Frame2
+    Button103.Size = UDim2.new(0, 85, 0, 35)
+    Button103.Position = UDim2.new(0, 8, 0.38, 0)
+    Button103.BackgroundColor3 = Color3.new(0, 0, 0)
+    Button103.BackgroundTransparency = 0.7
+    Button103.Text = "lIIllIIIllllIIlIl"
+    Button103.TextColor3 = Color3.new(1, 1, 1)
+    Button103.Font = Enum.Font.FredokaOne
+    Button103.TextSize = 15
+
+    -- Add rounded corners to Button1
+    local ButtonUICorner1 = Instance.new("UICorner")
+    ButtonUICorner1.Parent = Button103
+    ButtonUICorner1.CornerRadius = UDim.new(0, 12)
+
+    -- Add outline to Button1
+    local ButtonOutline1 = Instance.new("UIStroke")
+    ButtonOutline1.Parent = Button103
+    ButtonOutline1.Thickness = 2
+    ButtonOutline1.Color = Color3.new(1,1,1)
+    ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+    -- Button1 functionality
+    Button103.MouseButton1Click:Connect(function()
+    notify("Selected\nlIIllIIIllllIIlIl", 24)
+        
+    local TitleLabel4 = Instance.new("TextLabel")
+    TitleLabel4.Parent = Frame
+    TitleLabel4.Size = UDim2.new(0, 300, 0, 30)
+    TitleLabel4.Position = UDim2.new(0, 60, 0.05, 0)
+    TitleLabel4.BackgroundTransparency = 1
+    TitleLabel4.Text = "Ban Player (lIIllIIIllllIIlIl)"
+    TitleLabel4.TextColor3 = Color3.new(1, 1, 1)
+    TitleLabel4.TextSize = 24
+    TitleLabel4.Font = Enum.Font.FredokaOne
+    TitleLabel4.Visible = false
+    
+    
+    
+    ----
+    
+    
+    Button104.Parent = Frame2
+    Button104.Size = UDim2.new(0, 85, 0, 35)
+    Button104.Position = UDim2.new(0, 8, 0.38, 0)
+    Button104.BackgroundColor3 = Color3.new(0, 25, 0)
+    Button104.BackgroundTransparency = 0.7
+    Button104.Text = "lIIllIIIllllIIlIl"
+    Button104.TextColor3 = Color3.new(1, 1, 1)
+    Button104.Font = Enum.Font.FredokaOne
+    Button104.TextSize = 15
+    Button104.Visible = false
+
+    -- Add rounded corners to Button1
+    local ButtonUICorner1 = Instance.new("UICorner")
+    ButtonUICorner1.Parent = Button104
+    ButtonUICorner1.CornerRadius = UDim.new(0, 12)
+
+    -- Add outline to Button1
+    local ButtonOutline1 = Instance.new("UIStroke")
+    ButtonOutline1.Parent = Button104
+    ButtonOutline1.Thickness = 2
+    ButtonOutline1.Color = Color3.new(1,1,1)
+    ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    
+    Button104.MouseButton1Click:Connect(function()
+--- 2th click 
+notify("Deselected\nlIIllIIIllllIIlIl", 24)
+    Button103.Visible = true
+    Button104.Visible = false
+    TitleLabel.Visible = true
+    TitleLabel4.Visible = false
+    Button10.Visible = false
+    Button11.Visible = false
+    TitleLabel3.Visible = true
+    UnbanButton3.Visible = false
+    UnbanButton4.Visible = false
+    Button100.Visible = true
+    Button107.Visible = false
+    Button109.Visible = true
+    Button110.Visible = true
+    
+    
+end)
+    
+    
+    
+-- 1st click
+    TitleLabel.Visible = false
+    TitleLabel4.Visible = true
+    Button103.Visible = false
+    Button104.Visible = true
+    Button10.Visible = true
+    Button11.Visible = true
+    TitleLabel3.Visible = false
+    UnbanButton3.Visible = true
+    UnbanButton4.Visible = true
+    Button100.Visible = false
+    Button107.Visible = true
+    Button109.Visible = false
+    Button110.Visible = false
+        
+        
+        
+        
+        
+    end)
+    
+    
+    
+    Button105.Parent = Frame2
+Button105.Size = UDim2.new(0, 85, 0, 35)
+Button105.Position = UDim2.new(0, 8, 0.38, 0)
+Button105.BackgroundColor3 = Color3.new(0, 0, 0)
+Button105.BackgroundTransparency = 0.7
+Button105.Text = "lIIllIIIllllIIlIl"
+Button105.TextColor3 = Color3.new(1, 1, 1)
+Button105.Font = Enum.Font.FredokaOne
+Button105.TextSize = 15
+Button105.Visible = false
+
+Button105.MouseButton1Click:Connect(function()
+
+notify("Please deselected\na player first!", 19, 1.5)
+Button106.Visible = true
+Button105.Visible = false
+wait(1.5)
+Button106.Visible = false
+Button105.Visible = true
+end)
+
+
+
+
+Button106.Parent = Frame2
+Button106.Size = UDim2.new(0, 85, 0, 35)
+Button106.Position = UDim2.new(0, 8, 0.38, 0)
+Button106.BackgroundColor3 = Color3.new(25, 0, 0)
+Button106.BackgroundTransparency = 0.7
+Button106.Text = "lIIllIIIllllIIlIl"
+Button106.TextColor3 = Color3.new(1, 1, 1)
+Button106.Font = Enum.Font.FredokaOne
+Button106.TextSize = 15
+Button106.Visible = false
+
+-- Add rounded corners to Button106
+local ButtonUICorner1 = Instance.new("UICorner")
+ButtonUICorner1.Parent = Button106
+ButtonUICorner1.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button106
+local ButtonOutline1 = Instance.new("UIStroke")
+ButtonOutline1.Parent = Button106
+ButtonOutline1.Thickness = 2
+ButtonOutline1.Color = Color3.new(1,1,1)
+ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+
+
+Button107.Parent = Frame2
+Button107.Size = UDim2.new(0, 85, 0, 35)
+Button107.Position = UDim2.new(0, 8, 0.2, 0)
+Button107.BackgroundColor3 = Color3.new(0, 0, 0)
+Button107.BackgroundTransparency = 0.7
+Button107.Text = "KhoaAmazed"
+Button107.TextColor3 = Color3.new(1, 1, 1)
+Button107.Font = Enum.Font.FredokaOne
+Button107.TextSize = 15
+Button107.Visible = false
+
+-- Add rounded corners to Button107
+local ButtonUICorner1 = Instance.new("UICorner")
+ButtonUICorner1.Parent = Button107
+ButtonUICorner1.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button107
+local ButtonOutline1 = Instance.new("UIStroke")
+ButtonOutline1.Parent = Button107
+ButtonOutline1.Thickness = 2
+ButtonOutline1.Color = Color3.new(1,1,1)
+ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Button107.MouseButton1Click:Connect(function()
+
+notify("Please deselected\na player first!", 19, 1.5)
+Button107.Visible = false
+Button108.Visible = true
+wait(1.5)
+Button107.Visible = true
+Button108.Visible = false
+
+end)
+
+
+
+Button108.Parent = Frame2
+Button108.Size = UDim2.new(0, 85, 0, 35)
+Button108.Position = UDim2.new(0, 8, 0.2, 0)
+Button108.BackgroundColor3 = Color3.new(25, 0, 0)
+Button108.BackgroundTransparency = 0.7
+Button108.Text = "KhoaAmazed"
+Button108.TextColor3 = Color3.new(1, 1, 1)
+Button108.Font = Enum.Font.FredokaOne
+Button108.TextSize = 15
+Button108.Visible = false
+
+-- Add rounded corners to Button108
+local ButtonUICorner1 = Instance.new("UICorner")
+ButtonUICorner1.Parent = Button108
+ButtonUICorner1.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button108
+local ButtonOutline1 = Instance.new("UIStroke")
+ButtonOutline1.Parent = Button108
+ButtonOutline1.Thickness = 2
+ButtonOutline1.Color = Color3.new(1,1,1)
+ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+-- Add rounded corners to Button105
+local ButtonUICorner1 = Instance.new("UICorner")
+ButtonUICorner1.Parent = Button105
+ButtonUICorner1.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button105
+local ButtonOutline1 = Instance.new("UIStroke")
+ButtonOutline1.Parent = Button105
+ButtonOutline1.Thickness = 2
+ButtonOutline1.Color = Color3.new(1,1,1)
+ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+
+Button109.Parent = Frame
+Button109.Size = UDim2.new(0, 105, 0, 40)
+Button109.Position = UDim2.new(0.5, 52.5, 0.53, 0)
+Button109.AnchorPoint = Vector2.new(1, 0) -- Anchor to the top-right corner
+Button109.BackgroundColor3 = Color3.new(25, 0, 0)
+Button109.BackgroundTransparency = 0.7
+Button109.Text = "Un\nTBAN" -- Button text
+Button109.TextColor3 = Color3.new(1, 1, 1)
+Button109.Font = Enum.Font.FredokaOne
+Button109.TextSize = 15
+Button109.Visible = true
+
+-- Add rounded corners to Button109
+local ButtonUICorner4 = Instance.new("UICorner")
+ButtonUICorner4.Parent = Button109
+ButtonUICorner4.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button109
+local ButtonOutline4 = Instance.new("UIStroke")
+ButtonOutline4.Parent = Button109
+ButtonOutline4.Thickness = 2
+ButtonOutline4.Color = Color3.new(34,34,34)
+ButtonOutline4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Button110.Parent = Frame
+Button110.Size = UDim2.new(0, 105, 0, 40)
+Button110.Position = UDim2.new(0.5, -75, 0.53, 0)
+Button110.AnchorPoint = Vector2.new(1, 0) -- Anchor to the top-right corner
+Button110.BackgroundColor3 = Color3.new(25, 0, 0)
+Button110.BackgroundTransparency = 0.7
+Button110.Text = "Un\nPBAN" -- Button text
+Button110.TextColor3 = Color3.new(1, 1, 1)
+Button110.Font = Enum.Font.FredokaOne
+Button110.TextSize = 15
+
+-- Add rounded corners to Button110
+local ButtonUICorner4 = Instance.new("UICorner")
+ButtonUICorner4.Parent = Button110
+ButtonUICorner4.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button110
+local ButtonOutline4 = Instance.new("UIStroke")
+ButtonOutline4.Parent = Button110
+ButtonOutline4.Thickness = 2
+ButtonOutline4.Color = Color3.new(1,1,1)
+ButtonOutline4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+
+    
+
+    -- Create the Title Label
+    TitleLabel.Parent = Frame
+    TitleLabel.Size = UDim2.new(0, 300, 0, 30)
+    TitleLabel.Position = UDim2.new(0, 60, 0.05, 0)
+    TitleLabel.BackgroundTransparency = 1
+    TitleLabel.Text = "Ban Player"
+    TitleLabel.TextColor3 = Color3.new(1, 1, 1)
+    TitleLabel.TextSize = 24
+    TitleLabel.Font = Enum.Font.FredokaOne
+    TitleLabel.Visible = true
+    
+    
+    TitleLabel3.Parent = Frame
+    TitleLabel3.Size = UDim2.new(0, 300, 0, 30)
+    TitleLabel3.Position = UDim2.new(0.5, -170, 0.65, 40)
+    TitleLabel3.BackgroundTransparency = 1
+    TitleLabel3.Text = "Select Player"
+    TitleLabel3.TextColor3 = Color3.new(1, 1, 1)
+    TitleLabel3.TextSize = 34
+    TitleLabel3.Font = Enum.Font.FredokaOne
+    TitleLabel3.Visible = true
+    
+    
+
+    -- Create Button1
+    Button1.Parent = Frame
+    Button1.Size = UDim2.new(0, 120, 0, 40)
+    Button1.Position = UDim2.new(0.5, -170, 0.65, 40)
+    Button1.BackgroundColor3 = Color3.new(0, 0, 0)
+    Button1.BackgroundTransparency = 0.7
+    Button1.Text = "Ban"
+    Button1.TextColor3 = Color3.new(1, 1, 1)
+    Button1.Font = Enum.Font.FredokaOne
+    Button1.TextSize = 18
+    Button1.Visible = false
+
+    -- Add rounded corners to Button1
+    local ButtonUICorner1 = Instance.new("UICorner")
+    ButtonUICorner1.Parent = Button1
+    ButtonUICorner1.CornerRadius = UDim.new(0, 12)
+
+    -- Add outline to Button1
+    local ButtonOutline1 = Instance.new("UIStroke")
+    ButtonOutline1.Parent = Button1
+    ButtonOutline1.Thickness = 2
+    ButtonOutline1.Color = Color3.new(255, 0, 0)
+    ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+    
+
+    
+    -- Create Button2
+    Button2.Parent = Frame
+    Button2.Size = UDim2.new(0, 120, 0, 40)
+    Button2.Position = UDim2.new(0.5, -20, 0.65, 40)
+    Button2.BackgroundColor3 = Color3.new(0, 0, 0)
+    Button2.BackgroundTransparency = 0.7
+    Button2.Text = "Temp Ban"
+    Button2.TextColor3 = Color3.new(1, 1, 1)
+    Button2.Font = Enum.Font.FredokaOne
+    Button2.TextSize = 18
+    Button2.Visible = false
+
+    -- Add rounded corners to Button2
+    local ButtonUICorner2 = Instance.new("UICorner")
+    ButtonUICorner2.Parent = Button2
+    ButtonUICorner2.CornerRadius = UDim.new(0, 12)
+
+    -- Add outline to Button2
+    local ButtonOutline2 = Instance.new("UIStroke")
+    ButtonOutline2.Parent = Button2
+    ButtonOutline2.Thickness = 2
+    ButtonOutline2.Color = Color3.new(1, 1, 1)
+    ButtonOutline2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    
+    
+    
+    
+    
+    ---PERMAMENT BAN & TEMPORARY BAN BUTTON FOR lllllllllllllllll
+    
+    Button10.Parent = Frame
+    Button10.Size = UDim2.new(0, 120, 0, 40)
+    Button10.Position = UDim2.new(0.5, -170, 0.65, 40)
+    Button10.BackgroundColor3 = Color3.new(0, 0, 0)
+    Button10.BackgroundTransparency = 0.7
+    Button10.Text = "Ban"
+    Button10.TextColor3 = Color3.new(1, 1, 1)
+    Button10.Font = Enum.Font.FredokaOne
+    Button10.TextSize = 18
+    Button10.Visible = false
+
+    -- Add rounded corners to Button1
+    local ButtonUICorner1 = Instance.new("UICorner")
+    ButtonUICorner1.Parent = Button10
+    ButtonUICorner1.CornerRadius = UDim.new(0, 12)
+
+    -- Add outline to Button1
+    local ButtonOutline1 = Instance.new("UIStroke")
+    ButtonOutline1.Parent = Button10
+    ButtonOutline1.Thickness = 2
+    ButtonOutline1.Color = Color3.new(255, 0, 0)
+    ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+    
+
+    
+    -- Create Button2
+    Button11.Parent = Frame
+    Button11.Size = UDim2.new(0, 120, 0, 40)
+    Button11.Position = UDim2.new(0.5, -20, 0.65, 40)
+    Button11.BackgroundColor3 = Color3.new(0, 0, 0)
+    Button11.BackgroundTransparency = 0.7
+    Button11.Text = "Temp Ban"
+    Button11.TextColor3 = Color3.new(1, 1, 1)
+    Button11.Font = Enum.Font.FredokaOne
+    Button11.TextSize = 18
+    Button11.Visible = false
+
+    -- Add rounded corners to Button2
+    local ButtonUICorner2 = Instance.new("UICorner")
+    ButtonUICorner2.Parent = Button11
+    ButtonUICorner2.CornerRadius = UDim.new(0, 12)
+
+    -- Add outline to Button2
+    local ButtonOutline2 = Instance.new("UIStroke")
+    ButtonOutline2.Parent = Button11
+    ButtonOutline2.Thickness = 2
+    ButtonOutline2.Color = Color3.new(1, 1, 1)
+    ButtonOutline2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    
+    
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    -- Create Button3
+local Button3 = Instance.new("TextButton")
+Button3.Parent = Frame
+Button3.Size = UDim2.new(0, 50, 0, 50)
+Button3.Position = UDim2.new(0.5, 135, 0.635, 40) -- Positioned further to the right of Button2
+Button3.BackgroundColor3 = Color3.new(0, 0, 0)
+Button3.BackgroundTransparency = 0.7
+Button3.Text = ">"
+Button3.TextColor3 = Color3.new(1, 1, 1)
+Button3.Font = Enum.Font.FredokaOne
+Button3.TextSize = 18
+
+-- Add rounded corners to Button3
+local ButtonUICorner3 = Instance.new("UICorner")
+ButtonUICorner3.Parent = Button3
+ButtonUICorner3.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button3
+local ButtonOutline3 = Instance.new("UIStroke")
+ButtonOutline3.Parent = Button3
+ButtonOutline3.Thickness = 2
+ButtonOutline3.Color = Color3.new(1, 1, 1)
+ButtonOutline3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Button3 functionality
+
+
+
+
+-- Button3 functionality to toggle frames
+Button3.MouseButton1Click:Connect(function()
+
+
+
+
+------SECOND GUI FOR ">" BUTTON---------
+
+
+
+    local ScreenGui = Instance.new("ScreenGui")
+    local Frame3 = Instance.new("Frame")
+    local UICorner3 = Instance.new("UICorner")
+    local UIStroke3 = Instance.new("UIStroke")
+    local ScrollingFrame = Instance.new("ScrollingFrame") -- Create a ScrollingFrame
+    local AdminPanelLabel = Instance.new("TextLabel") -- New label for "Admin Panel"
+    local AdminPanelStroke = Instance.new("UIStroke") -- UIStroke for Admin Panel
+    
+    
+    local ToggleButton = Instance.new("ImageButton")
+    local ToggleUICorner = Instance.new("UICorner")
+    local ToggleTextLabel = Instance.new("TextLabel")
+
+    ToggleButton.Parent = ScreenGui
+    ToggleButton.Size = UDim2.new(0, 44, 0, 44)
+    ToggleButton.Position = UDim2.new(0.5, -195, 0.014, -50)
+    ToggleButton.BackgroundColor3 = Color3.new(0, 0, 0)
+    ToggleButton.Transparency = 0.35
+    ToggleButton.Visible = false
+
+    ToggleUICorner.Parent = ToggleButton
+    ToggleUICorner.CornerRadius = UDim.new(0, 50)
+
+    ToggleTextLabel.Parent = ToggleButton
+    ToggleTextLabel.Size = UDim2.new(1, 0, 1, 0)
+    ToggleTextLabel.Position = UDim2.new(0, 0, -0.05, 0)
+    ToggleTextLabel.BackgroundTransparency = 1
+    ToggleTextLabel.Text = "★"
+    ToggleTextLabel.TextColor3 = Color3.new(1, 1, 1)
+    ToggleTextLabel.TextScaled = true
+    ToggleTextLabel.TextStrokeTransparency = 0
+
+    ToggleButton.MouseButton1Click:Connect(function()
+    Frame3.Visible = not Frame3.Visible
+   end)
+    
+    
+    
+    -- Set up the UI
+    ScreenGui.Parent = game.CoreGui
+    ScreenGui.Name = "CoolXD"
+
+    -- Main Frame
+    Frame3.Parent = ScreenGui
+    Frame3.BackgroundColor3 = Color3.fromRGB(0,0,0)
+    Frame3.Position = UDim2.new(0.5, -175, 0.5, -150)
+    Frame3.Size = UDim2.new(0,350,0,300)
+    Frame3.Visible = true
+    Frame3.BackgroundTransparency = 0.35
+
+    -- Outline for the main frame
+    UIStroke3.Parent = Frame3
+    UIStroke3.Color = Color3.new(1,1,1)
+    UIStroke3.Thickness = 2.7
+
+    -- Rounded corners for the main frame
+    UICorner3.Parent = Frame3
+    UICorner3.CornerRadius = UDim.new(0, 10)
+
+    -- Scrolling Frame
+    ScrollingFrame.Parent = Frame3
+    ScrollingFrame.Size = UDim2.new(1, 0, 1, 0) -- Full size of the main frame
+    ScrollingFrame.BackgroundTransparency = 1 -- Make it transparent
+    ScrollingFrame.ScrollBarThickness = 5 -- Set thickness of the scrollbar
+    ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 700) -- Adjust the canvas size based on content
+
+    -- Admin Panel label
+    AdminPanelLabel.Parent = ScrollingFrame
+    AdminPanelLabel.Size = UDim2.new(1, 0, 0.2, 0) -- Adjust size as needed
+    AdminPanelLabel.Position = UDim2.new(0, 0, -0.068, 0) -- Position at the top
+    AdminPanelLabel.BackgroundTransparency = 1 -- Make it transparent
+    AdminPanelLabel.Text = "Combos" -- Label text
+    AdminPanelLabel.TextSize = 23 -- Text size
+    AdminPanelLabel.Font = Enum.Font.FredokaOne -- Set font to FredokaOne
+    AdminPanelLabel.TextColor3 = Color3.new(1, 1, 1) -- White text
+
+    -- Black outline for the Admin Panel label
+    AdminPanelStroke.Parent = AdminPanelLabel
+    AdminPanelStroke.Color = Color3.new(0, 0, 0) -- Black outline for the label
+    AdminPanelStroke.Thickness = 2 -- Thickness of the outline
+
+    -- Instant Crash button
+    local Combo1 = Instance.new("TextButton") -- Renamed from InstantCrash
+Combo1.Parent = ScrollingFrame
+Combo1.Size = UDim2.new(0, 250, 0, 45)
+Combo1.Position = UDim2.new(0.5, -124.5, 0.1, -22.5)
+Combo1.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo1.BackgroundTransparency = 0.7
+Combo1.Text = "Pear's scythe + Zapper + Sunshine"
+Combo1.TextSize = 17
+Combo1.Font = Enum.Font.FredokaOne
+
+-- Set text color to white and remove text outline
+Combo1.TextColor3 = Color3.new(1, 1, 1) -- White text
+Combo1.TextStrokeTransparency = 1 -- Remove text outline by setting transparency to 1
+
+-- Black outline for the Combo1 button
+local ButtonStroke = Instance.new("UIStroke", Combo1)
+ButtonStroke.Color = Color3.new(0, 0, 0) -- Black outline for the button
+ButtonStroke.Thickness = 2 -- Thickness of the outline
+
+-- Corner radius for the Combo1 button
+local ButtonUICorner2 = Instance.new("UICorner")
+ButtonUICorner2.Parent = Combo1
+ButtonUICorner2.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Combo1 button
+local ButtonOutline2 = Instance.new("UIStroke")
+ButtonOutline2.Parent = Combo1
+ButtonOutline2.Thickness = 2
+ButtonOutline2.Color = Color3.new(1, 1, 1) -- White outline for the button
+ButtonOutline2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Click event for Combo1
+Combo1.MouseButton1Click:Connect(function()
+    
+    local player = game.Players.LocalPlayer  -- Adjust this to your use case
+
+local function removeTools()
+    for _, item in pairs(player.Backpack:GetChildren()) do
+        if item:IsA("Tool") then
+            item:Destroy()
+        end
+    end
+end
+
+removeTools()
+
+    local function items()
+    local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "pearl's scythe"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "zapper"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "sunshine in a bag"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+end
+
+items()
+    
+    
+    
+end)
+
+-- Button 2
+local Combo2 = Instance.new("TextButton")
+Combo2.Parent = ScrollingFrame
+Combo2.Size = UDim2.new(0, 250, 0, 45)
+Combo2.Position = UDim2.new(0.5, -124.5, 0.15, 25)  -- Adjust position for stacking
+Combo2.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo2.BackgroundTransparency = 0.7
+Combo2.Text = "Stick + Brimstone + Uppercut"
+Combo2.TextSize = 17
+Combo2.Font = Enum.Font.FredokaOne
+Combo2.TextColor3 = Color3.new(1, 1, 1) 
+Combo2.TextStrokeTransparency = 1 
+
+local ButtonStroke2 = Instance.new("UIStroke", Combo2)
+ButtonStroke2.Color = Color3.new(0, 0, 0)
+ButtonStroke2.Thickness = 2 
+
+local ButtonUICorner3 = Instance.new("UICorner")
+ButtonUICorner3.Parent = Combo2
+ButtonUICorner3.CornerRadius = UDim.new(0, 12)
+
+local ButtonOutline3 = Instance.new("UIStroke")
+ButtonOutline3.Parent = Combo2
+ButtonOutline3.Thickness = 2
+ButtonOutline3.Color = Color3.new(1, 1, 1)
+ButtonOutline3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Combo2.MouseButton1Click:Connect(function()
+    
+    local player = game.Players.LocalPlayer  -- Adjust this to your use case
+
+local function removeTools()
+    for _, item in pairs(player.Backpack:GetChildren()) do
+        if item:IsA("Tool") then
+            item:Destroy()
+        end
+    end
+end
+
+removeTools()
+
+local function item()
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "stick"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "brimstone"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "uppercut"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+end
+
+item()
+    
+    
+end)
+
+-- Button 3
+local Combo3 = Instance.new("TextButton")
+Combo3.Parent = ScrollingFrame
+Combo3.Size = UDim2.new(0, 250, 0, 45)
+Combo3.Position = UDim2.new(0.5, -124.5, 0.2, 72.5)
+Combo3.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo3.BackgroundTransparency = 0.7
+Combo3.Text = "Sugarcoat + Brimstone + Uppercut"
+Combo3.TextSize = 17
+Combo3.Font = Enum.Font.FredokaOne
+Combo3.TextColor3 = Color3.new(1, 1, 1)
+Combo3.TextStrokeTransparency = 1 
+
+local ButtonStroke3 = Instance.new("UIStroke", Combo3)
+ButtonStroke3.Color = Color3.new(0, 0, 0)
+ButtonStroke3.Thickness = 2 
+
+local ButtonUICorner4 = Instance.new("UICorner")
+ButtonUICorner4.Parent = Combo3
+ButtonUICorner4.CornerRadius = UDim.new(0, 12)
+
+local ButtonOutline4 = Instance.new("UIStroke")
+ButtonOutline4.Parent = Combo3
+ButtonOutline4.Thickness = 2
+ButtonOutline4.Color = Color3.new(1, 1, 1)
+ButtonOutline4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Combo3.MouseButton1Click:Connect(function()
+    
+    local player = game.Players.LocalPlayer  -- Adjust this to your use case
+
+local function removeTools()
+    for _, item in pairs(player.Backpack:GetChildren()) do
+        if item:IsA("Tool") then
+            item:Destroy()
+        end
+    end
+end
+
+removeTools()
+
+local function item()
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "sugarcoat"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "brimstone"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "uppercut"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+end
+
+item()
+    
+    
+end)
+    
+
+-- Button 4
+local Combo4 = Instance.new("TextButton")
+Combo4.Parent = ScrollingFrame
+Combo4.Size = UDim2.new(0, 250, 0, 45)
+Combo4.Position = UDim2.new(0.5, -124.5, 0.25, 120) 
+Combo4.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo4.BackgroundTransparency = 0.7
+Combo4.Text = "Solemn lament + Chicago + Cloud Bottle"
+Combo4.TextSize = 15
+Combo4.Font = Enum.Font.FredokaOne
+Combo4.TextColor3 = Color3.new(1, 1, 1)
+Combo4.TextStrokeTransparency = 1
+
+local ButtonStroke4 = Instance.new("UIStroke", Combo4)
+ButtonStroke4.Color = Color3.new(0, 0, 0)
+ButtonStroke4.Thickness = 2 
+
+local ButtonUICorner5 = Instance.new("UICorner")
+ButtonUICorner5.Parent = Combo4
+ButtonUICorner5.CornerRadius = UDim.new(0, 12)
+
+local ButtonOutline5 = Instance.new("UIStroke")
+ButtonOutline5.Parent = Combo4
+ButtonOutline5.Thickness = 2
+ButtonOutline5.Color = Color3.new(1, 1, 1)
+ButtonOutline5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Combo4.MouseButton1Click:Connect(function()
+    
+    local player = game.Players.LocalPlayer  -- Adjust this to your use case
+
+local function removeTools()
+    for _, item in pairs(player.Backpack:GetChildren()) do
+        if item:IsA("Tool") then
+            item:Destroy()
+        end
+    end
+end
+
+removeTools()
+
+local function item()
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "solemn lament"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "chicago"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "cloud in a bottle"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+end
+
+item()
+    
+end)
+
+-- Button 5
+local Combo5 = Instance.new("TextButton")
+Combo5.Parent = ScrollingFrame
+Combo5.Size = UDim2.new(0, 250, 0, 45)
+Combo5.Position = UDim2.new(0.5, -124.5, 0.3, 167.5)
+Combo5.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo5.BackgroundTransparency = 0.7
+Combo5.Text = "Backhand Slap + Apc + Distraction"
+Combo5.TextSize = 17
+Combo5.Font = Enum.Font.FredokaOne
+Combo5.TextColor3 = Color3.new(1, 1, 1)
+Combo5.TextStrokeTransparency = 1
+
+local ButtonStroke5 = Instance.new("UIStroke", Combo5)
+ButtonStroke5.Color = Color3.new(0, 0, 0)
+ButtonStroke5.Thickness = 2 
+
+local ButtonUICorner6 = Instance.new("UICorner")
+ButtonUICorner6.Parent = Combo5
+ButtonUICorner6.CornerRadius = UDim.new(0, 12)
+
+local ButtonOutline6 = Instance.new("UIStroke")
+ButtonOutline6.Parent = Combo5
+ButtonOutline6.Thickness = 2
+ButtonOutline6.Color = Color3.new(1, 1, 1)
+ButtonOutline6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Combo5.MouseButton1Click:Connect(function()
+    local player = game.Players.LocalPlayer  -- Adjust this to your use case
+
+local function removeTools()
+    for _, item in pairs(player.Backpack:GetChildren()) do
+        if item:IsA("Tool") then
+            item:Destroy()
+        end
+    end
+end
+
+removeTools()
+
+local function item()
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "backhand slap"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "apc"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "distraction"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+end
+
+item()
+
+
+end)
+
+-- Button 6
+local Combo6 = Instance.new("TextButton")
+Combo6.Parent = ScrollingFrame
+Combo6.Size = UDim2.new(0, 250, 0, 45)
+Combo6.Position = UDim2.new(0.5, -124.5, 0.35, 215) 
+Combo6.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo6.BackgroundTransparency = 0.7
+Combo6.Text = "Night Reaper + Zapper + Holy Mantle"
+Combo6.TextSize = 16
+Combo6.Font = Enum.Font.FredokaOne
+Combo6.TextColor3 = Color3.new(1, 1, 1)
+Combo6.TextStrokeTransparency = 1
+
+local ButtonStroke6 = Instance.new("UIStroke", Combo6)
+ButtonStroke6.Color = Color3.new(0, 0, 0)
+ButtonStroke6.Thickness = 2 
+
+local ButtonUICorner7 = Instance.new("UICorner")
+ButtonUICorner7.Parent = Combo6
+ButtonUICorner7.CornerRadius = UDim.new(0, 12)
+
+local ButtonOutline7 = Instance.new("UIStroke")
+ButtonOutline7.Parent = Combo6
+ButtonOutline7.Thickness = 2
+ButtonOutline7.Color = Color3.new(1, 1, 1)
+ButtonOutline7.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Combo6.MouseButton1Click:Connect(function()
+    
+    local player = game.Players.LocalPlayer  -- Adjust this to your use case
+
+local function removeTools()
+    for _, item in pairs(player.Backpack:GetChildren()) do
+        if item:IsA("Tool") then
+            item:Destroy()
+        end
+    end
+end
+
+removeTools()
+
+local function item()
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "night reaper"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "zapper"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "holy mantle"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+end
+
+item()
+    
+end)
+
+
+
+    -- Button 7
+local Combo7 = Instance.new("TextButton")
+Combo7.Parent = ScrollingFrame
+Combo7.Size = UDim2.new(0, 250, 0, 45)
+Combo7.Position = UDim2.new(0.5, -124.5, 0.4, 267.5)
+Combo7.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo7.BackgroundTransparency = 0.7
+Combo7.Text = "Moonwalker + SSG-08 + Bossraid"
+Combo7.TextSize = 18
+Combo7.Font = Enum.Font.FredokaOne
+Combo7.TextColor3 = Color3.new(1, 1, 1)
+Combo7.TextStrokeTransparency = 1
+
+-- Add outline to Button 7
+local ButtonOutline7 = Instance.new("UIStroke")
+ButtonOutline7.Parent = Combo7
+ButtonOutline7.Thickness = 2
+ButtonOutline7.Color = Color3.new(1, 1, 1) -- White outline for the button
+ButtonOutline7.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Corner radius for Button 7
+local ButtonUICorner7 = Instance.new("UICorner")
+ButtonUICorner7.Parent = Combo7
+ButtonUICorner7.CornerRadius = UDim.new(0, 12) -- Set corner radius
+
+-- Click event for Button 7
+Combo7.MouseButton1Click:Connect(function()
+    
+    local player = game.Players.LocalPlayer  -- Adjust this to your use case
+
+local function removeTools()
+    for _, item in pairs(player.Backpack:GetChildren()) do
+        if item:IsA("Tool") then
+            item:Destroy()
+        end
+    end
+end
+
+removeTools()
+
+local function item()
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "moonwalker"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "ssg-08"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+local args = {
+    [1] = {
+        [1] = game:GetService("Players").LocalPlayer
+    },
+    [2] = "bossraid"
+}
+
+game:GetService("ReplicatedStorage").AdminUI.ItemRemote:InvokeServer(unpack(args))
+
+end
+
+item()
+    
+    
+end)
+
+
+-- Button 8
+local Combo8 = Instance.new("TextButton")
+Combo8.Parent = ScrollingFrame
+Combo8.Size = UDim2.new(0, 100, 0, 45)
+Combo8.Position = UDim2.new(0.5, -124.5, 0.45, 315)
+Combo8.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo8.BackgroundTransparency = 0.7
+Combo8.Text = "<"
+Combo8.TextSize = 18
+Combo8.Font = Enum.Font.FredokaOne
+Combo8.TextColor3 = Color3.new(1, 1, 1)
+Combo8.TextStrokeTransparency = 1
+
+-- Add outline to Button 8
+local ButtonOutline8 = Instance.new("UIStroke")
+ButtonOutline8.Parent = Combo8
+ButtonOutline8.Thickness = 2
+ButtonOutline8.Color = Color3.new(1, 1, 1) -- White outline for the button
+ButtonOutline8.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Corner radius for Button 8
+local ButtonUICorner8 = Instance.new("UICorner")
+ButtonUICorner8.Parent = Combo8
+ButtonUICorner8.CornerRadius = UDim.new(0, 12) -- Set corner radius
+
+-- Click event for Button 8
+Combo8.MouseButton1Click:Connect(function()
+    Frame.Visible = true
+Frame2.Visible = true
+Frame3.Visible = false
+ToggleButton.Visible = false
+ToggleButton1.Visible = true
+end)
+
+-- Button 9
+local Combo9 = Instance.new("TextButton")
+Combo9.Parent = ScrollingFrame
+Combo9.Size = UDim2.new(0, 100, 0, 45)
+Combo9.Position = UDim2.new(0.5, 25, 0.45, 315) -- Right next to Button 8
+Combo9.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo9.BackgroundTransparency = 0.7
+Combo9.Text = ">"
+Combo9.TextSize = 18
+Combo9.Font = Enum.Font.FredokaOne
+Combo9.TextColor3 = Color3.new(1, 1, 1)
+Combo9.TextStrokeTransparency = 1
+
+-- Add outline to Button 9
+local ButtonOutline9 = Instance.new("UIStroke")
+ButtonOutline9.Parent = Combo9
+ButtonOutline9.Thickness = 2
+ButtonOutline9.Color = Color3.new(1, 1, 1) -- White outline for the button
+ButtonOutline9.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Corner radius for Button 9
+local ButtonUICorner9 = Instance.new("UICorner")
+ButtonUICorner9.Parent = Combo9
+ButtonUICorner9.CornerRadius = UDim.new(0, 12) -- Set corner radius
+
+-- Click event for Button 9
+Combo9.MouseButton1Click:Connect(function()
+    
+    
+    
+    
+        local ScreenGui = Instance.new("ScreenGui")
+    local Frame4 = Instance.new("Frame")
+    local UICorner4 = Instance.new("UICorner")
+    local UIStroke4 = Instance.new("UIStroke")
+    local ScrollingFrame = Instance.new("ScrollingFrame") -- Create a ScrollingFrame
+    local AdminPanelLabel = Instance.new("TextLabel") -- New label for "Admin Panel"
+    local AdminPanelStroke = Instance.new("UIStroke") -- UIStroke for Admin Panel
+    
+    
+    local ToggleButton3 = Instance.new("ImageButton")
+    local ToggleUICorner = Instance.new("UICorner")
+    local ToggleTextLabel = Instance.new("TextLabel")
+
+    ToggleButton3.Parent = ScreenGui
+    ToggleButton3.Size = UDim2.new(0, 44, 0, 44)
+    ToggleButton3.Position = UDim2.new(0.5, -195, 0.014, -50)
+    ToggleButton3.BackgroundColor3 = Color3.new(0, 0, 0)
+    ToggleButton3.Transparency = 0.35
+    ToggleButton3.Visible = true
+
+    ToggleUICorner.Parent = ToggleButton3
+    ToggleUICorner.CornerRadius = UDim.new(0, 50)
+
+    ToggleTextLabel.Parent = ToggleButton3
+    ToggleTextLabel.Size = UDim2.new(1, 0, 1, 0)
+    ToggleTextLabel.Position = UDim2.new(0, 0, -0.05, 0)
+    ToggleTextLabel.BackgroundTransparency = 1
+    ToggleTextLabel.Text = "★"
+    ToggleTextLabel.TextColor3 = Color3.new(1, 1, 1)
+    ToggleTextLabel.TextScaled = true
+    ToggleTextLabel.TextStrokeTransparency = 0
+
+    ToggleButton3.MouseButton1Click:Connect(function()
+    Frame4.Visible = not Frame4.Visible
+   end)
+    
+    
+    
+    -- Set up the UI
+    ScreenGui.Parent = game.CoreGui
+    ScreenGui.Name = "CoolXD"
+
+    -- Main Frame
+    Frame4.Parent = ScreenGui
+    Frame4.BackgroundColor3 = Color3.fromRGB(0,0,0)
+    Frame4.Position = UDim2.new(0.5, -175, 0.5, -150)
+    Frame4.Size = UDim2.new(0,350,0,300)
+    Frame4.Visible = true
+    Frame4.BackgroundTransparency = 0.35
+
+    -- Outline for the main frame
+    UIStroke4.Parent = Frame4
+    UIStroke4.Color = Color3.new(1,1,1)
+    UIStroke4.Thickness = 2.7
+
+    -- Rounded corners for the main frame
+    UICorner4.Parent = Frame4
+    UICorner4.CornerRadius = UDim.new(0, 10)
+
+    -- Scrolling Frame
+    ScrollingFrame.Parent = Frame4
+    ScrollingFrame.Size = UDim2.new(1, 0, 1, 0) -- Full size of the main frame
+    ScrollingFrame.BackgroundTransparency = 1 -- Make it transparent
+    ScrollingFrame.ScrollBarThickness = 5 -- Set thickness of the scrollbar
+    ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 700) -- Adjust the canvas size based on content
+
+    -- Admin Panel label
+    AdminPanelLabel.Parent = ScrollingFrame
+    AdminPanelLabel.Size = UDim2.new(1, 0, 0.2, 0) -- Adjust size as needed
+    AdminPanelLabel.Position = UDim2.new(0, 0, -0.068, 0) -- Position at the top
+    AdminPanelLabel.BackgroundTransparency = 1 -- Make it transparent
+    AdminPanelLabel.Text = "Combos" -- Label text
+    AdminPanelLabel.TextSize = 23 -- Text size
+    AdminPanelLabel.Font = Enum.Font.FredokaOne -- Set font to FredokaOne
+    AdminPanelLabel.TextColor3 = Color3.new(1, 1, 1) -- White text
+
+    -- Black outline for the Admin Panel label
+    AdminPanelStroke.Parent = AdminPanelLabel
+    AdminPanelStroke.Color = Color3.new(0, 0, 0) -- Black outline for the label
+    AdminPanelStroke.Thickness = 2 -- Thickness of the outline
+
+    -- Instant Crash button
+    local Combo1 = Instance.new("TextButton") -- Renamed from InstantCrash
+Combo1.Parent = ScrollingFrame
+Combo1.Size = UDim2.new(0, 250, 0, 45)
+Combo1.Position = UDim2.new(0.5, -124.5, 0.1, -22.5)
+Combo1.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo1.BackgroundTransparency = 0.7
+Combo1.Text = "SOON"
+Combo1.TextSize = 18
+Combo1.Font = Enum.Font.FredokaOne
+
+-- Set text color to white and remove text outline
+Combo1.TextColor3 = Color3.new(1, 1, 1) -- White text
+Combo1.TextStrokeTransparency = 1 -- Remove text outline by setting transparency to 1
+
+-- Black outline for the Combo1 button
+local ButtonStroke = Instance.new("UIStroke", Combo1)
+ButtonStroke.Color = Color3.new(0, 0, 0) -- Black outline for the button
+ButtonStroke.Thickness = 2 -- Thickness of the outline
+
+-- Corner radius for the Combo1 button
+local ButtonUICorner2 = Instance.new("UICorner")
+ButtonUICorner2.Parent = Combo1
+ButtonUICorner2.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Combo1 button
+local ButtonOutline2 = Instance.new("UIStroke")
+ButtonOutline2.Parent = Combo1
+ButtonOutline2.Thickness = 2
+ButtonOutline2.Color = Color3.new(1, 1, 1) -- White outline for the button
+ButtonOutline2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Click event for Combo1
+Combo1.MouseButton1Click:Connect(function()
+    print(".")
+end)
+
+-- Button 2
+local Combo2 = Instance.new("TextButton")
+Combo2.Parent = ScrollingFrame
+Combo2.Size = UDim2.new(0, 250, 0, 45)
+Combo2.Position = UDim2.new(0.5, -124.5, 0.15, 25)  -- Adjust position for stacking
+Combo2.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo2.BackgroundTransparency = 0.7
+Combo2.Text = "SOON"
+Combo2.TextSize = 17
+Combo2.Font = Enum.Font.FredokaOne
+Combo2.TextColor3 = Color3.new(1, 1, 1) 
+Combo2.TextStrokeTransparency = 1 
+
+local ButtonStroke2 = Instance.new("UIStroke", Combo2)
+ButtonStroke2.Color = Color3.new(0, 0, 0)
+ButtonStroke2.Thickness = 2 
+
+local ButtonUICorner3 = Instance.new("UICorner")
+ButtonUICorner3.Parent = Combo2
+ButtonUICorner3.CornerRadius = UDim.new(0, 12)
+
+local ButtonOutline3 = Instance.new("UIStroke")
+ButtonOutline3.Parent = Combo2
+ButtonOutline3.Thickness = 2
+ButtonOutline3.Color = Color3.new(1, 1, 1)
+ButtonOutline3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Combo2.MouseButton1Click:Connect(function()
+    
+    print(".")
+end)
+
+-- Button 3
+local Combo3 = Instance.new("TextButton")
+Combo3.Parent = ScrollingFrame
+Combo3.Size = UDim2.new(0, 250, 0, 45)
+Combo3.Position = UDim2.new(0.5, -124.5, 0.2, 72.5)
+Combo3.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo3.BackgroundTransparency = 0.7
+Combo3.Text = "SOON"
+Combo3.TextSize = 17
+Combo3.Font = Enum.Font.FredokaOne
+Combo3.TextColor3 = Color3.new(1, 1, 1)
+Combo3.TextStrokeTransparency = 1 
+
+local ButtonStroke3 = Instance.new("UIStroke", Combo3)
+ButtonStroke3.Color = Color3.new(0, 0, 0)
+ButtonStroke3.Thickness = 2 
+
+local ButtonUICorner4 = Instance.new("UICorner")
+ButtonUICorner4.Parent = Combo3
+ButtonUICorner4.CornerRadius = UDim.new(0, 12)
+
+local ButtonOutline4 = Instance.new("UIStroke")
+ButtonOutline4.Parent = Combo3
+ButtonOutline4.Thickness = 2
+ButtonOutline4.Color = Color3.new(1, 1, 1)
+ButtonOutline4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Combo3.MouseButton1Click:Connect(function()
+    
+    print(".")
+end)
+    
+
+-- Button 4
+local Combo4 = Instance.new("TextButton")
+Combo4.Parent = ScrollingFrame
+Combo4.Size = UDim2.new(0, 250, 0, 45)
+Combo4.Position = UDim2.new(0.5, -124.5, 0.25, 120) 
+Combo4.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo4.BackgroundTransparency = 0.7
+Combo4.Text = "SOON"
+Combo4.TextSize = 15
+Combo4.Font = Enum.Font.FredokaOne
+Combo4.TextColor3 = Color3.new(1, 1, 1)
+Combo4.TextStrokeTransparency = 1
+
+local ButtonStroke4 = Instance.new("UIStroke", Combo4)
+ButtonStroke4.Color = Color3.new(0, 0, 0)
+ButtonStroke4.Thickness = 2 
+
+local ButtonUICorner5 = Instance.new("UICorner")
+ButtonUICorner5.Parent = Combo4
+ButtonUICorner5.CornerRadius = UDim.new(0, 12)
+
+local ButtonOutline5 = Instance.new("UIStroke")
+ButtonOutline5.Parent = Combo4
+ButtonOutline5.Thickness = 2
+ButtonOutline5.Color = Color3.new(1, 1, 1)
+ButtonOutline5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Combo4.MouseButton1Click:Connect(function()
+    
+    print(".")
+end)
+
+-- Button 5
+local Combo5 = Instance.new("TextButton")
+Combo5.Parent = ScrollingFrame
+Combo5.Size = UDim2.new(0, 250, 0, 45)
+Combo5.Position = UDim2.new(0.5, -124.5, 0.3, 167.5)
+Combo5.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo5.BackgroundTransparency = 0.7
+Combo5.Text = "SOON"
+Combo5.TextSize = 17
+Combo5.Font = Enum.Font.FredokaOne
+Combo5.TextColor3 = Color3.new(1, 1, 1)
+Combo5.TextStrokeTransparency = 1
+
+local ButtonStroke5 = Instance.new("UIStroke", Combo5)
+ButtonStroke5.Color = Color3.new(0, 0, 0)
+ButtonStroke5.Thickness = 2 
+
+local ButtonUICorner6 = Instance.new("UICorner")
+ButtonUICorner6.Parent = Combo5
+ButtonUICorner6.CornerRadius = UDim.new(0, 12)
+
+local ButtonOutline6 = Instance.new("UIStroke")
+ButtonOutline6.Parent = Combo5
+ButtonOutline6.Thickness = 2
+ButtonOutline6.Color = Color3.new(1, 1, 1)
+ButtonOutline6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Combo5.MouseButton1Click:Connect(function()
+    print(".")
+end)
+
+-- Button 6
+local Combo6 = Instance.new("TextButton")
+Combo6.Parent = ScrollingFrame
+Combo6.Size = UDim2.new(0, 250, 0, 45)
+Combo6.Position = UDim2.new(0.5, -124.5, 0.35, 215) 
+Combo6.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo6.BackgroundTransparency = 0.7
+Combo6.Text = "SOON"
+Combo6.TextSize = 16
+Combo6.Font = Enum.Font.FredokaOne
+Combo6.TextColor3 = Color3.new(1, 1, 1)
+Combo6.TextStrokeTransparency = 1
+
+local ButtonStroke6 = Instance.new("UIStroke", Combo6)
+ButtonStroke6.Color = Color3.new(0, 0, 0)
+ButtonStroke6.Thickness = 2 
+
+local ButtonUICorner7 = Instance.new("UICorner")
+ButtonUICorner7.Parent = Combo6
+ButtonUICorner7.CornerRadius = UDim.new(0, 12)
+
+local ButtonOutline7 = Instance.new("UIStroke")
+ButtonOutline7.Parent = Combo6
+ButtonOutline7.Thickness = 2
+ButtonOutline7.Color = Color3.new(1, 1, 1)
+ButtonOutline7.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Combo6.MouseButton1Click:Connect(function()
+    
+    print(".")
+end)
+
+
+
+    -- Button 7
+local Combo7 = Instance.new("TextButton")
+Combo7.Parent = ScrollingFrame
+Combo7.Size = UDim2.new(0, 250, 0, 45)
+Combo7.Position = UDim2.new(0.5, -124.5, 0.4, 267.5)
+Combo7.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo7.BackgroundTransparency = 0.7
+Combo7.Text = "SOON"
+Combo7.TextSize = 18
+Combo7.Font = Enum.Font.FredokaOne
+Combo7.TextColor3 = Color3.new(1, 1, 1)
+Combo7.TextStrokeTransparency = 1
+
+-- Add outline to Button 7
+local ButtonOutline7 = Instance.new("UIStroke")
+ButtonOutline7.Parent = Combo7
+ButtonOutline7.Thickness = 2
+ButtonOutline7.Color = Color3.new(1, 1, 1) -- White outline for the button
+ButtonOutline7.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Corner radius for Button 7
+local ButtonUICorner7 = Instance.new("UICorner")
+ButtonUICorner7.Parent = Combo7
+ButtonUICorner7.CornerRadius = UDim.new(0, 12) -- Set corner radius
+
+-- Click event for Button 7
+Combo7.MouseButton1Click:Connect(function()
+    
+    print(".")
+end)
+
+
+-- Button 8
+local Combo8 = Instance.new("TextButton")
+Combo8.Parent = ScrollingFrame
+Combo8.Size = UDim2.new(0, 100, 0, 45)
+Combo8.Position = UDim2.new(0.5, -124.5, 0.45, 315)
+Combo8.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo8.BackgroundTransparency = 0.7
+Combo8.Text = "<"
+Combo8.TextSize = 18
+Combo8.Font = Enum.Font.FredokaOne
+Combo8.TextColor3 = Color3.new(1, 1, 1)
+Combo8.TextStrokeTransparency = 1
+
+-- Add outline to Button 8
+local ButtonOutline8 = Instance.new("UIStroke")
+ButtonOutline8.Parent = Combo8
+ButtonOutline8.Thickness = 2
+ButtonOutline8.Color = Color3.new(1, 1, 1) -- White outline for the button
+ButtonOutline8.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Corner radius for Button 8
+local ButtonUICorner8 = Instance.new("UICorner")
+ButtonUICorner8.Parent = Combo8
+ButtonUICorner8.CornerRadius = UDim.new(0, 12) -- Set corner radius
+
+-- Click event for Button 8
+Combo8.MouseButton1Click:Connect(function()
+    Frame4.Visible = false
+    Frame3.Visible = true
+    ToggleButton3.Visible = false
+    ToggleButton.Visible = true
+end)
+
+-- Button 9
+local Combo9 = Instance.new("TextButton")
+Combo9.Parent = ScrollingFrame
+Combo9.Size = UDim2.new(0, 100, 0, 45)
+Combo9.Position = UDim2.new(0.5, 25, 0.45, 315) -- Right next to Button 8
+Combo9.BackgroundColor3 = Color3.new(0, 0, 0)
+Combo9.BackgroundTransparency = 0.7
+Combo9.Text = ">"
+Combo9.TextSize = 18
+Combo9.Font = Enum.Font.FredokaOne
+Combo9.TextColor3 = Color3.new(1, 1, 1)
+Combo9.TextStrokeTransparency = 1
+
+-- Add outline to Button 9
+local ButtonOutline9 = Instance.new("UIStroke")
+ButtonOutline9.Parent = Combo9
+ButtonOutline9.Thickness = 2
+ButtonOutline9.Color = Color3.new(1, 1, 1) -- White outline for the button
+ButtonOutline9.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Corner radius for Button 9
+local ButtonUICorner9 = Instance.new("UICorner")
+ButtonUICorner9.Parent = Combo9
+ButtonUICorner9.CornerRadius = UDim.new(0, 12) -- Set corner radius
+
+-- Click event for Button 9
+Combo9.MouseButton1Click:Connect(function()
+    print("Button 9 clicked")
+end)
+
+
+
+
+
+    -- Dragging functionality (if you have a scrolling frame)
+    local dragging, dragStart, startPos
+
+    local function update(input)
+        local delta = input.Position - dragStart
+        Frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+
+    Frame.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = true
+            dragStart = input.Position
+            startPos = Frame.Position
+
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+
+    Frame.InputChanged:Connect(function(input)
+        if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+            update(input)
+        end
+    end)
+    
+    
+    Frame3.Visible = false
+    ToggleButton.Visible = false
+    
+    
+    
+    
+    
+end)
+
+
+
+
+
+    -- Dragging functionality (if you have a scrolling frame)
+    local dragging, dragStart, startPos
+
+    local function update(input)
+        local delta = input.Position - dragStart
+        Frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+
+    Frame.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = true
+            dragStart = input.Position
+            startPos = Frame.Position
+
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+
+    Frame.InputChanged:Connect(function(input)
+        if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+            update(input)
+        end
+    end)
+
+Frame.Visible = false
+Frame2.Visible = false
+ToggleButton.Visible = true
+ToggleButton1.Visible = false
+
+
+
+
+end)
+
+
+
+    
+
+    
+
+
+    
+    
+    ---Unban Button
+UnbanButton.Parent = Frame
+UnbanButton.Size = UDim2.new(0, 105, 0, 40) -- Adjust size as needed
+UnbanButton.Position = UDim2.new(0.5, 52.5, 0.53, 0)
+UnbanButton.AnchorPoint = Vector2.new(1, 0) -- Anchor to the top-right corner
+UnbanButton.BackgroundColor3 = Color3.new(0, 0, 0)
+UnbanButton.BackgroundTransparency = 0.7
+UnbanButton.Text = "Un\nTBAN" -- Button text
+UnbanButton.TextColor3 = Color3.new(1, 1, 1)
+UnbanButton.Font = Enum.Font.FredokaOne
+UnbanButton.TextSize = 15
+UnbanButton.Visible = false
+
+-- Add rounded corners to UnbanButton
+local ButtonUICorner4 = Instance.new("UICorner")
+ButtonUICorner4.Parent = UnbanButton
+ButtonUICorner4.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to UnbanButton
+local ButtonOutline4 = Instance.new("UIStroke")
+ButtonOutline4.Parent = UnbanButton
+ButtonOutline4.Thickness = 2
+ButtonOutline4.Color = Color3.new(0, 255, 0)
+ButtonOutline4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+UnbanButton2.Parent = Frame
+UnbanButton2.Size = UDim2.new(0, 105, 0, 40)
+UnbanButton2.Position = UDim2.new(0.5, -75, 0.53, 0) -- Right corner: slight padding from edges
+UnbanButton2.AnchorPoint = Vector2.new(1, 0) -- Anchor to the top-right corner
+UnbanButton2.BackgroundColor3 = Color3.new(0, 0, 0)
+UnbanButton2.BackgroundTransparency = 0.7
+UnbanButton2.Text = "Un\nPBAN" -- Button text
+UnbanButton2.TextColor3 = Color3.new(1, 1, 1)
+UnbanButton2.Font = Enum.Font.FredokaOne
+UnbanButton2.TextSize = 15
+UnbanButton2.Visible = false
+
+-- Add rounded corners to UnbanButton
+local ButtonUICorner4 = Instance.new("UICorner")
+ButtonUICorner4.Parent = UnbanButton2
+ButtonUICorner4.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to UnbanButton
+local ButtonOutline4 = Instance.new("UIStroke")
+ButtonOutline4.Parent = UnbanButton2
+ButtonOutline4.Thickness = 2
+ButtonOutline4.Color = Color3.new(0, 255, 0)
+ButtonOutline4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+UnbanButton3.Parent = Frame
+UnbanButton3.Size = UDim2.new(0, 105, 0, 40)
+UnbanButton3.Position = UDim2.new(0.5, 52.5, 0.53, 0)
+UnbanButton3.AnchorPoint = Vector2.new(1, 0) -- Anchor to the top-right corner
+UnbanButton3.BackgroundColor3 = Color3.new(0, 0, 0)
+UnbanButton3.BackgroundTransparency = 0.7
+UnbanButton3.Text = "Un\nTBAN" -- Button text
+UnbanButton3.TextColor3 = Color3.new(1, 1, 1)
+UnbanButton3.Font = Enum.Font.FredokaOne
+UnbanButton3.TextSize = 15
+UnbanButton3.Visible = false
+
+-- Add rounded corners to UnbanButton3
+local ButtonUICorner4 = Instance.new("UICorner")
+ButtonUICorner4.Parent = UnbanButton3
+ButtonUICorner4.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to UnbanButton3
+local ButtonOutline4 = Instance.new("UIStroke")
+ButtonOutline4.Parent = UnbanButton3
+ButtonOutline4.Thickness = 2
+ButtonOutline4.Color = Color3.new(0, 255, 0)
+ButtonOutline4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+UnbanButton4.Parent = Frame
+UnbanButton4.Size = UDim2.new(0, 105, 0, 40)
+UnbanButton4.Position = UDim2.new(0.5, -75, 0.53, 0)
+UnbanButton4.AnchorPoint = Vector2.new(1, 0) -- Anchor to the top-right corner
+UnbanButton4.BackgroundColor3 = Color3.new(0, 0, 0)
+UnbanButton4.BackgroundTransparency = 0.7
+UnbanButton4.Text = "Un\nPBAN" -- Button text
+UnbanButton4.TextColor3 = Color3.new(1, 1, 1)
+UnbanButton4.Font = Enum.Font.FredokaOne
+UnbanButton4.TextSize = 15
+
+-- Add rounded corners to UnbanButton4
+local ButtonUICorner4 = Instance.new("UICorner")
+ButtonUICorner4.Parent = UnbanButton4
+ButtonUICorner4.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to UnbanButton4
+local ButtonOutline4 = Instance.new("UIStroke")
+ButtonOutline4.Parent = UnbanButton4
+ButtonOutline4.Thickness = 2
+ButtonOutline4.Color = Color3.new(0, 255, 0)
+ButtonOutline4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UnbanButton4.Visible = false
+
+
+
+
+    
+    
+    
+
+
+-- Create TextBox2
+local TextBox2 = Instance.new("TextBox")
+TextBox2.Parent = Frame
+TextBox2.Size = UDim2.new(0, 105, 0, 40)
+TextBox2.Position = UDim2.new(0.5, -180, 0.53, 0) -- Position it differently from TextBox1
+TextBox2.BackgroundColor3 = Color3.new(0, 0, 0)
+TextBox2.BackgroundTransparency = 0.7
+TextBox2.PlaceholderText = "Hour(s)" -- Distinct placeholder for TextBox2
+TextBox2.PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7)
+TextBox2.Text = ""
+TextBox2.TextColor3 = Color3.new(1, 1, 1)
+TextBox2.Font = Enum.Font.FredokaOne
+TextBox2.TextSize = 18
+TextBox2.Visible = false
+
+-- Add rounded corners to TextBox2
+local TextBox2UICorner = Instance.new("UICorner")
+TextBox2UICorner.Parent = TextBox2
+TextBox2UICorner.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to TextBox2
+local TextBox2Outline = Instance.new("UIStroke")
+TextBox2Outline.Parent = TextBox2
+TextBox2Outline.Thickness = 2
+TextBox2Outline.Color = Color3.new(1, 1, 1)
+TextBox2Outline.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+-- Create TextBox3
+local TextBox3 = Instance.new("TextBox")
+TextBox3.Parent = Frame
+TextBox3.Size = UDim2.new(0, 105, 0, 40)
+TextBox3.Position = UDim2.new(0.5, 75, 0.53, 0) -- Positioned differently from TextBox2
+TextBox3.BackgroundColor3 = Color3.new(0, 0, 0)
+TextBox3.BackgroundTransparency = 0.7
+TextBox3.PlaceholderText = "Second(s)" -- Distinct placeholder for TextBox3
+TextBox3.PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7)
+TextBox3.Text = ""
+TextBox3.TextColor3 = Color3.new(1, 1, 1)
+TextBox3.Font = Enum.Font.FredokaOne
+TextBox3.TextSize = 18
+
+-- Add rounded corners to TextBox3
+local TextBox3UICorner = Instance.new("UICorner")
+TextBox3UICorner.Parent = TextBox3
+TextBox3UICorner.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to TextBox3
+local TextBox3Outline = Instance.new("UIStroke")
+TextBox3Outline.Parent = TextBox3
+TextBox3Outline.Thickness = 2
+TextBox3Outline.Color = Color3.new(1, 1, 1)
+TextBox3Outline.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+
+
+
+
+
+-- Create TextBox4 (Middle)
+local TextBox4 = Instance.new("TextBox")
+TextBox4.Parent = Frame
+TextBox4.Size = UDim2.new(0, 105, 0, 40)
+TextBox4.Position = UDim2.new(0.5, -52.5, 0.53, 0) -- Positioned in the middle between TextBox2 and TextBox3
+TextBox4.BackgroundColor3 = Color3.new(0, 0, 0)
+TextBox4.BackgroundTransparency = 0.7
+TextBox4.PlaceholderText = "Minute(s)" -- Distinct placeholder for TextBox4
+TextBox4.PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7)
+TextBox4.Text = ""
+TextBox4.TextColor3 = Color3.new(1, 1, 1)
+TextBox4.Font = Enum.Font.FredokaOne
+TextBox4.TextSize = 18
+TextBox4.Visible = false
+
+-- Add rounded corners to TextBox4
+local TextBox4UICorner = Instance.new("UICorner")
+TextBox4UICorner.Parent = TextBox4
+TextBox4UICorner.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to TextBox4
+local TextBox4Outline = Instance.new("UIStroke")
+TextBox4Outline.Parent = TextBox4
+TextBox4Outline.Thickness = 2
+TextBox4Outline.Color = Color3.new(1, 1, 1)
+TextBox4Outline.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+
+local TextBox5 = Instance.new("TextBox")
+TextBox5.Parent = Frame
+TextBox5.Size = UDim2.new(0, 305, 0, 60)
+TextBox5.Position = UDim2.new(0, 60, 0.22, 0)
+TextBox5.BackgroundColor3 = Color3.new(0, 0, 0)
+TextBox5.BackgroundTransparency = 0.7
+TextBox5.PlaceholderText = "Reason" -- Custom placeholder text for TextBox5
+TextBox5.PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7) -- Sets the placeholder text color
+TextBox5.Text = "" -- Ensure no default text is set
+TextBox5.TextColor3 = Color3.new(1, 1, 1)
+TextBox5.Font = Enum.Font.FredokaOne
+TextBox5.TextSize = 18
+
+-- Add rounded corners to TextBox5
+local TextBox5UICorner = Instance.new("UICorner")
+TextBox5UICorner.Parent = TextBox5
+TextBox5UICorner.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to TextBox5
+local TextBox5Outline = Instance.new("UIStroke")
+TextBox5Outline.Parent = TextBox5
+TextBox5Outline.Thickness = 2
+TextBox5Outline.Color = Color3.new(1, 1, 1)
+TextBox5Outline.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+    -- Variable to control the banning loop
+local banning = false
+
+-- Ban Button Functionality
+Button1.MouseButton1Click:Connect(function()
+    local reason = TextBox5.Text -- Get the reason from the textbox
+    if reason == "" then
+        notify("Invalid reason!", 24)
+        return
+    end
+
+    -- Create the arguments table with the reason
+    local args = {
+        [1] = 1762242526,
+        [2] = "Kick",
+        [3] = "You have been PERMAMENT BANNED | Reason: " .. reason
+    }
+
+    -- Start running the remote every 0.5 seconds
+    notify("KhoaAmazed has been\npermament banned\nReason: " .. reason, 18, 5)
+    banning = true
+    while banning do
+        game:GetService("ReplicatedStorage").AdminUI.PunishRemote:InvokeServer(unpack(args))
+        wait(0.5)
+    end
+end)
+
+
+
+
+local isBanning = false -- Flag to track if temp banning is active
+
+-- Temp Ban button functionality
+Button2.MouseButton1Click:Connect(function()
+    local reason = TextBox5.Text -- Get the text from the Reason textbox
+    local seconds = tonumber(TextBox3.Text) -- Get the text from the Seconds textbox and convert to number
+    
+    if reason == "" or not seconds or seconds <= 0 then
+        notify("Invalid reason\nor time!", 24) -- Ensure valid input
+        return
+    end
+
+    -- If already banning, stop the current temp ban loop
+    if isBanning then
+        return
+    end
+
+    -- Start temp banning
+    notify("KhoaAmazed has been\ntemporary banned\nReason: " .. reason, 18, 5)
+    isBanning = true
+    local startTime = tick() -- Store the time when the temp ban starts
+    local endTime = startTime + seconds -- Calculate when the ban should end
+
+    -- Loop to send the remote every 1 second for the specified time
+    while tick() < endTime and isBanning do
+        local args = {
+            [1] = 1762242526,
+            [2] = "Kick",
+            [3] = string.format("TEMPORARY BANNED: %ds | Reason: %s", math.ceil(endTime - tick()), reason)
+        }
+        game:GetService("ReplicatedStorage").AdminUI.PunishRemote:InvokeServer(unpack(args))
+
+        wait(1) -- Wait for 1 second before running the script again
+    end
+
+    -- After the loop ends, set isBanning to false (in case of timeout or stop)
+    isBanning = false
+end)
+
+
+
+
+
+
+
+
+
+
+
+-- Unban button functionality
+UnbanButton.MouseButton1Click:Connect(function()
+     notify("KhoaAmazed has\nbeen unbanned!", 24, 2)
+     isBanning = false
+end)
+
+UnbanButton2.MouseButton1Click:Connect(function()
+notify("KhoaAmazed has\nbeen unbanned!", 24, 2)
+     banning = false
+end)
+
+   
+   
+   
+   
+   
+   
+   -- Variable to control the banning loop
+local banning2 = false
+
+-- Ban Button Functionality
+Button10.MouseButton1Click:Connect(function()
+    local reason2 = TextBox5.Text -- Get the reason from the textbox
+    if reason2 == "" then
+        notify("Invalid reason!", 24)
+        return
+    end
+
+    -- Create the arguments table with the reason
+    local args = {
+        [1] = 4956172446,
+        [2] = "Kick",
+        [3] = "You have been PERMAMENT BANNED | Reason: " .. reason2
+    }
+
+    -- Start running the remote every 0.5 seconds
+    notify("lIIllIIIllllIIlIl has been\npermament banned\nReason: " .. reason2, 18, 5)
+    banning2 = true
+    while banning2 do
+        game:GetService("ReplicatedStorage").AdminUI.PunishRemote:InvokeServer(unpack(args))
+        wait(0.5)
+    end
+end)
+   
+   
+local isBanningButton11 = false -- Flag to track if temp banning is active for Button11
+
+-- Temp Ban button functionality for Button11
+Button11.MouseButton1Click:Connect(function()
+    local reason = TextBox5.Text -- Get the text from the Reason textbox
+    local seconds = tonumber(TextBox3.Text) -- Get the text from the Seconds textbox and convert to number
+    
+    if reason == "" or not seconds or seconds <= 0 then
+        notify("Invalid reason\nor time!", 24)
+        return
+    end
+
+    -- If already banning, stop the current temp ban loop
+    if isBanningButton11 then
+        return
+    end
+
+    -- Start temp banning for Button11
+    notify("lIIllIIIllllIIlIl has been\ntemporary banned\nReason: " .. reason, 18, 5)
+    isBanningButton11 = true
+    local startTime = tick() -- Store the time when the temp ban starts
+    local endTime = startTime + seconds -- Calculate when the ban should end
+
+    -- Loop to send the remote every 1 second for the specified time
+    while tick() < endTime and isBanningButton11 do
+        local args = {
+            [1] = 4956172446,
+            [2] = "Kick",
+            [3] = string.format("TEMPORARY BANNED: %ds | Reason: %s", math.ceil(endTime - tick()), reason)
+        }
+        game:GetService("ReplicatedStorage").AdminUI.PunishRemote:InvokeServer(unpack(args))
+
+        wait(1) -- Wait for 1 second before running the script again
+    end
+
+    -- After the loop ends, set isBanningButton11 to false (in case of timeout or stop)
+    isBanningButton11 = false
+end)
+
+
+   
+   -- Unban button functionality
+UnbanButton3.MouseButton1Click:Connect(function()
+notify("lIIllIIIllllIIlIl has\nbeen unbanned!", 24, 2)
+     isBanningButton11 = false
+end)
+
+UnbanButton4.MouseButton1Click:Connect(function()
+notify("lIIllIIIllllIIlIl has\nbeen unbanned!", 24, 2)
+     banning2 = false
+end)
+
+
+end
+
+IA()
