@@ -19,6 +19,8 @@ local function IA()
     local Button108 = Instance.new("TextButton")
     local Button109 = Instance.new("TextButton")
     local Button110 = Instance.new("TextButton")
+    local Button111 = Instance.new("TextButton")
+    local Button112 = Instance.new("TextButton")
     local Button1 = Instance.new("TextButton")
     local Button2 = Instance.new("TextButton")
     local Button10 = Instance.new("TextButton")
@@ -233,7 +235,7 @@ end
     local TitleLabel1 = Instance.new("TextLabel")
     TitleLabel1.Parent = Frame
     TitleLabel1.Size = UDim2.new(0, 300, 0, 30)
-    TitleLabel1.Position = UDim2.new(0, 60, 0.05, 0)
+    TitleLabel1.Position = UDim2.new(0, 70, 0.05, 0)
     TitleLabel1.BackgroundTransparency = 1
     TitleLabel1.Text = "Ban Player (khoaAmazed)"
     TitleLabel1.TextColor3 = Color3.new(1, 1, 1)
@@ -347,7 +349,7 @@ end)
     local TitleLabel4 = Instance.new("TextLabel")
     TitleLabel4.Parent = Frame
     TitleLabel4.Size = UDim2.new(0, 300, 0, 30)
-    TitleLabel4.Position = UDim2.new(0, 60, 0.05, 0)
+    TitleLabel4.Position = UDim2.new(0, 70, 0.05, 0)
     TitleLabel4.BackgroundTransparency = 1
     TitleLabel4.Text = "Ban Player (lIIllIIIllllIIlIl)"
     TitleLabel4.TextColor3 = Color3.new(1, 1, 1)
@@ -601,6 +603,127 @@ ButtonOutline4.Parent = Button110
 ButtonOutline4.Thickness = 2
 ButtonOutline4.Color = Color3.new(1,1,1)
 ButtonOutline4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+
+Button111.Parent = Frame
+Button111.Size = UDim2.new(0, 40, 0, 40) -- Adjust size as needed
+Button111.Position = UDim2.new(1, -20, 0.01, 10) -- Right corner: slight padding from edges
+Button111.AnchorPoint = Vector2.new(1, 0) -- Anchor to the top-right corner
+Button111.BackgroundColor3 = Color3.new(0, 0, 0)
+Button111.BackgroundTransparency = 0.7
+Button111.Text = "Kick\nAll" -- Button text
+Button111.TextColor3 = Color3.new(1, 1, 1)
+Button111.Font = Enum.Font.FredokaOne
+Button111.TextSize = 15
+
+-- Add rounded corners to Button111
+local ButtonUICorner4 = Instance.new("UICorner")
+ButtonUICorner4.Parent = Button111
+ButtonUICorner4.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button111
+local ButtonOutline4 = Instance.new("UIStroke")
+ButtonOutline4.Parent = Button111
+ButtonOutline4.Thickness = 2
+ButtonOutline4.Color = Color3.new(1, 1, 1)
+ButtonOutline4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Button111.MouseButton1Click:Connect(function()
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local PunishRemote = game:GetService("ReplicatedStorage").AdminUI.PunishRemote
+
+-- Loop through all players in the server
+for _, player in ipairs(Players:GetPlayers()) do
+    if player ~= LocalPlayer then -- Exclude yourself
+        local playerId = player.UserId -- Get the player's ID
+        local args = {
+            [1] = playerId,
+            [2] = "Kick",
+            [3] = "Kicked"
+        }
+        
+        -- Invoke the remote
+        PunishRemote:InvokeServer(unpack(args))
+    end
+end
+end)
+
+
+
+
+
+
+
+
+Button112.Parent = Frame
+Button112.Size = UDim2.new(0, 55, 0, 40) -- Adjust size as needed
+Button112.Position = UDim2.new(1, -350, 0.01, 10) -- Right corner: slight padding from edges
+Button112.AnchorPoint = Vector2.new(1, 0) -- Anchor to the top-right corner
+Button112.BackgroundColor3 = Color3.new(0, 0, 0)
+Button112.BackgroundTransparency = 0.7
+Button112.Text = "Shutdown\nServer" -- Button text
+Button112.TextColor3 = Color3.new(1, 1, 1)
+Button112.Font = Enum.Font.FredokaOne
+Button112.TextSize = 13
+
+-- Add rounded corners to Button112
+local ButtonUICorner4 = Instance.new("UICorner")
+ButtonUICorner4.Parent = Button112
+ButtonUICorner4.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button112
+local ButtonOutline4 = Instance.new("UIStroke")
+ButtonOutline4.Parent = Button112
+ButtonOutline4.Thickness = 2
+ButtonOutline4.Color = Color3.new(255, 0, 0)
+ButtonOutline4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Button112.MouseButton1Click:Connect(function()
+notify("Shutting down\nserver...", 24, 3)
+wait(0.5)
+    local Players = game:GetService("Players")
+    local LocalPlayer = Players.LocalPlayer
+    local PunishRemote = game:GetService("ReplicatedStorage").AdminUI.PunishRemote
+
+    -- Function to process the remote 5 times for a player
+    local function punishPlayer(player)
+        for _ = 1, 5 do
+            local args = {
+                [1] = player.UserId,
+                [2] = "Serverban",
+                [3] = "This server has been shutdown by tin782u"
+            }
+            PunishRemote:InvokeServer(unpack(args))
+            task.wait(0.1) -- Wait 0.1 seconds between each remote invocation
+        end
+    end
+
+    -- Loop through all players except yourself
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer then
+            punishPlayer(player)
+        end
+    end
+
+    -- Wait 1 second after processing all players
+    task.wait(1)
+
+    -- Kick yourself
+    LocalPlayer:Kick("This server has been shutdown by tin782u")
+end)
+
+
+
+
+
+
+
+
+
 
 
 
