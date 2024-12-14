@@ -1,0 +1,141 @@
+local gui = Instance.new("ScreenGui")
+gui.Name = "TabGlitch"
+gui.Parent = game.CoreGui
+
+local isFrozen = false
+
+local Button100 = Instance.new("TextButton")
+local Button101 = Instance.new("TextButton")
+local Button102 = Instance.new("TextButton")
+
+Button100.Size = UDim2.new(0, 53, 0, 53)
+Button100.Position = UDim2.new(1, -72, 0.47, -25)
+Button100.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+Button100.BackgroundTransparency = 0.3
+Button100.Text = "Tab"
+Button100.TextColor3 = Color3.new(1, 0, 0) -- Initial text color (red for unfrozen)
+Button100.Font = Enum.Font.SourceSansBold
+Button100.TextSize = 24
+Button100.Parent = gui
+
+-- Add rounded corners to Button1
+local ButtonUICorner1 = Instance.new("UICorner")
+ButtonUICorner1.Parent = Button100
+ButtonUICorner1.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button1
+local ButtonOutline1 = Instance.new("UIStroke")
+ButtonOutline1.Parent = Button100
+ButtonOutline1.Thickness = 3
+ButtonOutline1.Color = Color3.new(0,0,0)
+ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Parent the button to the GUI
+Button100.Parent = gui
+
+-- Corrected MouseButton1Click connection with debug print
+Button100.MouseButton1Click:Connect(function()
+    print("Button clicked")  -- Debugging print to check if the click is detected
+    local player = game.Players.LocalPlayer
+    if player and player.Character then
+        for _, part in pairs(player.Character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.Anchored = not isFrozen
+            end
+        end
+        isFrozen = not isFrozen
+        -- Update text color based on frozen state
+        Button100.TextColor3 = isFrozen and Color3.new(0, 1, 0) or Color3.new(1, 0, 0) -- Green for frozen, red for unfrozen
+    end
+end)
+
+
+
+
+
+
+
+
+-- Create Button101 as a child of Button100
+Button101.Size = UDim2.new(0, 50, 0, 20)  -- Skinny (20 wide, 50 high)
+Button101.Position = UDim2.new(0.5, -25, 0.5, -55)  -- Positioned above Button100
+Button101.BackgroundTransparency = 0.3
+Button101.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+Button101.Text = "Settings"
+Button101.TextColor3 = Color3.new(1, 1, 1)  -- White text
+Button101.Font = Enum.Font.SourceSansBold
+Button101.TextSize = 15
+
+-- Add rounded corners to Button101
+local ButtonUICorner2 = Instance.new("UICorner")
+ButtonUICorner2.Parent = Button101
+ButtonUICorner2.CornerRadius = UDim.new(0, 8)
+
+-- Add outline to Button101
+local ButtonOutline2 = Instance.new("UIStroke")
+ButtonOutline2.Parent = Button101
+ButtonOutline2.Thickness = 1.5
+ButtonOutline2.Color = Color3.new(0,0,0)
+ButtonOutline2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Parent Button101 to Button100
+Button101.Parent = Button100
+
+-- Variable to track if Button102 is visible
+local isButton102Visible = false
+
+Button101.MouseButton1Click:Connect(function()
+    -- Toggle the visibility of Button102
+    isButton102Visible = not isButton102Visible
+    Button102.Visible = isButton102Visible
+end)
+
+
+
+
+
+
+-- Create Button102 as a child of Button101
+
+Button102.Size = UDim2.new(0, 50, 0, 30)  -- Same size as Button101 (50 wide, 20 high)
+Button102.Position = UDim2.new(0.5, -25, 0.8, -55)  -- Positioned above Button101
+Button102.BackgroundTransparency = 0.3
+Button102.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+Button102.Text = "Delete\nGui"
+Button102.TextColor3 = Color3.new(255,0,0)
+Button102.Font = Enum.Font.SourceSansBold
+Button102.TextSize = 15
+Button102.Visible = false
+
+-- Add rounded corners to Button102
+local ButtonUICorner3 = Instance.new("UICorner")
+ButtonUICorner3.Parent = Button102
+ButtonUICorner3.CornerRadius = UDim.new(0, 8)
+
+-- Add outline to Button102
+local ButtonOutline3 = Instance.new("UIStroke")
+ButtonOutline3.Parent = Button102
+ButtonOutline3.Thickness = 1.5
+ButtonOutline3.Color = Color3.new(0, 0, 0)  -- Black outline
+ButtonOutline3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Parent Button102 to Button101
+Button102.Parent = Button101
+
+
+Button102.MouseButton1Click:Connect(function()
+
+-- Example of a possible solution (if you're working with custom GUIs that can be in CoreGui)
+local guiName = "TabGlitch"
+local player = game.Players.LocalPlayer
+local coreGui = game:GetService("CoreGui")
+
+local gui = coreGui:FindFirstChild(guiName)
+if gui then
+    gui:Destroy()  -- This will work only if it's properly in CoreGui and not restricted
+    print(guiName .. " GUI has been deleted.")
+else
+    print("No GUI named " .. guiName .. " found.")
+end
+
+end)
