@@ -45,7 +45,7 @@ local function IA()
 
     ToggleButton1.Parent = ScreenGui
     ToggleButton1.Size = UDim2.new(0, 44, 0, 44)
-    ToggleButton1.Position = UDim2.new(0.5, -195, 0.014, -50)
+    ToggleButton1.Position = UDim2.new(0.5, -122, 0.014, -50)
     ToggleButton1.BackgroundColor3 = Color3.new(0, 0, 0)
     ToggleButton1.Transparency = 0.35
     ToggleButton1.Visible = true
@@ -927,7 +927,7 @@ Button3.MouseButton1Click:Connect(function()
 
     ToggleButton.Parent = ScreenGui
     ToggleButton.Size = UDim2.new(0, 44, 0, 44)
-    ToggleButton.Position = UDim2.new(0.5, -195, 0.014, -50)
+    ToggleButton.Position = UDim2.new(0.5, -122, 0.014, -50)
     ToggleButton.BackgroundColor3 = Color3.new(0, 0, 0)
     ToggleButton.Transparency = 0.35
     ToggleButton.Visible = false
@@ -1628,7 +1628,7 @@ Combo9.MouseButton1Click:Connect(function()
 
     ToggleButton3.Parent = ScreenGui
     ToggleButton3.Size = UDim2.new(0, 44, 0, 44)
-    ToggleButton3.Position = UDim2.new(0.5, -195, 0.014, -50)
+    ToggleButton3.Position = UDim2.new(0.5, -122, 0.014, -50)
     ToggleButton3.BackgroundColor3 = Color3.new(0, 0, 0)
     ToggleButton3.Transparency = 0.35
     ToggleButton3.Visible = true
