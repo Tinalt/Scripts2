@@ -1,0 +1,1833 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Frame1 = Instance.new("Frame")
+local UICorner1 = Instance.new("UICorner")
+local UIStroke1 = Instance.new("UIStroke")
+
+local Frame2 = Instance.new("Frame")
+local UICorner50 = Instance.new("UICorner")
+local UIStroke50 = Instance.new("UIStroke")
+
+local Frame3 = Instance.new("Frame")
+local UICorner51 = Instance.new("UICorner")
+local UIStroke51 = Instance.new("UIStroke")
+
+
+
+---Buttons---
+
+local Button1 = Instance.new("TextButton")
+local Button2 = Instance.new("TextButton")
+
+local Button3 = Instance.new("TextButton")
+local Button4 = Instance.new("TextButton")
+local Button5 = Instance.new("TextButton")
+local Button6 = Instance.new("TextButton")
+local Button7 = Instance.new("TextButton")
+
+local Button10 = Instance.new("TextButton")
+local Button11 = Instance.new("TextButton")
+local Button12 = Instance.new("TextButton")
+local Button13 = Instance.new("TextButton")
+local Button14 = Instance.new("TextButton")
+
+
+local Button15 = Instance.new("TextButton")
+local Button16 = Instance.new("TextButton")
+
+local Button17 = Instance.new("TextButton")
+local Button18 = Instance.new("TextButton")
+local Button19 = Instance.new("TextButton")
+local Button20 = Instance.new("TextButton")
+local Button21 = Instance.new("TextButton")
+local Button22 = Instance.new("TextButton")
+
+local Button23 = Instance.new("TextButton")
+
+
+
+
+
+
+local Label1 = Instance.new("TextLabel")
+local Label2 = Instance.new("TextLabel")
+local Label3 = Instance.new("TextLabel")
+local UIStroke2 = Instance.new("UIStroke")
+local TextBox1 = Instance.new("TextBox")
+local TextBoxUICorner = Instance.new("UICorner")
+local TextBoxStroke = Instance.new("UIStroke")
+
+
+    local ToggleButton1 = Instance.new("ImageButton")
+    local ToggleUICorner = Instance.new("UICorner")
+    local ToggleTextLabel = Instance.new("TextLabel")
+
+    ToggleButton1.Parent = ScreenGui
+    ToggleButton1.Size = UDim2.new(0, 44, 0, 44)
+    ToggleButton1.Position = UDim2.new(0.5, 250, 0.014, -50)
+    ToggleButton1.BackgroundColor3 = Color3.new(0, 0, 0)
+    ToggleButton1.Transparency = 0.35
+    ToggleButton1.Visible = true
+
+    ToggleUICorner.Parent = ToggleButton1
+    ToggleUICorner.CornerRadius = UDim.new(0, 50)
+
+    ToggleTextLabel.Parent = ToggleButton1
+    ToggleTextLabel.Size = UDim2.new(1, 0, 1, 0)
+    ToggleTextLabel.Position = UDim2.new(0, 0, -0.05, 0)
+    ToggleTextLabel.BackgroundTransparency = 1
+    ToggleTextLabel.Text = "★"
+    ToggleTextLabel.TextColor3 = Color3.new(1, 1, 1)
+    ToggleTextLabel.TextScaled = true
+    ToggleTextLabel.TextStrokeTransparency = 0
+
+    ToggleButton1.MouseButton1Click:Connect(function()
+    Frame1.Visible = not Frame1.Visible
+    Frame2.Visible = not Frame2.Visible
+   end)
+
+
+
+local ToggleButton5 = Instance.new("ImageButton")
+local ToggleUICorner5 = Instance.new("UICorner")
+local ToggleTextLabel5 = Instance.new("TextLabel")
+
+ToggleButton5.Parent = ScreenGui
+ToggleButton5.Size = UDim2.new(0, 44, 0, 44)
+ToggleButton5.Position = UDim2.new(0.5, 250, 0.014, -50)
+ToggleButton5.BackgroundColor3 = Color3.new(0, 0, 0)
+ToggleButton5.Transparency = 0.35
+ToggleButton5.Visible = false
+
+ToggleUICorner5.Parent = ToggleButton5
+ToggleUICorner5.CornerRadius = UDim.new(0, 50)
+
+ToggleTextLabel5.Parent = ToggleButton5
+ToggleTextLabel5.Size = UDim2.new(1, 0, 1, 0)
+ToggleTextLabel5.Position = UDim2.new(0, 0, -0.05, 0)
+ToggleTextLabel5.BackgroundTransparency = 1
+ToggleTextLabel5.Text = "★"
+ToggleTextLabel5.TextColor3 = Color3.new(1, 1, 1)
+ToggleTextLabel5.TextScaled = true
+ToggleTextLabel5.TextStrokeTransparency = 0
+
+ToggleButton5.MouseButton1Click:Connect(function()
+    Frame3.Visible = not Frame3.Visible
+end)
+
+
+
+
+
+-- Set up the UI
+ScreenGui.Parent = game.CoreGui
+ScreenGui.Name = "EZLOLKID"
+
+-- Main Frame
+Frame1.Parent = ScreenGui
+Frame1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame1.Position = UDim2.new(0.5, -175, 0.4, -150)
+Frame1.Size = UDim2.new(0, 350, 0, 340)
+Frame1.Visible = false
+Frame1.BackgroundTransparency = 0.35
+
+-- Outline for the main frame
+UIStroke1.Parent = Frame1
+UIStroke1.Color = Color3.new(1, 1, 1)
+UIStroke1.Thickness = 2.7
+
+-- Rounded corners for the main frame
+UICorner1.Parent = Frame1
+UICorner1.CornerRadius = UDim.new(0, 10)
+
+
+
+
+Frame2.Parent = ScreenGui
+Frame2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame2.Position = UDim2.new(0.5, 200, 0.4, -150)
+Frame2.Size = UDim2.new(0, 110, 0, 340)
+Frame2.Visible = false
+Frame2.BackgroundTransparency = 0.35
+
+-- Outline for the main frame (UIStroke with thickness 2)
+UIStroke50.Parent = Frame2
+UIStroke50.Color = Color3.new(1, 1, 1)
+UIStroke50.Thickness = 2.7
+
+
+UICorner50.Parent = Frame2
+UICorner50.CornerRadius = UDim.new(0, 10)
+
+
+
+Frame3.Parent = ScreenGui
+Frame3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame3.Position = UDim2.new(0.5, -175, 0.4, -150)
+Frame3.Size = UDim2.new(0, 350, 0, 340)
+Frame3.Visible = false
+Frame3.BackgroundTransparency = 0.35
+
+UIStroke51.Parent = Frame3
+UIStroke51.Color = Color3.new(1, 1, 1)
+UIStroke51.Thickness = 2.7
+
+
+UICorner51.Parent = Frame3
+UICorner51.CornerRadius = UDim.new(0, 10)
+
+
+
+
+
+
+
+
+Label1.Parent = Frame1
+Label1.Size = UDim2.new(1, 0, 0.2, 0)
+Label1.Position = UDim2.new(0, 0, 0.001, 0)
+Label1.BackgroundTransparency = 1
+Label1.Text = "Delete Engineer Builds"
+Label1.TextSize = 23
+Label1.Font = Enum.Font.FredokaOne
+Label1.TextColor3 = Color3.new(1, 1, 1)
+
+UIStroke2.Parent = Label1
+UIStroke2.Color = Color3.new(0, 0, 0)
+UIStroke2.Thickness = 2
+
+Label2.Parent = Frame1
+Label2.Size = UDim2.new(1, 0, 1.45, 0)
+Label2.Position = UDim2.new(0, -76, 0.001, 0)
+Label2.BackgroundTransparency = 1
+Label2.Text = "-----------------"
+Label2.TextSize = 23
+Label2.Font = Enum.Font.FredokaOne
+Label2.TextColor3 = Color3.new(1, 1, 1)
+
+-- Black outline for Label2
+UIStroke2.Parent = Label2
+UIStroke2.Color = Color3.new(0, 0, 0)
+UIStroke2.Thickness = 2
+
+
+Label3.Parent = Frame3
+Label3.Size = UDim2.new(1, 0, 0.2, 0)
+Label3.Position = UDim2.new(0, 0, 0.001, 0)
+Label3.BackgroundTransparency = 1
+Label3.Text = "Mastery Engineer"
+Label3.TextSize = 23
+Label3.Font = Enum.Font.FredokaOne
+Label3.TextColor3 = Color3.new(1, 1, 1)
+
+
+
+
+
+
+
+
+--------BUTTONS---------
+
+
+------FRAME 2-------
+
+
+
+
+Button10.Parent = Frame2
+Button10.Size = UDim2.new(0, 85, 0, 40)
+Button10.Position = UDim2.new(0.5, -42, 0.15, -20)
+Button10.BackgroundColor3 = Color3.new(0, 0, 0)
+Button10.BackgroundTransparency = 0.7
+Button10.Text = "Seat"
+Button10.TextSize = 18
+Button10.Font = Enum.Font.FredokaOne
+Button10.TextColor3 = Color3.new(1, 1, 1) -- White text
+Button10.TextStrokeTransparency = 1
+
+-- Black outline for Button10
+local UIStroke3 = Instance.new("UIStroke", Button10)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+-- Corner radius for Button10
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button10
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+-- White outline for Button10
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button10
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+local Button11 = Instance.new("TextButton")
+Button11.Parent = Frame2
+Button11.Size = UDim2.new(0, 85, 0, 40)
+Button11.Position = UDim2.new(0.5, -42, 0.32, -20)
+Button11.BackgroundColor3 = Color3.new(0, 0, 0)
+Button11.BackgroundTransparency = 0.7
+Button11.Text = "Fan"
+Button11.TextSize = 18
+Button11.Font = Enum.Font.FredokaOne
+Button11.TextColor3 = Color3.new(1, 1, 1)
+Button11.TextStrokeTransparency = 1
+
+-- Black outline for Button11
+local UIStroke3 = Instance.new("UIStroke", Button11)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+-- Corner radius for Button11
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button11
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+-- White outline for Button11
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button11
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+
+
+Button12.Parent = Frame2
+Button12.Size = UDim2.new(0, 85, 0, 40)
+Button12.Position = UDim2.new(0.5, -42, 0.49, -20)
+Button12.BackgroundColor3 = Color3.new(0, 0, 0)
+Button12.BackgroundTransparency = 0.7
+Button12.Text = "Wheel"
+Button12.TextSize = 18
+Button12.Font = Enum.Font.FredokaOne
+Button12.TextColor3 = Color3.new(1, 1, 1)
+Button12.TextStrokeTransparency = 1
+
+-- Black outline for Button12
+local UIStroke3 = Instance.new("UIStroke", Button12)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+-- Corner radius for Button12
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button12
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+-- White outline for Button12
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button12
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+local Button13 = Instance.new("TextButton")
+Button13.Parent = Frame2
+Button13.Size = UDim2.new(0, 85, 0, 40)
+Button13.Position = UDim2.new(0.5, -42, 0.665, -20)
+Button13.BackgroundColor3 = Color3.new(0, 0, 0)
+Button13.BackgroundTransparency = 0.7
+Button13.Text = "Wall"
+Button13.TextSize = 18
+Button13.Font = Enum.Font.FredokaOne
+Button13.TextColor3 = Color3.new(1, 1, 1)
+Button13.TextStrokeTransparency = 1
+
+-- Black outline for Button13
+local UIStroke3 = Instance.new("UIStroke", Button13)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+-- Corner radius for Button13
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button13
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+-- White outline for Button13
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button13
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+
+Button14.Parent = Frame2
+Button14.Size = UDim2.new(0, 85, 0, 40)
+Button14.Position = UDim2.new(0.5, -42, 0.84, -20)
+Button14.BackgroundColor3 = Color3.new(0, 0, 0)
+Button14.BackgroundTransparency = 0.7
+Button14.Text = "Balloon"
+Button14.TextSize = 18
+Button14.Font = Enum.Font.FredokaOne
+Button14.TextColor3 = Color3.new(1, 1, 1)
+Button14.TextStrokeTransparency = 1
+
+-- Black outline for Button14
+local UIStroke3 = Instance.new("UIStroke", Button14)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+-- Corner radius for Button14
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button14
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+-- White outline for Button14
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button14
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+
+Button15.Parent = Frame1
+Button15.Size = UDim2.new(0, 25, 0, 200)
+Button15.Position = UDim2.new(0.5, -220, 0.28, -20)
+Button15.BackgroundColor3 = Color3.new(0, 0, 0)
+Button15.BackgroundTransparency = 0.7
+Button15.Text = ">"
+Button15.TextSize = 21
+Button15.Font = Enum.Font.FredokaOne
+Button15.TextColor3 = Color3.new(1, 1, 1)
+Button15.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button15)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button15
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button15
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+
+
+
+Button16.Parent = Frame3
+Button16.Size = UDim2.new(0, 25, 0, 200)
+Button16.Position = UDim2.new(0.5, -220, 0.28, -20)
+Button16.BackgroundColor3 = Color3.new(0, 0, 0)
+Button16.BackgroundTransparency = 0.7
+Button16.Text = "<"
+Button16.TextSize = 21
+Button16.Font = Enum.Font.FredokaOne
+Button16.TextColor3 = Color3.new(1, 1, 1)
+Button16.TextStrokeTransparency = 1
+Button16.Visible = false
+
+local UIStroke3 = Instance.new("UIStroke", Button16)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button16
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button16
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Button16.MouseButton1Click:Connect(function()
+
+Frame1.Visible = true
+Frame2.Visible = true
+Frame3.Visible = false
+Button15.Visible = true
+Button16.Visible = false
+ToggleButton1.Visible = true
+ToggleButton5.Visible = false
+
+end)
+
+
+Button15.MouseButton1Click:Connect(function()
+
+Frame1.Visible = false
+Frame2.Visible = false
+Frame3.Visible = true
+Button16.Visible = true
+Button15.Visible = false
+ToggleButton1.Visible = false
+ToggleButton5.Visible = true
+
+end)
+
+
+
+
+
+Button17.Parent = Frame3
+Button17.Size = UDim2.new(0, 120, 0, 40)
+Button17.Position = UDim2.new(0.5, 25, 0.25, -20)
+Button17.BackgroundColor3 = Color3.new(0, 0, 0)
+Button17.BackgroundTransparency = 0.7
+Button17.Text = "Propeller"
+Button17.TextSize = 18
+Button17.Font = Enum.Font.FredokaOne
+Button17.TextColor3 = Color3.new(1, 1, 1)
+Button17.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button17)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button17
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button17
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+Button18.Parent = Frame3
+Button18.Size = UDim2.new(0, 120, 0, 40)
+Button18.Position = UDim2.new(0.5, 25, 0.45, -20)
+Button18.BackgroundColor3 = Color3.new(0, 0, 0)
+Button18.BackgroundTransparency = 0.7
+Button18.Text = "Launch Pad"
+Button18.TextSize = 18
+Button18.Font = Enum.Font.FredokaOne
+Button18.TextColor3 = Color3.new(1, 1, 1)
+Button18.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button18)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button18
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button18
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+Button19.Parent = Frame3
+Button19.Size = UDim2.new(0, 120, 0, 40)
+Button19.Position = UDim2.new(0.5, 25, 0.65, -20)
+Button19.BackgroundColor3 = Color3.new(0, 0, 0)
+Button19.BackgroundTransparency = 0.7
+Button19.Text = "Ladder"
+Button19.TextSize = 18
+Button19.Font = Enum.Font.FredokaOne
+Button19.TextColor3 = Color3.new(1, 1, 1)
+Button19.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button19)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button19
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button19
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Button20.Parent = Frame3
+Button20.Size = UDim2.new(0, 120, 0, 40)
+Button20.Position = UDim2.new(0.5, -145, 0.25, -20)
+Button20.BackgroundColor3 = Color3.new(0, 0, 0)
+Button20.BackgroundTransparency = 0.7
+Button20.Text = "Overclocker"
+Button20.TextSize = 18
+Button20.Font = Enum.Font.FredokaOne
+Button20.TextColor3 = Color3.new(1, 1, 1)
+Button20.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button20)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button20
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button20
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Button21.Parent = Frame3
+Button21.Size = UDim2.new(0, 120, 0, 40)
+Button21.Position = UDim2.new(0.5, -145, 0.45, -20)
+Button21.BackgroundColor3 = Color3.new(0, 0, 0)
+Button21.BackgroundTransparency = 0.7
+Button21.Text = "Radio"
+Button21.TextSize = 18
+Button21.Font = Enum.Font.FredokaOne
+Button21.TextColor3 = Color3.new(1, 1, 1)
+Button21.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button21)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button21
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button21
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Button22.Parent = Frame3
+Button22.Size = UDim2.new(0, 120, 0, 40)
+Button22.Position = UDim2.new(0.5, -145, 0.65, -20)
+Button22.BackgroundColor3 = Color3.new(0, 0, 0)
+Button22.BackgroundTransparency = 0.7
+Button22.Text = "Piston"
+Button22.TextSize = 18
+Button22.Font = Enum.Font.FredokaOne
+Button22.TextColor3 = Color3.new(1, 1, 1)
+Button22.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button22)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button22
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button22
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+Button23.Parent = Frame3
+Button23.Size = UDim2.new(0, 170, 0, 40)
+Button23.Position = UDim2.new(0.5, -85, 0.85, -20)
+Button23.BackgroundColor3 = Color3.new(0, 0, 0)
+Button23.BackgroundTransparency = 0.7
+Button23.Text = "Delete Everything"
+Button23.TextSize = 18
+Button23.Font = Enum.Font.FredokaOne
+Button23.TextColor3 = Color3.new(1,0,0)
+Button23.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button23)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button23
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button23
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- Button1
+
+Button1.Parent = Frame1
+Button1.Size = UDim2.new(0, 150, 0, 40)
+Button1.Position = UDim2.new(0.5, -150, 0.435, -20)
+Button1.BackgroundColor3 = Color3.new(0, 0, 0)
+Button1.BackgroundTransparency = 0.7
+Button1.Text = "Delete Gui"
+Button1.TextSize = 18
+Button1.Font = Enum.Font.FredokaOne
+Button1.TextColor3 = Color3.new(1, 1, 1)
+Button1.TextStrokeTransparency = 1
+
+-- Black outline for Button1
+local UIStroke3 = Instance.new("UIStroke", Button1)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+-- Corner radius for Button1
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button1
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button1
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button1
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Click event for Button1
+Button1.MouseButton1Click:Connect(function()
+
+local guiName = "EZLOLKID"
+
+local coreGui = game.CoreGui
+local deletedCount = 0
+
+for _, child in pairs(coreGui:GetChildren()) do
+    if child.Name == guiName then
+        child:Destroy()
+        deletedCount += 1
+    end
+end
+
+if deletedCount > 0 then
+    print(deletedCount .. " GUI(s) named " .. guiName .. " have been deleted.")
+else
+    print("No GUI named " .. guiName .. " found.")
+end
+
+
+end)
+
+
+
+Button2.Parent = Frame1
+Button2.Size = UDim2.new(0, 150, 0, 40)
+Button2.Position = UDim2.new(0.5, -150, 0.61, -20)
+Button2.BackgroundColor3 = Color3.new(0, 0, 0)
+Button2.BackgroundTransparency = 0.7
+Button2.Text = "Tp To Safespot"
+Button2.TextSize = 18
+Button2.Font = Enum.Font.FredokaOne
+Button2.TextColor3 = Color3.new(1, 1, 1)
+Button2.TextStrokeTransparency = 1
+
+-- Black outline for Button2
+local UIStroke3 = Instance.new("UIStroke", Button2)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+-- Corner radius for Button2
+local UICorner2 = Instance.new("UICorner") 
+UICorner2.Parent = Button2
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button2
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button2
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local originalPosition = nil
+local createdPart = nil
+
+Button2.Text = "Tp To Safespot"
+
+-- Function to teleport the player
+local function teleportPlayer(position)
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        character.HumanoidRootPart.CFrame = CFrame.new(position)
+    end
+end
+
+-- Update character reference after resetting
+local function updateCharacter(newCharacter)
+    character = newCharacter
+end
+
+player.CharacterAdded:Connect(updateCharacter)
+
+-- Button click functionality
+Button2.MouseButton1Click:Connect(function()
+    if Button2.Text == "Tp To Safespot" then
+        if character and character:FindFirstChild("HumanoidRootPart") then
+            originalPosition = character.HumanoidRootPart.Position
+        end
+
+
+        createdPart = Instance.new("Part")
+        createdPart.Position = Vector3.new(-4740.06, 100000, -4743.73)
+        createdPart.Size = Vector3.new(2048, 1, 2048)
+        createdPart.Anchored = true
+        createdPart.Material = Enum.Material.Plastic -- Optional: Set material
+        createdPart.Transparency = 0.5
+        createdPart.Parent = workspace
+
+        teleportPlayer(Vector3.new(-4739.6591796875, 100003.5, -4744.0185546875))
+
+        Button2.Text = "Tp Back"
+    elseif Button2.Text == "Tp Back" then
+        if createdPart then
+            createdPart:Destroy()
+            createdPart = nil
+        end
+
+        if originalPosition then
+            teleportPlayer(originalPosition)
+        end
+
+        Button2.Text = "Tp To Safespot"
+    end
+end)
+
+
+
+Button3.Parent = Frame1
+Button3.Size = UDim2.new(0, 110, 0, 40)
+Button3.Position = UDim2.new(0.5, 35, 0.25, -20)
+Button3.BackgroundColor3 = Color3.new(0, 0, 0)
+Button3.BackgroundTransparency = 0.7
+Button3.Text = "Floor"
+Button3.TextSize = 18
+Button3.Font = Enum.Font.FredokaOne
+Button3.TextColor3 = Color3.new(1, 1, 1)
+Button3.TextStrokeTransparency = 1
+
+-- Black outline for Button3
+local UIStroke3 = Instance.new("UIStroke", Button3)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+-- Corner radius for Button3
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button3
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button3
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button3
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Click event for Button3
+Button3.MouseButton1Click:Connect(function()
+
+end)
+
+
+Button4.Parent = Frame1
+Button4.Size = UDim2.new(0, 110, 0, 40)
+Button4.Position = UDim2.new(0.5, 35, 0.45, -20)
+Button4.BackgroundColor3 = Color3.new(0, 0, 0)
+Button4.BackgroundTransparency = 0.7
+Button4.Text = "Tree"
+Button4.TextSize = 18
+Button4.Font = Enum.Font.FredokaOne
+Button4.TextColor3 = Color3.new(1, 1, 1)
+Button4.TextStrokeTransparency = 1
+
+-- Black outline for Button4
+local UIStroke3 = Instance.new("UIStroke", Button4)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+-- Corner radius for Button4
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button4
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button4
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button4
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+
+
+
+
+
+Button5.Parent = Frame1
+Button5.Size = UDim2.new(0, 110, 0, 40)
+Button5.Position = UDim2.new(0.5, 35, 0.65, -20)
+Button5.BackgroundColor3 = Color3.new(0, 0, 0)
+Button5.BackgroundTransparency = 0.7
+Button5.Text = "Dispenser"
+Button5.TextSize = 18
+Button5.Font = Enum.Font.FredokaOne
+Button5.TextColor3 = Color3.new(1, 1, 1)
+Button5.TextStrokeTransparency = 1
+
+-- Black outline for Button5
+local UIStroke3 = Instance.new("UIStroke", Button5)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+-- Corner radius for Button5
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button5
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button5
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button5
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Click event for Button5
+Button5.MouseButton1Click:Connect(function()
+    -- Your button click functionality goes here
+end)
+
+
+
+Button6.Parent = Frame1
+Button6.Size = UDim2.new(0, 110, 0, 40)
+Button6.Position = UDim2.new(0.5, 35, 0.85, -20)
+Button6.BackgroundColor3 = Color3.new(0, 0, 0)
+Button6.BackgroundTransparency = 0.7
+Button6.Text = "Teleporter"
+Button6.TextSize = 18
+Button6.Font = Enum.Font.FredokaOne
+Button6.TextColor3 = Color3.new(1, 1, 1)
+Button6.TextStrokeTransparency = 1
+
+-- Black outline for Button6
+local UIStroke3 = Instance.new("UIStroke", Button6)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+-- Corner radius for Button6
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button6
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button6
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button6
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Click event for Button6
+Button6.MouseButton1Click:Connect(function()
+    -- Your button click functionality goes here
+end)
+
+
+
+
+Button7.Parent = Frame1
+Button7.Size = UDim2.new(0, 150, 0, 40)
+Button7.Position = UDim2.new(0.5, -150, 0.85, -20)
+Button7.BackgroundColor3 = Color3.new(0, 0, 0)
+Button7.BackgroundTransparency = 0.7
+Button7.Text = "Driver Seat"
+Button7.TextSize = 18
+Button7.Font = Enum.Font.FredokaOne
+Button7.TextColor3 = Color3.new(1, 1, 1) 
+Button7.TextStrokeTransparency = 1
+
+-- Black outline for Button7
+local UIStroke3 = Instance.new("UIStroke", Button7)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+-- Corner radius for Button7
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button7
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button7
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button7
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Click event for Button7
+Button7.MouseButton1Click:Connect(function()
+
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+---------TEXTBOX---------
+
+
+-- TextBox
+
+TextBox1.Parent = Frame1
+TextBox1.Size = UDim2.new(0, 150, 0, 50)
+TextBox1.Position = UDim2.new(0.5, -150, 0.25, -20)
+TextBox1.BackgroundColor3 = Color3.new(0, 0, 0)
+TextBox1.BackgroundTransparency = 0.5
+TextBox1.Text = "Enter Player Name"
+TextBox1.TextSize = 18
+TextBox1.Font = Enum.Font.FredokaOne
+TextBox1.TextColor3 = Color3.new(1, 1, 1) 
+
+TextBox1.PlaceholderText = "Enter Player Name"
+TextBox1.PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7)
+TextBox1.ClearTextOnFocus = true
+
+-- Corner radius for TextBox
+
+TextBoxUICorner.Parent = TextBox1
+TextBoxUICorner.CornerRadius = UDim.new(0, 12)
+
+-- Black outline for TextBox
+
+TextBoxStroke.Parent = TextBox1
+TextBoxStroke.Color = Color3.new(0,0,0)
+TextBoxStroke.Thickness = 2
+
+
+local function completePlayerName(inputName)
+    local players = game:GetService("Players")
+    for _, player in ipairs(players:GetPlayers()) do
+        if string.lower(player.Name):sub(1, #inputName) == string.lower(inputName) or 
+           string.lower(player.DisplayName):sub(1, #inputName) == string.lower(inputName) then
+            return player.Name -- Return username if match is found
+        end
+    end
+    return nil -- If no match is found
+end
+
+
+TextBox1.FocusLost:Connect(function(enterPressed)
+    if enterPressed then
+        local inputName = TextBox1.Text
+        if inputName == "" then
+            TextBox1.PlaceholderText = "Enter Player Name"
+        else
+            local playerName = completePlayerName(inputName)
+            if playerName then
+                TextBox1.Text = playerName
+            else
+                TextBox1.Text = "Player not found"
+                wait(2)
+                TextBox1.Text = "Enter Player Name"
+            end
+        end
+    end
+end)
+
+
+Button4.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Tree" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+
+
+
+Button3.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Floor" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+
+
+Button5.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Dispenser" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+
+Button6.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Teleporter" then
+                    for i = 1, 15 do
+                        -- Construct the arguments dynamically
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+
+Button7.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            local driverSeat = engineerBuild:FindFirstChild("Driver's Seat")
+            if driverSeat then
+                local args = {
+                    [1] = driverSeat,
+                    [2] = Vector3.new(-61.30976486206055, 28.19960594177246, -47.560218811035156),
+                    [3] = 2.2868831157684326,
+                    [4] = driverSeat.HumanoidRootPart
+                }
+
+                for i = 1, 15 do
+                    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+
+
+
+
+Button10.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Seat" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+
+
+
+Button11.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Fan" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+
+
+Button12.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Wheel" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+
+Button13.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Wall" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = "" -- Reset text
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+
+Button14.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Balloon" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+
+Button17.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Propeller" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+
+Button10.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Launch Pad" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+Button19.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Ladder" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+Button20.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Overclocker" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+
+Button21.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Radio" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+
+
+Button22.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Piston" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+
+
+Button23.MouseButton1Click:Connect(function()
+    local inputName = TextBox1.Text
+    local playerName = completePlayerName(inputName)
+
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            for _, tree in pairs(engineerBuild:GetChildren()) do
+                if tree.Name == "Dispenser" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                elseif tree.Name == "Teleporter" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                elseif tree.Name == "Driver's Seat" then
+                    local driverSeat = engineerBuild:FindFirstChild("Driver's Seat")
+                    if driverSeat then
+                        local args = {
+                            [1] = driverSeat,
+                            [2] = Vector3.new(-61.30976486206055, 28.19960594177246, -47.560218811035156),
+                            [3] = 2.2868831157684326,
+                            [4] = driverSeat.HumanoidRootPart
+                        }
+
+                        for i = 1, 15 do
+                            game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                        end
+                    end
+                elseif tree.Name == "Floor" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                elseif tree.Name == "Tree" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                elseif tree.Name == "Radio" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                    elseif tree.Name == "Laucher Pad" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                    elseif tree.Name == "Wall" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                    elseif tree.Name == "Wheel" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                    elseif tree.Name == "Balloon" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                    elseif tree.Name == "Seat" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                    elseif tree.Name == "Ladder" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                    elseif tree.Name == "Piston" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                    elseif tree.Name == "Overclocker" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                    elseif tree.Name == "Propreller" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                    elseif tree.Name == "Fan" then
+                    for i = 1, 15 do
+                        local args = {
+                            [1] = tree,
+                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [3] = 1.999159812927246,
+                            [4] = tree.HumanoidRootPart
+                        }
+                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                    end
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
+        TextBox1.Text = "Player not found!"
+        wait(2)
+        TextBox1.Text = ""
+        TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
