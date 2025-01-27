@@ -1,7 +1,6 @@
 local function IA()
     local ScreenGui = Instance.new("ScreenGui")
     local Frame = Instance.new("Frame")
-    local Frame2 = Instance.new("Frame")
     local UICorner = Instance.new("UICorner")
     local UIStroke = Instance.new("UIStroke")
     local UICorner2 = Instance.new("UICorner")
@@ -29,7 +28,7 @@ local function IA()
     local UnbanButton2 = Instance.new("TextButton")
     local UnbanButton3 = Instance.new("TextButton")
     local UnbanButton4 = Instance.new("TextButton")
-    local TextBox = Instance.new("TextBox") -- Add the TextBox
+    local TextBox = Instance.new("TextBox")
     local UserInputService = game:GetService("UserInputService")
     
     
@@ -92,36 +91,7 @@ local function IA()
     FrameOutline.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     
     
-     Frame2.Parent = ScreenGui
-    Frame2.Size = UDim2.new(0, 100, 0, 300)
-    Frame2.Position = UDim2.new(0.5, 230, 0.18, -25)
-    Frame2.BackgroundColor3 = Color3.new(0, 0, 0)
-    Frame2.BackgroundTransparency = 0.35
-    Frame2.Name = "LOL123"
-    Frame2.Visible = false
-
-    -- Rounded corners for the frame
-    UICorner2.Parent = Frame2
-    UICorner2.CornerRadius = UDim.new(0, 10)
-
-    local FrameOutline2 = Instance.new("UIStroke")
-    FrameOutline2.Parent = Frame2
-    FrameOutline2.Thickness = 2
-    FrameOutline2.Color = Color3.new(1, 1, 1)
-    FrameOutline2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    
-    
-    
-    -- Create the Title Label
-    TitleLabel2.Parent = Frame2
-    TitleLabel2.Size = UDim2.new(0, 300, 0, 30)
-    TitleLabel2.Position = UDim2.new(0, -100, 0.05, 0) 
-    TitleLabel2.BackgroundTransparency = 1    
-    TitleLabel2.Text = "Select\nPlayer"
-    TitleLabel2.TextColor3 = Color3.new(1, 1, 1)
-    TitleLabel2.TextSize = 22
-    TitleLabel2.Font = Enum.Font.FredokaOne
-    
+     
     
     
     
@@ -205,355 +175,7 @@ end
     
     
     
-    local Button100 = Instance.new("TextButton")
-    Button100.Parent = Frame2
-    Button100.Size = UDim2.new(0, 85, 0, 35)
-    Button100.Position = UDim2.new(0, 8, 0.2, 0)
-    Button100.BackgroundColor3 = Color3.new(0, 0, 0)
-    Button100.BackgroundTransparency = 0.7
-    Button100.Text = "KhoaAmazed"
-    Button100.TextColor3 = Color3.new(1, 1, 1)
-    Button100.Font = Enum.Font.FredokaOne
-    Button100.TextSize = 15
-
-    -- Add rounded corners to Button1
-    local ButtonUICorner1 = Instance.new("UICorner")
-    ButtonUICorner1.Parent = Button100
-    ButtonUICorner1.CornerRadius = UDim.new(0, 12)
-
-    -- Add outline to Button1
-    local ButtonOutline1 = Instance.new("UIStroke")
-    ButtonOutline1.Parent = Button100
-    ButtonOutline1.Thickness = 2
-    ButtonOutline1.Color = Color3.new(1,1,1)
-    ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-
-    -- Button1 functionality
-    Button100.MouseButton1Click:Connect(function()
-    notify("Selected\nKhoaAmazed", 24)
-        
-    local TitleLabel1 = Instance.new("TextLabel")
-    TitleLabel1.Parent = Frame
-    TitleLabel1.Size = UDim2.new(0, 300, 0, 30)
-    TitleLabel1.Position = UDim2.new(0, 70, 0.05, 0)
-    TitleLabel1.BackgroundTransparency = 1
-    TitleLabel1.Text = "Ban Player (khoaAmazed)"
-    TitleLabel1.TextColor3 = Color3.new(1, 1, 1)
-    TitleLabel1.TextSize = 24
-    TitleLabel1.Font = Enum.Font.FredokaOne
-    TitleLabel1.Visible = false
     
-    
-    
-    ----
-    
-    local Button101 = Instance.new("TextButton")
-    Button101.Parent = Frame2
-    Button101.Size = UDim2.new(0, 85, 0, 35)
-    Button101.Position = UDim2.new(0, 8, 0.2, 0)
-    Button101.BackgroundColor3 = Color3.new(0, 25, 0)
-    Button101.BackgroundTransparency = 0.7
-    Button101.Text = "KhoaAmazed"
-    Button101.TextColor3 = Color3.new(1, 1, 1)
-    Button101.Font = Enum.Font.FredokaOne
-    Button101.TextSize = 15
-    Button101.Visible = false
-
-    -- Add rounded corners to Button1
-    local ButtonUICorner1 = Instance.new("UICorner")
-    ButtonUICorner1.Parent = Button101
-    ButtonUICorner1.CornerRadius = UDim.new(0, 12)
-
-    -- Add outline to Button1
-    local ButtonOutline1 = Instance.new("UIStroke")
-    ButtonOutline1.Parent = Button101
-    ButtonOutline1.Thickness = 2
-    ButtonOutline1.Color = Color3.new(1,1,1)
-    ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    
-    Button101.MouseButton1Click:Connect(function()
---- 2th click 
-notify("Deselected\nKhoaAmazed", 24)
-
-    Button101.Visible = false
-    Button100.Visible = true
-    TitleLabel.Visible = true
-    TitleLabel1.Visible = false
-    Button1.Visible = false
-    Button2.Visible = false
-    TitleLabel3.Visible = true
-    Button103.Visible = true
-    Button104.Visible = false
-    Button105.Visible = false
-    Button109.Visible = true
-    Button110.Visible = true
-    UnbanButton.Visible = false
-    UnbanButton2.Visible = false
-    
-    
-end)
-    
-    
-    
--- 1st click
-    TitleLabel.Visible = false
-    TitleLabel1.Visible = true
-    Button100.Visible = false
-    Button101.Visible = true
-    Button1.Visible = true
-    Button2.Visible = true
-    TitleLabel3.Visible = false
-    Button103.Visible = false
-    Button104.Visible = false
-    Button105.Visible = true
-    Button109.Visible = false
-    Button110.Visible = false
-    UnbanButton.Visible = true
-    UnbanButton2.Visible = true
-        
-        
-        
-        
-        
-    end)
-    
-    
-    
-    
-    Button103.Parent = Frame2
-    Button103.Size = UDim2.new(0, 85, 0, 35)
-    Button103.Position = UDim2.new(0, 8, 0.38, 0)
-    Button103.BackgroundColor3 = Color3.new(0, 0, 0)
-    Button103.BackgroundTransparency = 0.7
-    Button103.Text = "lIIllIIIllllIIlIl"
-    Button103.TextColor3 = Color3.new(1, 1, 1)
-    Button103.Font = Enum.Font.FredokaOne
-    Button103.TextSize = 15
-
-    -- Add rounded corners to Button1
-    local ButtonUICorner1 = Instance.new("UICorner")
-    ButtonUICorner1.Parent = Button103
-    ButtonUICorner1.CornerRadius = UDim.new(0, 12)
-
-    -- Add outline to Button1
-    local ButtonOutline1 = Instance.new("UIStroke")
-    ButtonOutline1.Parent = Button103
-    ButtonOutline1.Thickness = 2
-    ButtonOutline1.Color = Color3.new(1,1,1)
-    ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-
-    -- Button1 functionality
-    Button103.MouseButton1Click:Connect(function()
-    notify("Selected\nlIIllIIIllllIIlIl", 24)
-        
-    local TitleLabel4 = Instance.new("TextLabel")
-    TitleLabel4.Parent = Frame
-    TitleLabel4.Size = UDim2.new(0, 300, 0, 30)
-    TitleLabel4.Position = UDim2.new(0, 70, 0.05, 0)
-    TitleLabel4.BackgroundTransparency = 1
-    TitleLabel4.Text = "Ban Player (lIIllIIIllllIIlIl)"
-    TitleLabel4.TextColor3 = Color3.new(1, 1, 1)
-    TitleLabel4.TextSize = 24
-    TitleLabel4.Font = Enum.Font.FredokaOne
-    TitleLabel4.Visible = false
-    
-    
-    
-    ----
-    
-    
-    Button104.Parent = Frame2
-    Button104.Size = UDim2.new(0, 85, 0, 35)
-    Button104.Position = UDim2.new(0, 8, 0.38, 0)
-    Button104.BackgroundColor3 = Color3.new(0, 25, 0)
-    Button104.BackgroundTransparency = 0.7
-    Button104.Text = "lIIllIIIllllIIlIl"
-    Button104.TextColor3 = Color3.new(1, 1, 1)
-    Button104.Font = Enum.Font.FredokaOne
-    Button104.TextSize = 15
-    Button104.Visible = false
-
-    -- Add rounded corners to Button1
-    local ButtonUICorner1 = Instance.new("UICorner")
-    ButtonUICorner1.Parent = Button104
-    ButtonUICorner1.CornerRadius = UDim.new(0, 12)
-
-    -- Add outline to Button1
-    local ButtonOutline1 = Instance.new("UIStroke")
-    ButtonOutline1.Parent = Button104
-    ButtonOutline1.Thickness = 2
-    ButtonOutline1.Color = Color3.new(1,1,1)
-    ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    
-    Button104.MouseButton1Click:Connect(function()
---- 2th click 
-notify("Deselected\nlIIllIIIllllIIlIl", 24)
-    Button103.Visible = true
-    Button104.Visible = false
-    TitleLabel.Visible = true
-    TitleLabel4.Visible = false
-    Button10.Visible = false
-    Button11.Visible = false
-    TitleLabel3.Visible = true
-    UnbanButton3.Visible = false
-    UnbanButton4.Visible = false
-    Button100.Visible = true
-    Button107.Visible = false
-    Button109.Visible = true
-    Button110.Visible = true
-    
-    
-end)
-    
-    
-    
--- 1st click
-    TitleLabel.Visible = false
-    TitleLabel4.Visible = true
-    Button103.Visible = false
-    Button104.Visible = true
-    Button10.Visible = true
-    Button11.Visible = true
-    TitleLabel3.Visible = false
-    UnbanButton3.Visible = true
-    UnbanButton4.Visible = true
-    Button100.Visible = false
-    Button107.Visible = true
-    Button109.Visible = false
-    Button110.Visible = false
-        
-        
-        
-        
-        
-    end)
-    
-    
-    
-    Button105.Parent = Frame2
-Button105.Size = UDim2.new(0, 85, 0, 35)
-Button105.Position = UDim2.new(0, 8, 0.38, 0)
-Button105.BackgroundColor3 = Color3.new(0, 0, 0)
-Button105.BackgroundTransparency = 0.7
-Button105.Text = "lIIllIIIllllIIlIl"
-Button105.TextColor3 = Color3.new(1, 1, 1)
-Button105.Font = Enum.Font.FredokaOne
-Button105.TextSize = 15
-Button105.Visible = false
-
-Button105.MouseButton1Click:Connect(function()
-
-notify("Please deselected\na player first!", 19, 1.5)
-Button106.Visible = true
-Button105.Visible = false
-wait(1.5)
-Button106.Visible = false
-Button105.Visible = true
-end)
-
-
-
-
-Button106.Parent = Frame2
-Button106.Size = UDim2.new(0, 85, 0, 35)
-Button106.Position = UDim2.new(0, 8, 0.38, 0)
-Button106.BackgroundColor3 = Color3.new(25, 0, 0)
-Button106.BackgroundTransparency = 0.7
-Button106.Text = "lIIllIIIllllIIlIl"
-Button106.TextColor3 = Color3.new(1, 1, 1)
-Button106.Font = Enum.Font.FredokaOne
-Button106.TextSize = 15
-Button106.Visible = false
-
--- Add rounded corners to Button106
-local ButtonUICorner1 = Instance.new("UICorner")
-ButtonUICorner1.Parent = Button106
-ButtonUICorner1.CornerRadius = UDim.new(0, 12)
-
--- Add outline to Button106
-local ButtonOutline1 = Instance.new("UIStroke")
-ButtonOutline1.Parent = Button106
-ButtonOutline1.Thickness = 2
-ButtonOutline1.Color = Color3.new(1,1,1)
-ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-
-
-
-
-
-Button107.Parent = Frame2
-Button107.Size = UDim2.new(0, 85, 0, 35)
-Button107.Position = UDim2.new(0, 8, 0.2, 0)
-Button107.BackgroundColor3 = Color3.new(0, 0, 0)
-Button107.BackgroundTransparency = 0.7
-Button107.Text = "KhoaAmazed"
-Button107.TextColor3 = Color3.new(1, 1, 1)
-Button107.Font = Enum.Font.FredokaOne
-Button107.TextSize = 15
-Button107.Visible = false
-
--- Add rounded corners to Button107
-local ButtonUICorner1 = Instance.new("UICorner")
-ButtonUICorner1.Parent = Button107
-ButtonUICorner1.CornerRadius = UDim.new(0, 12)
-
--- Add outline to Button107
-local ButtonOutline1 = Instance.new("UIStroke")
-ButtonOutline1.Parent = Button107
-ButtonOutline1.Thickness = 2
-ButtonOutline1.Color = Color3.new(1,1,1)
-ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-
-Button107.MouseButton1Click:Connect(function()
-
-notify("Please deselected\na player first!", 19, 1.5)
-Button107.Visible = false
-Button108.Visible = true
-wait(1.5)
-Button107.Visible = true
-Button108.Visible = false
-
-end)
-
-
-
-Button108.Parent = Frame2
-Button108.Size = UDim2.new(0, 85, 0, 35)
-Button108.Position = UDim2.new(0, 8, 0.2, 0)
-Button108.BackgroundColor3 = Color3.new(25, 0, 0)
-Button108.BackgroundTransparency = 0.7
-Button108.Text = "KhoaAmazed"
-Button108.TextColor3 = Color3.new(1, 1, 1)
-Button108.Font = Enum.Font.FredokaOne
-Button108.TextSize = 15
-Button108.Visible = false
-
--- Add rounded corners to Button108
-local ButtonUICorner1 = Instance.new("UICorner")
-ButtonUICorner1.Parent = Button108
-ButtonUICorner1.CornerRadius = UDim.new(0, 12)
-
--- Add outline to Button108
-local ButtonOutline1 = Instance.new("UIStroke")
-ButtonOutline1.Parent = Button108
-ButtonOutline1.Thickness = 2
-ButtonOutline1.Color = Color3.new(1,1,1)
-ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-
-
-
--- Add rounded corners to Button105
-local ButtonUICorner1 = Instance.new("UICorner")
-ButtonUICorner1.Parent = Button105
-ButtonUICorner1.CornerRadius = UDim.new(0, 12)
-
--- Add outline to Button105
-local ButtonOutline1 = Instance.new("UIStroke")
-ButtonOutline1.Parent = Button105
-ButtonOutline1.Thickness = 2
-ButtonOutline1.Color = Color3.new(1,1,1)
-ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-
 
 
 
@@ -561,7 +183,7 @@ Button109.Parent = Frame
 Button109.Size = UDim2.new(0, 105, 0, 40)
 Button109.Position = UDim2.new(0.5, 52.5, 0.53, 0)
 Button109.AnchorPoint = Vector2.new(1, 0) -- Anchor to the top-right corner
-Button109.BackgroundColor3 = Color3.new(25, 0, 0)
+Button109.BackgroundColor3 = Color3.new(0, 0, 0)
 Button109.BackgroundTransparency = 0.7
 Button109.Text = "Un\nTBAN" -- Button text
 Button109.TextColor3 = Color3.new(1, 1, 1)
@@ -585,7 +207,7 @@ Button110.Parent = Frame
 Button110.Size = UDim2.new(0, 105, 0, 40)
 Button110.Position = UDim2.new(0.5, -75, 0.53, 0)
 Button110.AnchorPoint = Vector2.new(1, 0) -- Anchor to the top-right corner
-Button110.BackgroundColor3 = Color3.new(25, 0, 0)
+Button110.BackgroundColor3 = Color3.new(0, 0, 0)
 Button110.BackgroundTransparency = 0.7
 Button110.Text = "Un\nPBAN" -- Button text
 Button110.TextColor3 = Color3.new(1, 1, 1)
@@ -742,15 +364,7 @@ end)
     TitleLabel.Visible = true
     
     
-    TitleLabel3.Parent = Frame
-    TitleLabel3.Size = UDim2.new(0, 300, 0, 30)
-    TitleLabel3.Position = UDim2.new(0.5, -170, 0.65, 40)
-    TitleLabel3.BackgroundTransparency = 1
-    TitleLabel3.Text = "Select Player"
-    TitleLabel3.TextColor3 = Color3.new(1, 1, 1)
-    TitleLabel3.TextSize = 34
-    TitleLabel3.Font = Enum.Font.FredokaOne
-    TitleLabel3.Visible = true
+    
     
     
 
@@ -764,7 +378,7 @@ end)
     Button1.TextColor3 = Color3.new(1, 1, 1)
     Button1.Font = Enum.Font.FredokaOne
     Button1.TextSize = 18
-    Button1.Visible = false
+    Button1.Visible = true
 
     -- Add rounded corners to Button1
     local ButtonUICorner1 = Instance.new("UICorner")
@@ -791,7 +405,7 @@ end)
     Button2.TextColor3 = Color3.new(1, 1, 1)
     Button2.Font = Enum.Font.FredokaOne
     Button2.TextSize = 18
-    Button2.Visible = false
+    Button2.Visible = true
 
     -- Add rounded corners to Button2
     local ButtonUICorner2 = Instance.new("UICorner")
@@ -809,58 +423,7 @@ end)
     
     
     
-    ---PERMAMENT BAN & TEMPORARY BAN BUTTON FOR lllllllllllllllll
-    
-    Button10.Parent = Frame
-    Button10.Size = UDim2.new(0, 120, 0, 40)
-    Button10.Position = UDim2.new(0.5, -170, 0.65, 40)
-    Button10.BackgroundColor3 = Color3.new(0, 0, 0)
-    Button10.BackgroundTransparency = 0.7
-    Button10.Text = "Ban"
-    Button10.TextColor3 = Color3.new(1, 1, 1)
-    Button10.Font = Enum.Font.FredokaOne
-    Button10.TextSize = 18
-    Button10.Visible = false
 
-    -- Add rounded corners to Button1
-    local ButtonUICorner1 = Instance.new("UICorner")
-    ButtonUICorner1.Parent = Button10
-    ButtonUICorner1.CornerRadius = UDim.new(0, 12)
-
-    -- Add outline to Button1
-    local ButtonOutline1 = Instance.new("UIStroke")
-    ButtonOutline1.Parent = Button10
-    ButtonOutline1.Thickness = 2
-    ButtonOutline1.Color = Color3.new(255, 0, 0)
-    ButtonOutline1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-
-    
-
-    
-    -- Create Button2
-    Button11.Parent = Frame
-    Button11.Size = UDim2.new(0, 120, 0, 40)
-    Button11.Position = UDim2.new(0.5, -20, 0.65, 40)
-    Button11.BackgroundColor3 = Color3.new(0, 0, 0)
-    Button11.BackgroundTransparency = 0.7
-    Button11.Text = "Temp Ban"
-    Button11.TextColor3 = Color3.new(1, 1, 1)
-    Button11.Font = Enum.Font.FredokaOne
-    Button11.TextSize = 18
-    Button11.Visible = false
-
-    -- Add rounded corners to Button2
-    local ButtonUICorner2 = Instance.new("UICorner")
-    ButtonUICorner2.Parent = Button11
-    ButtonUICorner2.CornerRadius = UDim.new(0, 12)
-
-    -- Add outline to Button2
-    local ButtonOutline2 = Instance.new("UIStroke")
-    ButtonOutline2.Parent = Button11
-    ButtonOutline2.Thickness = 2
-    ButtonOutline2.Color = Color3.new(1, 1, 1)
-    ButtonOutline2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    
     
 
 
@@ -1575,11 +1138,10 @@ ButtonUICorner8.CornerRadius = UDim.new(0, 12) -- Set corner radius
 
 -- Click event for Button 8
 Combo8.MouseButton1Click:Connect(function()
-    Frame.Visible = true
-Frame2.Visible = true
 Frame3.Visible = false
 ToggleButton.Visible = false
 ToggleButton1.Visible = true
+Frame.Visible = true
 end)
 
 -- Button 9
@@ -2282,8 +1844,8 @@ TextBox4Outline.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
 local TextBox5 = Instance.new("TextBox")
 TextBox5.Parent = Frame
-TextBox5.Size = UDim2.new(0, 305, 0, 60)
-TextBox5.Position = UDim2.new(0, 60, 0.22, 0)
+TextBox5.Size = UDim2.new(0, 150, 0, 60)
+TextBox5.Position = UDim2.new(0, 235, 0.22, 0)
 TextBox5.BackgroundColor3 = Color3.new(0, 0, 0)
 TextBox5.BackgroundTransparency = 0.7
 TextBox5.PlaceholderText = "Reason" -- Custom placeholder text for TextBox5
@@ -2306,26 +1868,111 @@ TextBox5Outline.Color = Color3.new(1, 1, 1)
 TextBox5Outline.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
 
-    -- Variable to control the banning loop
+
+local TextBox50 = Instance.new("TextBox")
+TextBox50.Parent = Frame
+TextBox50.Size = UDim2.new(0, 150, 0, 60)
+TextBox50.Position = UDim2.new(0, 42, 0.22, 0)
+TextBox50.BackgroundColor3 = Color3.new(0, 0, 0)
+TextBox50.BackgroundTransparency = 0.7
+TextBox50.PlaceholderText = "Enter Player Name" -- Custom placeholder text for TextBox50
+TextBox50.PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7) -- Sets the placeholder text color
+TextBox50.Text = "" -- Ensure no default text is set
+TextBox50.TextColor3 = Color3.new(1, 1, 1)
+TextBox50.Font = Enum.Font.FredokaOne
+TextBox50.TextSize = 18
+
+-- Add rounded corners to TextBox50
+local TextBox50UICorner = Instance.new("UICorner")
+TextBox50UICorner.Parent = TextBox50
+TextBox50UICorner.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to TextBox50
+local TextBox50Outline = Instance.new("UIStroke")
+TextBox50Outline.Parent = TextBox50
+TextBox50Outline.Thickness = 2
+TextBox50Outline.Color = Color3.new(1, 1, 1)
+TextBox50Outline.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+local function completePlayerName(inputName)
+    local players = game:GetService("Players")
+    for _, player in ipairs(players:GetPlayers()) do
+        if string.lower(player.Name):sub(1, #inputName) == string.lower(inputName) or 
+           string.lower(player.DisplayName):sub(1, #inputName) == string.lower(inputName) then
+            return player.Name -- Return username if match is found
+        end
+    end
+    return nil -- If no match is found
+end
+
+TextBox50.FocusLost:Connect(function(enterPressed)
+    if enterPressed then
+        local inputName = TextBox50.Text
+        if inputName == "" then
+            TextBox50.PlaceholderText = "Enter Player Name"
+        else
+            local playerName = completePlayerName(inputName)
+            if playerName then
+                TextBox50.Text = playerName
+            else
+                TextBox50.Text = "Player not found"
+                wait(2)
+                TextBox50.Text = ""
+                TextBox50.PlaceholderText = "Enter Player Name"
+            end
+        end
+    end
+end)
+
+
+
+
+
 local banning = false
+
+-- Function to get Player ID from username
+local function getPlayerIdByUsername(username)
+    local players = game:GetService("Players")
+    for _, player in ipairs(players:GetPlayers()) do
+        if string.lower(player.Name) == string.lower(username) or 
+           string.lower(player.DisplayName) == string.lower(username) then
+            return player.UserId -- Return the Player ID
+        end
+    end
+    return nil -- If no player is found
+end
 
 -- Ban Button Functionality
 Button1.MouseButton1Click:Connect(function()
-    local reason = TextBox5.Text -- Get the reason from the textbox
-    if reason == "" then
-        notify("Invalid reason!", 24)
+    local username = TextBox50.Text -- Get the username from TextBox50
+    local reason = TextBox5.Text -- Get the reason from TextBox5
+
+    if username == "" then
+        notify("Enter a valid\nusername!", 24)
         return
     end
 
-    -- Create the arguments table with the reason
+    if reason == "" then
+        notify("Enter a valid\nreason!", 24)
+        return
+    end
+
+    -- Get the player ID from the username
+    local playerId = getPlayerIdByUsername(username)
+    if not playerId then
+        notify("Player not found!", 24)
+        return
+    end
+
+    -- Create the arguments table with the player ID and reason
     local args = {
-        [1] = 1762242526,
+        [1] = playerId, -- Use the retrieved Player ID
         [2] = "Kick",
-        [3] = "You have been PERMAMENT BANNED | Reason: " .. reason
+        [3] = "You have been PERMANENTLY BANNED | Reason: " .. reason
     }
 
-    -- Start running the remote every 0.5 seconds
-    notify("KhoaAmazed has been\npermament banned\nReason: " .. reason, 18, 5)
+    -- Notify and start banning
+    notify(username .. " has been\npermanently banned\nReason: " .. reason, 18, 5)
     banning = true
     while banning do
         game:GetService("ReplicatedStorage").AdminUI.PunishRemote:InvokeServer(unpack(args))
@@ -2338,13 +1985,38 @@ end)
 
 local isBanning = false -- Flag to track if temp banning is active
 
+-- Function to get Player ID from username
+local function getPlayerIdByUsername(username)
+    local players = game:GetService("Players")
+    for _, player in ipairs(players:GetPlayers()) do
+        if string.lower(player.Name) == string.lower(username) or 
+           string.lower(player.DisplayName) == string.lower(username) then
+            return player.UserId -- Return the Player ID
+        end
+    end
+    return nil -- If no player is found
+end
+
 -- Temp Ban button functionality
 Button2.MouseButton1Click:Connect(function()
+    local username = TextBox50.Text -- Get the username from TextBox50
     local reason = TextBox5.Text -- Get the text from the Reason textbox
     local seconds = tonumber(TextBox3.Text) -- Get the text from the Seconds textbox and convert to number
-    
+
+    if username == "" then
+        notify("Enter a valid\nusername!", 24)
+        return
+    end
+
     if reason == "" or not seconds or seconds <= 0 then
         notify("Invalid reason\nor time!", 24) -- Ensure valid input
+        return
+    end
+
+    -- Retrieve the Player ID
+    local playerId = getPlayerIdByUsername(username)
+    if not playerId then
+        notify("Player not found!", 24)
         return
     end
 
@@ -2354,7 +2026,7 @@ Button2.MouseButton1Click:Connect(function()
     end
 
     -- Start temp banning
-    notify("KhoaAmazed has been\ntemporary banned\nReason: " .. reason, 18, 5)
+    notify(username .. " has been\ntemporarily banned\nReason: " .. reason, 18, 5)
     isBanning = true
     local startTime = tick() -- Store the time when the temp ban starts
     local endTime = startTime + seconds -- Calculate when the ban should end
@@ -2362,9 +2034,9 @@ Button2.MouseButton1Click:Connect(function()
     -- Loop to send the remote every 1 second for the specified time
     while tick() < endTime and isBanning do
         local args = {
-            [1] = 1762242526,
+            [1] = playerId, -- Use the retrieved Player ID
             [2] = "Kick",
-            [3] = string.format("TEMPORARY BANNED: %ds | Reason: %s", math.ceil(endTime - tick()), reason)
+            [3] = string.format("You have been TEMPORARY BANNED: %ds | Reason: %s", math.ceil(endTime - tick()), reason)
         }
         game:GetService("ReplicatedStorage").AdminUI.PunishRemote:InvokeServer(unpack(args))
 
@@ -2386,101 +2058,28 @@ end)
 
 
 -- Unban button functionality
-UnbanButton.MouseButton1Click:Connect(function()
-     notify("KhoaAmazed has\nbeen unbanned!", 24, 2)
-     isBanning = false
-end)
+Button109.MouseButton1Click:Connect(function()
+    local username = TextBox50.Text 
 
-UnbanButton2.MouseButton1Click:Connect(function()
-notify("KhoaAmazed has\nbeen unbanned!", 24, 2)
-     banning = false
-end)
-
-   
-   
-   
-   
-   
-   
-   -- Variable to control the banning loop
-local banning2 = false
-
--- Ban Button Functionality
-Button10.MouseButton1Click:Connect(function()
-    local reason2 = TextBox5.Text -- Get the reason from the textbox
-    if reason2 == "" then
-        notify("Invalid reason!", 24)
-        return
-    end
-
-    -- Create the arguments table with the reason
-    local args = {
-        [1] = 4956172446,
-        [2] = "Kick",
-        [3] = "You have been PERMAMENT BANNED | Reason: " .. reason2
-    }
-
-    -- Start running the remote every 0.5 seconds
-    notify("lIIllIIIllllIIlIl has been\npermament banned\nReason: " .. reason2, 18, 5)
-    banning2 = true
-    while banning2 do
-        game:GetService("ReplicatedStorage").AdminUI.PunishRemote:InvokeServer(unpack(args))
-        wait(0.5)
-    end
-end)
-   
-   
-local isBanningButton11 = false -- Flag to track if temp banning is active for Button11
-
--- Temp Ban button functionality for Button11
-Button11.MouseButton1Click:Connect(function()
-    local reason = TextBox5.Text -- Get the text from the Reason textbox
-    local seconds = tonumber(TextBox3.Text) -- Get the text from the Seconds textbox and convert to number
-    
-    if reason == "" or not seconds or seconds <= 0 then
-        notify("Invalid reason\nor time!", 24)
-        return
-    end
-
-    -- If already banning, stop the current temp ban loop
-    if isBanningButton11 then
-        return
-    end
-
-    -- Start temp banning for Button11
-    notify("lIIllIIIllllIIlIl has been\ntemporary banned\nReason: " .. reason, 18, 5)
-    isBanningButton11 = true
-    local startTime = tick() -- Store the time when the temp ban starts
-    local endTime = startTime + seconds -- Calculate when the ban should end
-
-    -- Loop to send the remote every 1 second for the specified time
-    while tick() < endTime and isBanningButton11 do
-        local args = {
-            [1] = 4956172446,
-            [2] = "Kick",
-            [3] = string.format("TEMPORARY BANNED: %ds | Reason: %s", math.ceil(endTime - tick()), reason)
-        }
-        game:GetService("ReplicatedStorage").AdminUI.PunishRemote:InvokeServer(unpack(args))
-
-        wait(1) -- Wait for 1 second before running the script again
-    end
-
-    -- After the loop ends, set isBanningButton11 to false (in case of timeout or stop)
-    isBanningButton11 = false
+    notify(username .. " has\nbeen unbanned!", 24, 2) -- Display the username in the notification
+    isBanning = false
 end)
 
 
-   
-   -- Unban button functionality
-UnbanButton3.MouseButton1Click:Connect(function()
-notify("lIIllIIIllllIIlIl has\nbeen unbanned!", 24, 2)
-     isBanningButton11 = false
+Button110.MouseButton1Click:Connect(function()
+    local username = TextBox50.Text 
+
+    notify(username .. " has\nbeen unbanned!", 24, 2) -- Display the username in the notification
+    banning = false
 end)
 
-UnbanButton4.MouseButton1Click:Connect(function()
-notify("lIIllIIIllllIIlIl has\nbeen unbanned!", 24, 2)
-     banning2 = false
-end)
+   
+   
+   
+   
+   
+   
+
 
 
 end
