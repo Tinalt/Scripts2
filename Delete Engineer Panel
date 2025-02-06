@@ -1070,10 +1070,11 @@ Button4.MouseButton1Click:Connect(function()
                 if tree.Name == "Tree" then
                     for i = 1, 15 do
                         local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
+                            [1] = 71247352612,
+                            [2] = tree,
+                            [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [4] = 1.999159812927246,
+                            [5] = tree.HumanoidRootPart
                         }
 
                         game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
@@ -1093,6 +1094,7 @@ Button4.MouseButton1Click:Connect(function()
         TextBox1.PlaceholderText = "Enter Player Name"
     end
 end)
+
 
 
 
@@ -1108,10 +1110,11 @@ Button3.MouseButton1Click:Connect(function()
                 if tree.Name == "Floor" then
                     for i = 1, 15 do
                         local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
+                            [1] = 71247352612,
+                            [2] = tree,
+                            [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [4] = 1.999159812927246,
+                            [5] = tree.HumanoidRootPart
                         }
 
                         game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
@@ -1134,6 +1137,7 @@ end)
 
 
 
+
 Button5.MouseButton1Click:Connect(function()
     local inputName = TextBox1.Text
     local playerName = completePlayerName(inputName)
@@ -1145,10 +1149,11 @@ Button5.MouseButton1Click:Connect(function()
                 if tree.Name == "Dispenser" then
                     for i = 1, 15 do
                         local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
+                            [1] = 71247352612,
+                            [2] = tree,
+                            [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [4] = 1.999159812927246,
+                            [5] = tree.HumanoidRootPart
                         }
 
                         game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
@@ -1182,10 +1187,11 @@ Button6.MouseButton1Click:Connect(function()
                     for i = 1, 15 do
                         -- Construct the arguments dynamically
                         local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
+                            [1] = 71247352612,
+                            [2] = tree,
+                            [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [4] = 1.999159812927246,
+                            [5] = tree.HumanoidRootPart
                         }
 
                         game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
@@ -1217,10 +1223,11 @@ Button7.MouseButton1Click:Connect(function()
             local driverSeat = engineerBuild:FindFirstChild("Driver's Seat")
             if driverSeat then
                 local args = {
-                    [1] = driverSeat,
-                    [2] = Vector3.new(-61.30976486206055, 28.19960594177246, -47.560218811035156),
-                    [3] = 2.2868831157684326,
-                    [4] = driverSeat.HumanoidRootPart
+                    [1] = 71247352612,
+                    [2] = driverSeat,
+                    [3] = Vector3.new(-61.30976486206055, 28.19960594177246, -47.560218811035156),
+                    [4] = 2.2868831157684326,
+                    [5] = driverSeat.HumanoidRootPart
                 }
 
                 for i = 1, 15 do
@@ -1245,6 +1252,7 @@ end)
 
 
 
+
 Button10.MouseButton1Click:Connect(function()
     local inputName = TextBox1.Text
     local playerName = completePlayerName(inputName)
@@ -1256,10 +1264,11 @@ Button10.MouseButton1Click:Connect(function()
                 if tree.Name == "Seat" then
                     for i = 1, 15 do
                         local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
+                            [1] = 71247352612,
+                            [2] = tree,
+                            [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [4] = 1.999159812927246,
+                            [5] = tree.HumanoidRootPart
                         }
 
                         game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
@@ -1294,10 +1303,11 @@ Button11.MouseButton1Click:Connect(function()
                 if tree.Name == "Fan" then
                     for i = 1, 15 do
                         local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
+                            [1] = 71247352612,
+                            [2] = tree,
+                            [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [4] = 1.999159812927246,
+                            [5] = tree.HumanoidRootPart
                         }
 
                         game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
@@ -1331,10 +1341,11 @@ Button12.MouseButton1Click:Connect(function()
                 if tree.Name == "Wheel" then
                     for i = 1, 15 do
                         local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
+                            [1] = 71247352612,
+                            [2] = tree,
+                            [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [4] = 1.999159812927246,
+                            [5] = tree.HumanoidRootPart
                         }
 
                         game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
@@ -1367,10 +1378,11 @@ Button13.MouseButton1Click:Connect(function()
                 if tree.Name == "Wall" then
                     for i = 1, 15 do
                         local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
+                            [1] = 71247352612,
+                            [2] = tree,
+                            [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [4] = 1.999159812927246,
+                            [5] = tree.HumanoidRootPart
                         }
 
                         game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
@@ -1403,10 +1415,11 @@ Button14.MouseButton1Click:Connect(function()
                 if tree.Name == "Balloon" then
                     for i = 1, 15 do
                         local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
+                            [1] = 71247352612,
+                            [2] = tree,
+                            [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [4] = 1.999159812927246,
+                            [5] = tree.HumanoidRootPart
                         }
 
                         game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
@@ -1439,10 +1452,11 @@ Button17.MouseButton1Click:Connect(function()
                 if tree.Name == "Propeller" then
                     for i = 1, 15 do
                         local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
+                            [1] = 71247352612,
+                            [2] = tree,
+                            [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [4] = 1.999159812927246,
+                            [5] = tree.HumanoidRootPart
                         }
 
                         game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
@@ -1466,38 +1480,39 @@ end)
 
 Button10.MouseButton1Click:Connect(function()
     local inputName = TextBox1.Text
-    local playerName = completePlayerName(inputName)
+local playerName = completePlayerName(inputName)
 
-    if playerName then
-        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
-        if engineerBuild then
-            for _, tree in pairs(engineerBuild:GetChildren()) do
-                if tree.Name == "Launch Pad" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
+if playerName then
+    local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+    if engineerBuild then
+        for _, tree in pairs(engineerBuild:GetChildren()) do
+            if tree.Name == "Launch Pad" then
+                for i = 1, 15 do
+                    local args = {
+                        [1] = engineerBuild:FindFirstChild("Launch Pad"),
+                        [2] = Vector3.new(-9.804037094116211, 19.14888572692871, 39.684391021728516),
+                        [3] = 1.6987570524215698,
+                        [4] = engineerBuild:FindFirstChild("Launch Pad").Main
+                    }
 
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
+                    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
                 end
             end
-        else
-            TextBox1.Text = "Build not found!"
-            wait(2)
-            TextBox1.Text = ""
-            TextBox1.PlaceholderText = "Enter Player Name"
         end
     else
-        TextBox1.Text = "Player not found!"
+        TextBox1.Text = "Build not found!"
         wait(2)
         TextBox1.Text = ""
         TextBox1.PlaceholderText = "Enter Player Name"
     end
+else
+    TextBox1.Text = "Player not found!"
+    wait(2)
+    TextBox1.Text = ""
+    TextBox1.PlaceholderText = "Enter Player Name"
+end
 end)
+
 
 Button19.MouseButton1Click:Connect(function()
     local inputName = TextBox1.Text
@@ -1510,10 +1525,11 @@ Button19.MouseButton1Click:Connect(function()
                 if tree.Name == "Ladder" then
                     for i = 1, 15 do
                         local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
+                            [1] = 71247352612,
+                            [2] = tree,
+                            [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [4] = 1.999159812927246,
+                            [5] = tree.HumanoidRootPart
                         }
 
                         game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
@@ -1545,10 +1561,11 @@ Button20.MouseButton1Click:Connect(function()
                 if tree.Name == "Overclocker" then
                     for i = 1, 15 do
                         local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
+                            [1] = 71247352612,
+                            [2] = tree,
+                            [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [4] = 1.999159812927246,
+                            [5] = tree.HumanoidRootPart
                         }
 
                         game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
@@ -1581,10 +1598,11 @@ Button21.MouseButton1Click:Connect(function()
                 if tree.Name == "Radio" then
                     for i = 1, 15 do
                         local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
+                            [1] = 71247352612,
+                            [2] = tree,
+                            [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [4] = 1.999159812927246,
+                            [5] = tree.HumanoidRootPart
                         }
 
                         game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
@@ -1618,10 +1636,11 @@ Button22.MouseButton1Click:Connect(function()
                 if tree.Name == "Piston" then
                     for i = 1, 15 do
                         local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
+                            [1] = 71247352612,
+                            [2] = tree,
+                            [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                            [4] = 1.999159812927246,
+                            [5] = tree.HumanoidRootPart
                         }
 
                         game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
@@ -1649,177 +1668,52 @@ Button23.MouseButton1Click:Connect(function()
     local playerName = completePlayerName(inputName)
 
     if playerName then
-        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
-        if engineerBuild then
-            for _, tree in pairs(engineerBuild:GetChildren()) do
-                if tree.Name == "Dispenser" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
-                elseif tree.Name == "Teleporter" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
-                elseif tree.Name == "Driver's Seat" then
-                    local driverSeat = engineerBuild:FindFirstChild("Driver's Seat")
-                    if driverSeat then
-                        local args = {
-                            [1] = driverSeat,
-                            [2] = Vector3.new(-61.30976486206055, 28.19960594177246, -47.560218811035156),
-                            [3] = 2.2868831157684326,
-                            [4] = driverSeat.HumanoidRootPart
-                        }
+        local engineerBuilds = workspace:FindFirstChild("Engineer Builds")
+        if engineerBuilds then
+            local engineerBuild = engineerBuilds:FindFirstChild(playerName)
+            if engineerBuild then
+                local remoteEvents = game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events")
+                local punchEvent = remoteEvents and remoteEvents:FindFirstChild("Punch")
+                
+                if not punchEvent then
+                    print("Remote event 'Punch' not found!")
+                    return
+                end
 
-                        for i = 1, 15 do
-                            game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                for _, tree in pairs(engineerBuild:GetChildren()) do
+                    local validObjects = {
+                        "Dispenser", "Teleporter", "Driver's Seat", "Floor", "Tree", "Radio", "Launch Pad",
+                        "Wall", "Wheel", "Balloon", "Seat", "Ladder", "Piston", "Overclocker", "Propeller", "Fan"
+                    }
+
+                    if table.find(validObjects, tree.Name) then
+                        local targetPart = tree:FindFirstChild("HumanoidRootPart") or tree.PrimaryPart
+                        if targetPart then
+                            local position = Vector3.new(61.8017, 19.4766, -42.9627) -- Default position
+                            local force = 1.9991 -- Default force
+                            
+                            if tree.Name == "Driver's Seat" then
+                                position = Vector3.new(-61.3097, 28.1996, -47.5602)
+                                force = 2.2868
+                            elseif tree.Name == "Launch Pad" then
+                                position = Vector3.new(-9.8040, 19.1488, 39.6843)
+                                force = 1.6987
+                            end
+
+                            for i = 1, 15 do
+                                punchEvent:FireServer(71247352612, tree, position, force, targetPart)
+                            end
                         end
                     end
-                elseif tree.Name == "Floor" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
-                elseif tree.Name == "Tree" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
-                elseif tree.Name == "Radio" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
-                    elseif tree.Name == "Laucher Pad" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
-                    elseif tree.Name == "Wall" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
-                    elseif tree.Name == "Wheel" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
-                    elseif tree.Name == "Balloon" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
-                    elseif tree.Name == "Seat" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
-                    elseif tree.Name == "Ladder" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
-                    elseif tree.Name == "Piston" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
-                    elseif tree.Name == "Overclocker" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
-                    elseif tree.Name == "Propreller" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
-                    elseif tree.Name == "Fan" then
-                    for i = 1, 15 do
-                        local args = {
-                            [1] = tree,
-                            [2] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
-                            [3] = 1.999159812927246,
-                            [4] = tree.HumanoidRootPart
-                        }
-                        game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                    end
                 end
+            else
+                TextBox1.Text = "Build not found!"
+                wait(2)
+                TextBox1.Text = ""
+                TextBox1.PlaceholderText = "Enter Player Name"
             end
         else
-            TextBox1.Text = "Build not found!"
+            TextBox1.Text = "Engineer Builds not found!"
             wait(2)
             TextBox1.Text = ""
             TextBox1.PlaceholderText = "Enter Player Name"
