@@ -202,7 +202,7 @@ game:GetService('RunService').RenderStepped:Connect(function()
             if player.Name ~= game:GetService('Players').LocalPlayer.Name and not excludedPlayers[player.Name] then
                 pcall(function()
                     player.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize, _G.HeadSize, _G.HeadSize)
-                    player.Character.HumanoidRootPart.Transparency = 0.9
+                    player.Character.HumanoidRootPart.Transparency = 1
                     player.Character.HumanoidRootPart.BrickColor = BrickColor.new("White")
                     player.Character.HumanoidRootPart.Material = "Neon"
                     player.Character.HumanoidRootPart.CanCollide = false
