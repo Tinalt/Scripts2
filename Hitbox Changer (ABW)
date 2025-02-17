@@ -225,7 +225,7 @@ Button1.MouseButton1Click:Connect(function()
 
         applyCooldown = true
 
-        Button1.BackgroundColor3 = Color3.new(1, 0, 0)
+        Button1.BackgroundColor3 = Color3.new(255, 0, 0)
 
         for i = 0, 1, 0.1 do
             Button1.BackgroundTransparency = i
