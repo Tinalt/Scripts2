@@ -11,6 +11,14 @@ local Frame3 = Instance.new("Frame")
 local UICorner51 = Instance.new("UICorner")
 local UIStroke51 = Instance.new("UIStroke")
 
+local Frame4 = Instance.new("Frame")
+local UICorner52 = Instance.new("UICorner")
+local UIStroke52 = Instance.new("UIStroke")
+
+local Frame5 = Instance.new("Frame")
+local UICorner530 = Instance.new("UICorner")
+local UIStroke530 = Instance.new("UIStroke")
+
 
 
 ---Buttons---
@@ -42,6 +50,10 @@ local Button21 = Instance.new("TextButton")
 local Button22 = Instance.new("TextButton")
 
 local Button23 = Instance.new("TextButton")
+local Button24 = Instance.new("TextButton")
+
+local Button25 = Instance.new("TextButton")
+local Button26 = Instance.new("TextButton")
 
 
 
@@ -51,6 +63,7 @@ local Button23 = Instance.new("TextButton")
 local Label1 = Instance.new("TextLabel")
 local Label2 = Instance.new("TextLabel")
 local Label3 = Instance.new("TextLabel")
+local Label4 = Instance.new("TextLabel")
 local UIStroke2 = Instance.new("UIStroke")
 local TextBox1 = Instance.new("TextBox")
 local TextBoxUICorner = Instance.new("UICorner")
@@ -115,6 +128,32 @@ ToggleButton5.MouseButton1Click:Connect(function()
 end)
 
 
+local ToggleButton6 = Instance.new("ImageButton")
+local ToggleUICorner6 = Instance.new("UICorner")
+local ToggleTextLabel6 = Instance.new("TextLabel")
+
+ToggleButton6.Parent = ScreenGui
+ToggleButton6.Size = UDim2.new(0, 44, 0, 44)
+ToggleButton6.Position = UDim2.new(0.5, 250, 0.014, -50)
+ToggleButton6.BackgroundColor3 = Color3.new(0, 0, 0)
+ToggleButton6.Transparency = 0.35
+ToggleButton6.Visible = false
+
+ToggleUICorner6.Parent = ToggleButton6
+ToggleUICorner6.CornerRadius = UDim.new(0, 50)
+
+ToggleTextLabel6.Parent = ToggleButton6
+ToggleTextLabel6.Size = UDim2.new(1, 0, 1, 0)
+ToggleTextLabel6.Position = UDim2.new(0, 0, -0.05, 0)
+ToggleTextLabel6.BackgroundTransparency = 1
+ToggleTextLabel6.Text = "★"
+ToggleTextLabel6.TextColor3 = Color3.new(1, 1, 1)
+ToggleTextLabel6.TextScaled = true
+ToggleTextLabel6.TextStrokeTransparency = 0
+
+ToggleButton6.MouseButton1Click:Connect(function()
+Frame4.Visible = not Frame4.Visible
+end)
 
 
 
@@ -176,7 +215,36 @@ UICorner51.Parent = Frame3
 UICorner51.CornerRadius = UDim.new(0, 10)
 
 
+Frame4.Parent = ScreenGui
+Frame4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame4.Position = UDim2.new(0.5, -175, 0.4, -150)
+Frame4.Size = UDim2.new(0, 350, 0, 340)
+Frame4.Visible = false
+Frame4.BackgroundTransparency = 0.35
 
+UIStroke52.Parent = Frame4
+UIStroke52.Color = Color3.new(1, 1, 1)
+UIStroke52.Thickness = 2.7
+
+UICorner52.Parent = Frame4
+UICorner52.CornerRadius = UDim.new(0, 10)
+
+
+Frame5.Parent = ScreenGui
+Frame5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame5.Position = UDim2.new(0.5, 200, 0.4, -150)
+Frame5.Size = UDim2.new(0, 110, 0, 340)
+Frame5.Visible = false
+Frame5.BackgroundTransparency = 0.35
+
+-- Outline for the main frame (UIStroke with thickness 2)
+UIStroke530.Parent = Frame5
+UIStroke530.Color = Color3.new(1, 1, 1)
+UIStroke530.Thickness = 2.7
+
+
+UICorner530.Parent = Frame5
+UICorner530.CornerRadius = UDim.new(0, 10)
 
 
 
@@ -219,6 +287,14 @@ Label3.TextSize = 23
 Label3.Font = Enum.Font.FredokaOne
 Label3.TextColor3 = Color3.new(1, 1, 1)
 
+Label4.Parent = Frame4
+Label4.Size = UDim2.new(1, 0, 0.2, 0)
+Label4.Position = UDim2.new(0, 0, 0.001, 0)
+Label4.BackgroundTransparency = 1
+Label4.Text = "Loop Delete"
+Label4.TextSize = 23
+Label4.Font = Enum.Font.FredokaOne
+Label4.TextColor3 = Color3.new(1, 1, 1)
 
 
 
@@ -655,12 +731,101 @@ UIStroke4.Color = Color3.new(1, 1, 1)
 UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
 
+Button24.Parent = Frame3
+Button24.Size = UDim2.new(0, 40, 0, 40)
+Button24.Position = UDim2.new(0.5, 100, 0.85, -20)
+Button24.BackgroundColor3 = Color3.new(0, 0, 0)
+Button24.BackgroundTransparency = 0.7
+Button24.Text = "Loop"
+Button24.TextSize = 18
+Button24.Font = Enum.Font.FredokaOne
+Button24.TextColor3 = Color3.new(1,0,0)
+Button24.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button24)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button24
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button24
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
 
 
+Button25.Parent = Frame3
+Button25.Size = UDim2.new(0, 25, 0, 200)
+Button25.Position = UDim2.new(0.5, 195, 0.28, -20)
+Button25.BackgroundColor3 = Color3.new(0, 0, 0)
+Button25.BackgroundTransparency = 0.7
+Button25.Text = ">"
+Button25.TextSize = 21
+Button25.Font = Enum.Font.FredokaOne
+Button25.TextColor3 = Color3.new(1, 1, 1)
+Button25.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button25)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button25
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button25
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Button25.MouseButton1Click:Connect(function()
+Frame3.Visible = false
+Frame4.Visible = true
+Frame5.Visible = true
+ToggleButton5.Visible = false
+ToggleButton6.Visible = true
+end)
 
 
 
+Button26.Parent = Frame4
+Button26.Size = UDim2.new(0, 25, 0, 200)
+Button26.Position = UDim2.new(0.5, -220, 0.28, -20)
+Button26.BackgroundColor3 = Color3.new(0, 0, 0)
+Button26.BackgroundTransparency = 0.7
+Button26.Text = "<"
+Button26.TextSize = 21
+Button26.Font = Enum.Font.FredokaOne
+Button26.TextColor3 = Color3.new(1, 1, 1)
+Button26.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button26)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button26
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button26
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+Button26.MouseButton1Click:Connect(function()
+Frame3.Visible = true
+Frame4.Visible = false
+Frame5.Visible = false
+ToggleButton5.Visible = true
+ToggleButton6.Visible = false
+end)
 
 
 
@@ -1480,38 +1645,54 @@ end)
 
 Button10.MouseButton1Click:Connect(function()
     local inputName = TextBox1.Text
-local playerName = completePlayerName(inputName)
+    local playerName = completePlayerName(inputName)
 
-if playerName then
-    local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
-    if engineerBuild then
-        for _, tree in pairs(engineerBuild:GetChildren()) do
-            if tree.Name == "Launch Pad" then
-                for i = 1, 15 do
-                    local args = {
-                        [1] = engineerBuild:FindFirstChild("Launch Pad"),
-                        [2] = Vector3.new(-9.804037094116211, 19.14888572692871, 39.684391021728516),
-                        [3] = 1.6987570524215698,
-                        [4] = engineerBuild:FindFirstChild("Launch Pad").Main
-                    }
-
-                    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
-                end
-            end
-        end
-    else
-        TextBox1.Text = "Build not found!"
+    if not playerName then
+        print("Player not found!")
+        TextBox1.Text = "Player not found!"
         wait(2)
         TextBox1.Text = ""
         TextBox1.PlaceholderText = "Enter Player Name"
+        return
     end
-else
-    TextBox1.Text = "Player not found!"
-    wait(2)
-    TextBox1.Text = ""
-    TextBox1.PlaceholderText = "Enter Player Name"
-end
+
+    local engineerBuilds = workspace:FindFirstChild("Engineer Builds")
+    if not engineerBuilds then
+        print("Engineer Builds not found!")
+        return
+    end
+
+    local engineerBuild = engineerBuilds:FindFirstChild(playerName)
+    if not engineerBuild then
+        print("Build for", playerName, "not found!")
+        return
+    end
+
+    local launchPad = engineerBuild:FindFirstChild("Launch Pad")
+    if not launchPad then
+        print("Launch Pad not found!")
+        return
+    end
+
+    local targetPart = launchPad:FindFirstChild("HumanoidRootPart") or launchPad.PrimaryPart
+    if not targetPart then
+        print("Target part not found!")
+        return
+    end
+
+    print("All checks passed! Sending remote event...")
+    
+    local args = {
+        [1] = 8923749671123,
+        [2] = launchPad,
+        [3] = Vector3.new(45.7248, 269.969, 55.6883),
+        [4] = 3.1615,
+        [5] = targetPart
+    }
+
+    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
 end)
+
 
 
 Button19.MouseButton1Click:Connect(function()
@@ -1723,5 +1904,87 @@ Button23.MouseButton1Click:Connect(function()
         wait(2)
         TextBox1.Text = ""
         TextBox1.PlaceholderText = "Enter Player Name"
+    end
+end)
+
+
+local looping = false -- Toggle state
+
+Button24.MouseButton1Click:Connect(function()
+    looping = not looping -- Toggle state
+
+    -- Update button color (Green = ON, Red = OFF)
+    Button24.TextColor3 = looping and Color3.new(0, 1, 0) or Color3.new(1, 0, 0)
+
+    if looping then
+        spawn(function() -- Run in a separate thread
+            while looping do
+                local inputName = TextBox1.Text
+                local playerName = completePlayerName(inputName)
+
+                if playerName then
+                    local engineerBuilds = workspace:FindFirstChild("Engineer Builds")
+                    if engineerBuilds then
+                        local engineerBuild = engineerBuilds:FindFirstChild(playerName)
+                        if engineerBuild then
+                            local remoteEvents = game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events")
+                            local punchEvent = remoteEvents and remoteEvents:FindFirstChild("Punch")
+                            
+                            if not punchEvent then
+                                print("Remote event 'Punch' not found!")
+                                return
+                            end
+
+                            local validObjects = {
+                                "Dispenser", "Teleporter", "Driver's Seat", "Floor", "Tree", "Radio", "Launch Pad",
+                                "Wall", "Wheel", "Balloon", "Seat", "Ladder", "Piston", "Overclocker", "Propeller", "Fan"
+                            }
+
+                            for _, tree in pairs(engineerBuild:GetChildren()) do
+                                if not looping then break end -- Stop immediately if toggled off
+
+                                if table.find(validObjects, tree.Name) then
+                                    local targetPart = tree:FindFirstChild("HumanoidRootPart") or tree.PrimaryPart
+                                    if targetPart then
+                                        local position = Vector3.new(61.8017, 19.4766, -42.9627) -- Default position
+                                        local force = 1.9991 -- Default force
+                                        
+                                        if tree.Name == "Driver's Seat" then
+                                            position = Vector3.new(-61.3097, 28.1996, -47.5602)
+                                            force = 2.2868
+                                        elseif tree.Name == "Launch Pad" then
+                                            position = Vector3.new(-9.8040, 19.1488, 39.6843)
+                                            force = 1.6987
+                                        end
+
+                                        for i = 1, 15 do
+                                            if not looping then break end -- Stop mid-execution if toggled off
+                                            punchEvent:FireServer(8923749671123, tree, position, force, targetPart)
+                                        end
+                                    end
+                                end
+                            end
+                        else
+                            TextBox1.Text = "Build not found!"
+                            task.wait(2)
+                            TextBox1.Text = ""
+                            TextBox1.PlaceholderText = "Enter Player Name"
+                        end
+                    else
+                        TextBox1.Text = "Engineer Builds not found!"
+                        task.wait(2)
+                        TextBox1.Text = ""
+                        TextBox1.PlaceholderText = "Enter Player Name"
+                    end
+                else
+                    TextBox1.Text = "Player not found!"
+                    task.wait(2)
+                    TextBox1.Text = ""
+                    TextBox1.PlaceholderText = "Enter Player Name"
+                end
+
+                task.wait(0.1) -- **Prevents game from crashing**
+            end
+        end)
     end
 end)
