@@ -1643,55 +1643,46 @@ Button17.MouseButton1Click:Connect(function()
 end)
 
 
-Button10.MouseButton1Click:Connect(function()
+
+Button18.MouseButton1Click:Connect(function()
     local inputName = TextBox1.Text
     local playerName = completePlayerName(inputName)
 
-    if not playerName then
-        print("Player not found!")
+    if playerName then
+        local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+        if engineerBuild then
+            local launchPad = engineerBuild:FindFirstChild("Launch Pad")
+            if launchPad then
+                local args = {
+                    [1] = 8923749671123,
+                    [2] = launchPad,
+                    [3] = Vector3.new(-61.30976486206055, 28.19960594177246, -47.560218811035156),
+                    [4] = 2.2868831157684326,
+                    [5] = launchPad.HumanoidRootPart
+                }
+
+                for i = 1, 15 do
+                    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                end
+            end
+        else
+            TextBox1.Text = "Build not found!"
+            wait(2)
+            TextBox1.Text = ""
+            TextBox1.PlaceholderText = "Enter Player Name"
+        end
+    else
         TextBox1.Text = "Player not found!"
         wait(2)
         TextBox1.Text = ""
         TextBox1.PlaceholderText = "Enter Player Name"
-        return
     end
-
-    local engineerBuilds = workspace:FindFirstChild("Engineer Builds")
-    if not engineerBuilds then
-        print("Engineer Builds not found!")
-        return
-    end
-
-    local engineerBuild = engineerBuilds:FindFirstChild(playerName)
-    if not engineerBuild then
-        print("Build for", playerName, "not found!")
-        return
-    end
-
-    local launchPad = engineerBuild:FindFirstChild("Launch Pad")
-    if not launchPad then
-        print("Launch Pad not found!")
-        return
-    end
-
-    local targetPart = launchPad:FindFirstChild("HumanoidRootPart") or launchPad.PrimaryPart
-    if not targetPart then
-        print("Target part not found!")
-        return
-    end
-
-    print("All checks passed! Sending remote event...")
-    
-    local args = {
-        [1] = 8923749671123,
-        [2] = launchPad,
-        [3] = Vector3.new(45.7248, 269.969, 55.6883),
-        [4] = 3.1615,
-        [5] = targetPart
-    }
-
-    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
 end)
+
+
+
+
+
 
 
 
