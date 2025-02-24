@@ -19,9 +19,14 @@ local Frame5 = Instance.new("Frame")
 local UICorner530 = Instance.new("UICorner")
 local UIStroke530 = Instance.new("UIStroke")
 
+local Frame6 = Instance.new("Frame")
+local UICorner531 = Instance.new("UICorner")
+local UIStroke531 = Instance.new("UIStroke")
+
 
 
 ---Buttons---
+
 
 local Button1 = Instance.new("TextButton")
 local Button2 = Instance.new("TextButton")
@@ -55,6 +60,18 @@ local Button24 = Instance.new("TextButton")
 local Button25 = Instance.new("TextButton")
 local Button26 = Instance.new("TextButton")
 
+local Button27 = Instance.new("TextButton")
+local Button28 = Instance.new("TextButton")
+local Button29 = Instance.new("TextButton")
+local Button30 = Instance.new("TextButton")
+local Button31 = Instance.new("TextButton")
+local Button32 = Instance.new("TextButton")
+local Button33 = Instance.new("TextButton")
+local Button34 = Instance.new("TextButton")
+local Button35 = Instance.new("TextButton")
+local Button36 = Instance.new("TextButton")
+
+local Button37 = Instance.new("TextButton")
 
 
 
@@ -158,6 +175,37 @@ end)
 
 
 
+local ToggleButton7 = Instance.new("ImageButton")
+local ToggleUICorner7 = Instance.new("UICorner")
+local ToggleTextLabel7 = Instance.new("TextLabel")
+
+ToggleButton7.Parent = ScreenGui
+ToggleButton7.Size = UDim2.new(0, 44, 0, 44)
+ToggleButton7.Position = UDim2.new(0.5, 250, 0.014, -50)
+ToggleButton7.BackgroundColor3 = Color3.new(0, 0, 0)
+ToggleButton7.Transparency = 0.35
+ToggleButton7.Visible = false
+
+ToggleUICorner7.Parent = ToggleButton7
+ToggleUICorner7.CornerRadius = UDim.new(0, 50)
+
+ToggleTextLabel7.Parent = ToggleButton7
+ToggleTextLabel7.Size = UDim2.new(1, 0, 1, 0)
+ToggleTextLabel7.Position = UDim2.new(0, 0, -0.05, 0)
+ToggleTextLabel7.BackgroundTransparency = 1
+ToggleTextLabel7.Text = "★"
+ToggleTextLabel7.TextColor3 = Color3.new(1, 1, 1)
+ToggleTextLabel7.TextScaled = true
+ToggleTextLabel7.TextStrokeTransparency = 0
+
+
+ToggleButton7.MouseButton1Click:Connect(function()
+Frame6.Visible = not Frame6.Visible
+end)
+
+
+
+
 -- Set up the UI
 ScreenGui.Parent = game.CoreGui
 ScreenGui.Name = "EZLOLKID"
@@ -233,8 +281,8 @@ UICorner52.CornerRadius = UDim.new(0, 10)
 
 Frame5.Parent = ScreenGui
 Frame5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame5.Position = UDim2.new(0.5, 200, 0.4, -150)
-Frame5.Size = UDim2.new(0, 110, 0, 340)
+Frame5.Position = UDim2.new(0.5, 200, 0.62, -150)
+Frame5.Size = UDim2.new(0, 110, 0, 160)
 Frame5.Visible = false
 Frame5.BackgroundTransparency = 0.35
 
@@ -247,6 +295,21 @@ UIStroke530.Thickness = 2.7
 UICorner530.Parent = Frame5
 UICorner530.CornerRadius = UDim.new(0, 10)
 
+
+Frame6.Parent = ScreenGui
+Frame6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame6.Position = UDim2.new(0.5, -175, 0.4, -150)
+Frame6.Size = UDim2.new(0, 350, 0, 340)
+Frame6.Visible = false
+Frame6.BackgroundTransparency = 0.35
+
+-- Outline for the main frame (UIStroke with thickness 2)
+UIStroke531.Parent = Frame6
+UIStroke531.Color = Color3.new(1, 1, 1)
+UIStroke531.Thickness = 2.7
+
+UICorner531.Parent = Frame6
+UICorner531.CornerRadius = UDim.new(0, 10)
 
 
 
@@ -292,7 +355,7 @@ Label4.Parent = Frame4
 Label4.Size = UDim2.new(1, 0, 0.2, 0)
 Label4.Position = UDim2.new(0, 0, 0.001, 0)
 Label4.BackgroundTransparency = 1
-Label4.Text = "Loop Delete"
+Label4.Text = "Auto Delete"
 Label4.TextSize = 23
 Label4.Font = Enum.Font.FredokaOne
 Label4.TextColor3 = Color3.new(1, 1, 1)
@@ -829,6 +892,313 @@ ToggleButton6.Visible = false
 end)
 
 
+
+Button27.Parent = Frame4
+Button27.Size = UDim2.new(0, 130, 0, 40)
+Button27.Position = UDim2.new(0.5, 15, 0.25, -20)
+Button27.BackgroundColor3 = Color3.new(0, 0, 0)
+Button27.BackgroundTransparency = 0.7
+Button27.Text = "Floor"
+Button27.TextSize = 18
+Button27.Font = Enum.Font.FredokaOne
+Button27.TextColor3 = Color3.new(1, 1, 1)
+Button27.TextStrokeTransparency = 1
+
+-- Black outline for Button27
+local UIStroke3 = Instance.new("UIStroke", Button27)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+-- Corner radius for Button27
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button27
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+-- Add outline to Button27
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button27
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+Button28.Parent = Frame4
+Button28.Size = UDim2.new(0, 130, 0, 40)
+Button28.Position = UDim2.new(0.5, 15, 0.45, -20)
+Button28.BackgroundColor3 = Color3.new(0, 0, 0)
+Button28.BackgroundTransparency = 0.7
+Button28.Text = "Tree"
+Button28.TextSize = 18
+Button28.Font = Enum.Font.FredokaOne
+Button28.TextColor3 = Color3.new(1, 1, 1)
+Button28.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button28)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button28
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button28
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+Button29.Parent = Frame4
+Button29.Size = UDim2.new(0, 130, 0, 40)
+Button29.Position = UDim2.new(0.5, 15, 0.65, -20)
+Button29.BackgroundColor3 = Color3.new(0, 0, 0)
+Button29.BackgroundTransparency = 0.7
+Button29.Text = "Dispenser"
+Button29.TextSize = 18
+Button29.Font = Enum.Font.FredokaOne
+Button29.TextColor3 = Color3.new(1, 1, 1)
+Button29.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button29)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button29
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button29
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+Button30.Parent = Frame4
+Button30.Size = UDim2.new(0, 130, 0, 40)
+Button30.Position = UDim2.new(0.5, 15, 0.85, -20)
+Button30.BackgroundColor3 = Color3.new(0, 0, 0)
+Button30.BackgroundTransparency = 0.7
+Button30.Text = "Teleporter"
+Button30.TextSize = 18
+Button30.Font = Enum.Font.FredokaOne
+Button30.TextColor3 = Color3.new(1, 1, 1)
+Button30.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button30)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button30
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button30
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+Button31.Parent = Frame4
+Button31.Size = UDim2.new(0, 130, 0, 40)
+Button31.Position = UDim2.new(0.5, -145, 0.85, -20)
+Button31.BackgroundColor3 = Color3.new(0, 0, 0)
+Button31.BackgroundTransparency = 0.7
+Button31.Text = "Driver Seat"
+Button31.TextSize = 18
+Button31.Font = Enum.Font.FredokaOne
+Button31.TextColor3 = Color3.new(1, 1, 1) 
+Button31.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button31)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button31
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button31
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+
+Button32.Parent = Frame4
+Button32.Size = UDim2.new(0, 130, 0, 40)
+Button32.Position = UDim2.new(0.5, -145, 0.65, -20)
+Button32.BackgroundColor3 = Color3.new(0, 0, 0)
+Button32.BackgroundTransparency = 0.7
+Button32.Text = "Seat"
+Button32.TextSize = 18
+Button32.Font = Enum.Font.FredokaOne
+Button32.TextColor3 = Color3.new(1, 1, 1) 
+Button32.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button32)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button32
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button32
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+Button33.Parent = Frame4
+Button33.Size = UDim2.new(0, 130, 0, 40)
+Button33.Position = UDim2.new(0.5, -145, 0.45, -20)
+Button33.BackgroundColor3 = Color3.new(0, 0, 0)
+Button33.BackgroundTransparency = 0.7
+Button33.Text = "Wheel"
+Button33.TextSize = 18
+Button33.Font = Enum.Font.FredokaOne
+Button33.TextColor3 = Color3.new(1, 1, 1) 
+Button33.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button33)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button33
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button33
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+Button34.Parent = Frame4
+Button34.Size = UDim2.new(0, 130, 0, 40)
+Button34.Position = UDim2.new(0.5, -145, 0.25, -20)
+Button34.BackgroundColor3 = Color3.new(0, 0, 0)
+Button34.BackgroundTransparency = 0.7
+Button34.Text = "Wall"
+Button34.TextSize = 18
+Button34.Font = Enum.Font.FredokaOne
+Button34.TextColor3 = Color3.new(1, 1, 1) 
+Button34.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button34)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button34
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button34
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+
+Button35.Parent = Frame5
+Button35.Size = UDim2.new(0, 80, 0, 40)
+Button35.Position = UDim2.new(0.5, -40, 0.29, -20)
+Button35.BackgroundColor3 = Color3.new(0, 0, 0)
+Button35.BackgroundTransparency = 0.7
+Button35.Text = "Balloon"
+Button35.TextSize = 18
+Button35.Font = Enum.Font.FredokaOne
+Button35.TextColor3 = Color3.new(1, 1, 1) 
+Button35.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button35)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button35
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button35
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+Button36.Parent = Frame5
+Button36.Size = UDim2.new(0, 80, 0, 40)
+Button36.Position = UDim2.new(0.5, -40, 0.73, -20)
+Button36.BackgroundColor3 = Color3.new(0, 0, 0)
+Button36.BackgroundTransparency = 0.7
+Button36.Text = "Fan"
+Button36.TextSize = 18
+Button36.Font = Enum.Font.FredokaOne
+Button36.TextColor3 = Color3.new(1, 1, 1) 
+Button36.TextStrokeTransparency = 1
+
+local UIStroke3 = Instance.new("UIStroke", Button36)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button36
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button36
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+
+Button37.Parent = Frame4
+Button37.Size = UDim2.new(0, 25, 0, 150)
+Button37.Position = UDim2.new(0.5, 195, 0.6, -20)
+Button37.BackgroundColor3 = Color3.new(0, 0, 0)
+Button37.BackgroundTransparency = 0.7
+Button37.Text = ">"
+Button37.TextSize = 21
+Button37.Font = Enum.Font.FredokaOne
+Button37.TextColor3 = Color3.new(1, 1, 1)
+Button37.TextStrokeTransparency = 1
+Button37.Visible = false
+
+local UIStroke3 = Instance.new("UIStroke", Button37)
+UIStroke3.Color = Color3.new(0, 0, 0)
+UIStroke3.Thickness = 2
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button37
+UICorner2.CornerRadius = UDim.new(0, 12)
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Parent = Button37
+UIStroke4.Thickness = 2
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+Button37.MouseButton1Click:Connect(function()
+Frame4.Visible = false
+Frame5.Visible = false
+Frame6.Visible = true
+ToggleButton6.Visible = false
+ToggleButton7.Visible = true
+end)
 
 
 
@@ -1979,4 +2349,523 @@ Button24.MouseButton1Click:Connect(function()
             end
         end)
     end
+end)
+
+
+local loopActive = false
+
+Button27.MouseButton1Click:Connect(function()
+    loopActive = not loopActive
+    Button27.TextColor3 = loopActive and Color3.new(0,1,0) or Color3.new(1,0,0) -- Green when on, red when off
+
+    task.spawn(function()
+        while loopActive do
+            local inputName = TextBox1.Text
+            local playerName = completePlayerName(inputName)
+
+            if playerName then
+                local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+                if engineerBuild then
+                    for _, tree in pairs(engineerBuild:GetChildren()) do
+                        if tree.Name == "Floor" then
+                            for i = 1, 15 do
+                                if not loopActive then return end -- Stop if toggled off
+
+                                task.defer(function()
+                                    local args = {
+                                        [1] = 8923749671123,
+                                        [2] = tree,
+                                        [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                                        [4] = 1.999159812927246,
+                                        [5] = tree.HumanoidRootPart
+                                    }
+
+                                    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                                end)
+                            end
+                        end
+                    end
+                else
+                    TextBox1.Text = "Build not found!"
+                    task.wait(2)
+                    TextBox1.Text = ""
+                    TextBox1.PlaceholderText = "Enter Player Name"
+                end
+            else
+                TextBox1.Text = "Player not found!"
+                task.wait(2)
+                TextBox1.Text = ""
+                TextBox1.PlaceholderText = "Enter Player Name"
+            end
+
+            task.wait() -- Prevents infinite freeze but keeps it fast
+        end
+    end)
+end)
+
+
+local loopActive = false
+
+Button28.MouseButton1Click:Connect(function()
+    loopActive = not loopActive
+    Button28.TextColor3 = loopActive and Color3.new(0,1,0) or Color3.new(1,0,0)
+
+    task.spawn(function()
+        while loopActive do
+            local inputName = TextBox1.Text
+            local playerName = completePlayerName(inputName)
+
+            if playerName then
+                local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+                if engineerBuild then
+                    for _, tree in pairs(engineerBuild:GetChildren()) do
+                        if tree.Name == "Tree" then
+                            for i = 1, 15 do
+                                if not loopActive then return end
+
+                                task.defer(function()
+                                    local args = {
+                                        [1] = 8923749671123,
+                                        [2] = tree,
+                                        [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                                        [4] = 1.999159812927246,
+                                        [5] = tree.HumanoidRootPart
+                                    }
+
+                                    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                                end)
+                            end
+                        end
+                    end
+                else
+                    TextBox1.Text = "Build not found!"
+                    task.wait(2)
+                    TextBox1.Text = ""
+                    TextBox1.PlaceholderText = "Enter Player Name"
+                end
+            else
+                TextBox1.Text = "Player not found!"
+                task.wait(2)
+                TextBox1.Text = ""
+                TextBox1.PlaceholderText = "Enter Player Name"
+            end
+
+            task.wait()
+        end
+    end)
+end)
+
+
+local loopActive = false
+
+Button29.MouseButton1Click:Connect(function()
+    loopActive = not loopActive
+    Button29.TextColor3 = loopActive and Color3.new(0,1,0) or Color3.new(1,0,0)
+
+    task.spawn(function()
+        while loopActive do
+            local inputName = TextBox1.Text
+            local playerName = completePlayerName(inputName)
+
+            if playerName then
+                local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+                if engineerBuild then
+                    for _, tree in pairs(engineerBuild:GetChildren()) do
+                        if tree.Name == "Dispenser" then
+                            for i = 1, 15 do
+                                if not loopActive then return end
+
+                                task.defer(function()
+                                    local args = {
+                                        [1] = 8923749671123,
+                                        [2] = tree,
+                                        [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                                        [4] = 1.999159812927246,
+                                        [5] = tree.HumanoidRootPart
+                                    }
+
+                                    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                                end)
+                            end
+                        end
+                    end
+                else
+                    TextBox1.Text = "Build not found!"
+                    task.wait(2)
+                    TextBox1.Text = ""
+                    TextBox1.PlaceholderText = "Enter Player Name"
+                end
+            else
+                TextBox1.Text = "Player not found!"
+                task.wait(2)
+                TextBox1.Text = ""
+                TextBox1.PlaceholderText = "Enter Player Name"
+            end
+
+            task.wait()
+        end
+    end)
+end)
+
+
+local loopActive = false
+
+Button30.MouseButton1Click:Connect(function()
+    loopActive = not loopActive
+    Button30.TextColor3 = loopActive and Color3.new(0,1,0) or Color3.new(1,0,0)
+
+    task.spawn(function()
+        while loopActive do
+            local inputName = TextBox1.Text
+            local playerName = completePlayerName(inputName)
+
+            if playerName then
+                local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+                if engineerBuild then
+                    for _, tree in pairs(engineerBuild:GetChildren()) do
+                        if tree.Name == "Teleporter" then
+                            for i = 1, 15 do
+                                if not loopActive then return end
+
+                                task.defer(function()
+                                    local args = {
+                                        [1] = 8923749671123,
+                                        [2] = tree,
+                                        [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                                        [4] = 1.999159812927246,
+                                        [5] = tree.HumanoidRootPart
+                                    }
+
+                                    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                                end)
+                            end
+                        end
+                    end
+                else
+                    TextBox1.Text = "Build not found!"
+                    task.wait(2)
+                    TextBox1.Text = ""
+                    TextBox1.PlaceholderText = "Enter Player Name"
+                end
+            else
+                TextBox1.Text = "Player not found!"
+                task.wait(2)
+                TextBox1.Text = ""
+                TextBox1.PlaceholderText = "Enter Player Name"
+            end
+
+            task.wait()
+        end
+    end)
+end)
+
+
+local loopActive = false
+
+Button32.MouseButton1Click:Connect(function()
+    loopActive = not loopActive
+    Button32.TextColor3 = loopActive and Color3.new(0,1,0) or Color3.new(1,0,0)
+
+    task.spawn(function()
+        while loopActive do
+            local inputName = TextBox1.Text
+            local playerName = completePlayerName(inputName)
+
+            if playerName then
+                local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+                if engineerBuild then
+                    for _, tree in pairs(engineerBuild:GetChildren()) do
+                        if tree.Name == "Seat" then
+                            for i = 1, 15 do
+                                if not loopActive then return end
+
+                                task.defer(function()
+                                    local args = {
+                                        [1] = 8923749671123,
+                                        [2] = tree,
+                                        [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                                        [4] = 1.999159812927246,
+                                        [5] = tree.HumanoidRootPart
+                                    }
+
+                                    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                                end)
+                            end
+                        end
+                    end
+                else
+                    TextBox1.Text = "Build not found!"
+                    task.wait(2)
+                    TextBox1.Text = ""
+                    TextBox1.PlaceholderText = "Enter Player Name"
+                end
+            else
+                TextBox1.Text = "Player not found!"
+                task.wait(2)
+                TextBox1.Text = ""
+                TextBox1.PlaceholderText = "Enter Player Name"
+            end
+
+            task.wait()
+        end
+    end)
+end)
+
+
+local loopActive = false
+
+Button33.MouseButton1Click:Connect(function()
+    loopActive = not loopActive
+    Button33.TextColor3 = loopActive and Color3.new(0,1,0) or Color3.new(1,0,0)
+
+    task.spawn(function()
+        while loopActive do
+            local inputName = TextBox1.Text
+            local playerName = completePlayerName(inputName)
+
+            if playerName then
+                local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+                if engineerBuild then
+                    for _, tree in pairs(engineerBuild:GetChildren()) do
+                        if tree.Name == "Wheel" then
+                            for i = 1, 15 do
+                                if not loopActive then return end
+
+                                task.defer(function()
+                                    local args = {
+                                        [1] = 8923749671123,
+                                        [2] = tree,
+                                        [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                                        [4] = 1.999159812927246,
+                                        [5] = tree.HumanoidRootPart
+                                    }
+
+                                    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                                end)
+                            end
+                        end
+                    end
+                else
+                    TextBox1.Text = "Build not found!"
+                    task.wait(2)
+                    TextBox1.Text = ""
+                    TextBox1.PlaceholderText = "Enter Player Name"
+                end
+            else
+                TextBox1.Text = "Player not found!"
+                task.wait(2)
+                TextBox1.Text = ""
+                TextBox1.PlaceholderText = "Enter Player Name"
+            end
+
+            task.wait()
+        end
+    end)
+end)
+
+
+local loopActive = false
+
+Button34.MouseButton1Click:Connect(function()
+    loopActive = not loopActive
+    Button34.TextColor3 = loopActive and Color3.new(0,1,0) or Color3.new(1,0,0)
+
+    task.spawn(function()
+        while loopActive do
+            local inputName = TextBox1.Text
+            local playerName = completePlayerName(inputName)
+
+            if playerName then
+                local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+                if engineerBuild then
+                    for _, tree in pairs(engineerBuild:GetChildren()) do
+                        if tree.Name == "Wall" then
+                            for i = 1, 15 do
+                                if not loopActive then return end
+
+                                task.defer(function()
+                                    local args = {
+                                        [1] = 8923749671123,
+                                        [2] = tree,
+                                        [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                                        [4] = 1.999159812927246,
+                                        [5] = tree.HumanoidRootPart
+                                    }
+
+                                    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                                end)
+                            end
+                        end
+                    end
+                else
+                    TextBox1.Text = "Build not found!"
+                    task.wait(2)
+                    TextBox1.Text = ""
+                    TextBox1.PlaceholderText = "Enter Player Name"
+                end
+            else
+                TextBox1.Text = "Player not found!"
+                task.wait(2)
+                TextBox1.Text = ""
+                TextBox1.PlaceholderText = "Enter Player Name"
+            end
+
+            task.wait()
+        end
+    end)
+end)
+
+
+local loopActive = false
+
+Button35.MouseButton1Click:Connect(function()
+    loopActive = not loopActive
+    Button35.TextColor3 = loopActive and Color3.new(0,1,0) or Color3.new(1,0,0)
+
+    task.spawn(function()
+        while loopActive do
+            local inputName = TextBox1.Text
+            local playerName = completePlayerName(inputName)
+
+            if playerName then
+                local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+                if engineerBuild then
+                    for _, tree in pairs(engineerBuild:GetChildren()) do
+                        if tree.Name == "Balloon" then
+                            for i = 1, 15 do
+                                if not loopActive then return end
+
+                                task.defer(function()
+                                    local args = {
+                                        [1] = 8923749671123,
+                                        [2] = tree,
+                                        [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                                        [4] = 1.999159812927246,
+                                        [5] = tree.HumanoidRootPart
+                                    }
+
+                                    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                                end)
+                            end
+                        end
+                    end
+                else
+                    TextBox1.Text = "Build not found!"
+                    task.wait(2)
+                    TextBox1.Text = ""
+                    TextBox1.PlaceholderText = "Enter Player Name"
+                end
+            else
+                TextBox1.Text = "Player not found!"
+                task.wait(2)
+                TextBox1.Text = ""
+                TextBox1.PlaceholderText = "Enter Player Name"
+            end
+
+            task.wait()
+        end
+    end)
+end)
+
+
+local loopActive = false
+
+Button36.MouseButton1Click:Connect(function()
+    loopActive = not loopActive
+    Button36.TextColor3 = loopActive and Color3.new(0,1,0) or Color3.new(1,0,0)
+
+    task.spawn(function()
+        while loopActive do
+            local inputName = TextBox1.Text
+            local playerName = completePlayerName(inputName)
+
+            if playerName then
+                local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+                if engineerBuild then
+                    for _, tree in pairs(engineerBuild:GetChildren()) do
+                        if tree.Name == "Fan" then
+                            for i = 1, 15 do
+                                if not loopActive then return end
+
+                                task.defer(function()
+                                    local args = {
+                                        [1] = 8923749671123,
+                                        [2] = tree,
+                                        [3] = Vector3.new(61.80173873901367, 19.47662925720215, -42.96271896362305),
+                                        [4] = 1.999159812927246,
+                                        [5] = tree.HumanoidRootPart
+                                    }
+
+                                    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                                end)
+                            end
+                        end
+                    end
+                else
+                    TextBox1.Text = "Build not found!"
+                    task.wait(2)
+                    TextBox1.Text = ""
+                    TextBox1.PlaceholderText = "Enter Player Name"
+                end
+            else
+                TextBox1.Text = "Player not found!"
+                task.wait(2)
+                TextBox1.Text = ""
+                TextBox1.PlaceholderText = "Enter Player Name"
+            end
+
+            task.wait()
+        end
+    end)
+end)
+
+
+local loopActive = false
+
+Button31.MouseButton1Click:Connect(function()
+    loopActive = not loopActive
+    Button31.TextColor3 = loopActive and Color3.new(0,1,0) or Color3.new(1,0,0)
+
+    task.spawn(function()
+        while loopActive do
+            local inputName = TextBox1.Text
+            local playerName = completePlayerName(inputName)
+
+            if playerName then
+                local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
+                if engineerBuild then
+                    local driverSeat = engineerBuild:FindFirstChild("Driver's Seat")
+                    if driverSeat then
+                        for i = 1, 15 do
+                            if not loopActive then return end
+
+                            task.defer(function()
+                                local args = {
+                                    [1] = 8923749671123,
+                                    [2] = driverSeat,
+                                    [3] = Vector3.new(-61.3097, 28.1996, -47.5602),
+                                    [4] = 2.2868,
+                                    [5] = driverSeat.HumanoidRootPart
+                                }
+
+                                game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+                            end)
+                        end
+                    end
+                else
+                    TextBox1.Text = "Build not found!"
+                    task.wait(2)
+                    TextBox1.Text = ""
+                    TextBox1.PlaceholderText = "Enter Player Name"
+                end
+            else
+                TextBox1.Text = "Player not found!"
+                task.wait(2)
+                TextBox1.Text = ""
+                TextBox1.PlaceholderText = "Enter Player Name"
+            end
+
+            task.wait()
+        end
+    end)
 end)
