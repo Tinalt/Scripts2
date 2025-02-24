@@ -153,6 +153,7 @@ ToggleTextLabel6.TextStrokeTransparency = 0
 
 ToggleButton6.MouseButton1Click:Connect(function()
 Frame4.Visible = not Frame4.Visible
+Frame5.Visible = not Frame5.Visible
 end)
 
 
