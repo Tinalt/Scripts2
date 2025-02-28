@@ -2022,33 +2022,36 @@ Button18.MouseButton1Click:Connect(function()
     if playerName then
         local engineerBuild = workspace:FindFirstChild("Engineer Builds"):FindFirstChild(playerName)
         if engineerBuild then
-            local launchPad = engineerBuild:FindFirstChild("Launch Pad")
-            if launchPad then
-                local args = {
-                    [1] = 8923749671123,
-                    [2] = launchPad,
-                    [3] = Vector3.new(-61.30976486206055, 28.19960594177246, -47.560218811035156),
-                    [4] = 2.2868831157684326,
-                    [5] = launchPad.HumanoidRootPart
-                }
-
-                for i = 1, 15 do
-                    game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(unpack(args))
+            for _, launchPad in ipairs(engineerBuild:GetChildren()) do
+                if launchPad.Name == "Launch Pad" then
+                    local targetPart = launchPad:FindFirstChild("HumanoidRootPart")
+                    if targetPart then
+                        for i = 1, 15 do
+                            game:GetService("ReplicatedStorage"):FindFirstChild("Remote Events").Punch:FireServer(
+                                8923749671123,
+                                launchPad,
+                                Vector3.new(-61.3097, 28.1996, -47.5602),
+                                2.2868,
+                                targetPart
+                            )
+                        end
+                    end
                 end
             end
         else
             TextBox1.Text = "Build not found!"
-            wait(2)
+            task.wait(2)
             TextBox1.Text = ""
             TextBox1.PlaceholderText = "Enter Player Name"
         end
     else
         TextBox1.Text = "Player not found!"
-        wait(2)
+        task.wait(2)
         TextBox1.Text = ""
         TextBox1.PlaceholderText = "Enter Player Name"
     end
 end)
+
 
 
 
@@ -2327,10 +2330,9 @@ Button24.MouseButton1Click:Connect(function()
                                 end
                             end
                         else
-                            TextBox1.Text = "Build not found!"
+                            print(".")
                             task.wait(2)
-                            TextBox1.Text = ""
-                            TextBox1.PlaceholderText = "Enter Player Name"
+                            print(".")
                         end
                     else
                         TextBox1.Text = "Engineer Builds not found!"
