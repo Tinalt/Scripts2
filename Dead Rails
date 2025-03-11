@@ -1,0 +1,155 @@
+---Dead Rails Hub
+
+local kavoUi = loadstring(game:HttpGet("https://raw.githubusercontent.com/Toilatin/Insane-elevator/main/Insane2", true))()
+local window = kavoUi.CreateLib("Dead Rails","BloodTheme")
+
+---Toggle Button
+
+local gui = Instance.new("ScreenGui")
+gui.Name = "patrickGui"
+gui.Parent = game.CoreGui
+
+-- Create the TextButton
+local TextButton = Instance.new("TextButton")
+-- Text
+TextButton.Text = "Toggle\nHub"
+TextButton.TextSize = 14
+-- Color
+TextButton.TextColor3 = Color3.new(1, 1, 1)
+TextButton.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton.BorderColor3 = Color3.new(0, 0, 0)
+-- Transparency
+TextButton.BackgroundTransparency = 0.5
+-- Thickness
+TextButton.BorderSizePixel = 4
+-- Text Code
+TextButton.Font = Enum.Font.Code
+-- Size (making it a small square)
+TextButton.Size = UDim2.new(0, 50, 0, 50)  -- 50×50 pixels
+-- Position
+TextButton.Position = UDim2.new(1, -110, 0, 10)  -- Center of the screen
+-- Function
+TextButton.MouseButton1Click:Connect(function()
+    kavoUi:ToggleUI()
+end)
+TextButton.Parent = gui
+TextButton.Draggable = true
+TextButton.Visible = false
+
+-- Adding UICorner for rounded corners
+local cornerUI = Instance.new("UICorner")
+cornerUI.CornerRadius = UDim.new(0, 5)
+cornerUI.Parent = TextButton
+
+-- Adding UIStroke for border
+local uiStroke = Instance.new("UIStroke")
+uiStroke.Color = Color3.new(0, 0, 0)
+uiStroke.Thickness = 2
+uiStroke.Parent = TextButton
+
+---Hi
+
+local Tab1 = window:NewTab("Main")
+local Tab1Section = Tab1:NewSection("Main")
+
+local Tab2 = window:NewTab("Credits")
+local Tab2Section = Tab2:NewSection("Credits")
+
+--
+
+Tab1Section:NewButton("TN Roblox Hub [Key] (Take 30-1min to load)","INFOHERE",function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/thiennrb7/Script/refs/heads/main/Bringall"))()
+
+end)
+
+Tab1Section:NewButton("Speed Hub","INFOHERE",function()
+
+---Dead Rails
+--- Speed's Hub
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+
+end)
+
+Tab1Section:NewButton("Lunor Hub","INFOHERE",function()
+
+---Dead Rails
+--- Lunor Hub
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Just3itx/Lunor-Loadstrings/refs/heads/main/Loader'))()
+
+end)
+
+
+Tab1Section:NewButton("Leaf Hub [Key]","INFOHERE",function()
+
+-- Key System: https://ads.luarmor.net/get_key?for=Leaf_Hub__Daily_Key-IMmpYwRKcYxy
+loadstring(game:HttpGet("https://leafhub.dev/script.lua"))()
+
+end)
+
+
+Tab1Section:NewButton("Instant Heal Button [Bandage]","INFOHERE",function()
+
+local gui = Instance.new("ScreenGui")
+gui.Name = "patrickGui"
+gui.Parent = game.CoreGui
+
+-- Create the TextButton
+local TextButton = Instance.new("TextButton")
+-- Text
+TextButton.Text = "Heal"
+TextButton.TextSize = 14
+-- Color
+TextButton.TextColor3 = Color3.new(1, 1, 1)
+TextButton.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton.BorderColor3 = Color3.new(0, 0, 0)
+-- Transparency
+TextButton.BackgroundTransparency = 0.5
+-- Thickness
+TextButton.BorderSizePixel = 4
+-- Text Code
+TextButton.Font = Enum.Font.Code
+-- Size (making it a small square)
+TextButton.Size = UDim2.new(0, 50, 0, 50)  -- 50×50 pixels
+-- Position
+TextButton.Position = UDim2.new(1, -110, 0, 10)  -- Center of the screen
+-- Function
+TextButton.MouseButton1Click:Connect(function()
+    game:GetService("Players").LocalPlayer.Character.Bandage.Use:FireServer()
+end)
+TextButton.Parent = gui
+TextButton.Draggable = true
+
+-- Adding UICorner for rounded corners
+local cornerUI = Instance.new("UICorner")
+cornerUI.CornerRadius = UDim.new(0, 5)
+cornerUI.Parent = TextButton
+
+-- Adding UIStroke for border
+local uiStroke = Instance.new("UIStroke")
+uiStroke.Color = Color3.new(0, 0, 0)
+uiStroke.Thickness = 2
+uiStroke.Parent = TextButton
+
+end)
+
+
+
+Tab1Section:NewButton("Auto Delete Walls","INFOHERE",function()
+
+while true do
+    for _, obj in ipairs(workspace:GetDescendants()) do
+        if (obj.Name == "ColorWalls" or obj.Name == "Walls") and (obj:IsA("Folder") or obj:IsA("Model")) then
+            obj:Destroy()
+        end
+    end
+    wait(3) -- Wait 3 seconds before running again
+end
+
+
+end)
+
+
+local Tab2Section = Tab2:NewSection("---Made by Tin---")
