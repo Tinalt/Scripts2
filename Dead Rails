@@ -141,12 +141,17 @@ Tab1Section:NewButton("Auto Delete Walls","INFOHERE",function()
 
 while true do
     for _, obj in ipairs(workspace:GetDescendants()) do
-        if (obj.Name == "ColorWalls" or obj.Name == "Walls") and (obj:IsA("Folder") or obj:IsA("Model")) then
+        if obj:IsA("Folder") or obj:IsA("Model") then
+            if obj.Name == "ColorWalls" or obj.Name == "Walls" then
+                obj:Destroy()
+            end
+        elseif obj:IsA("BasePart") and obj.Name == "Wall" then
             obj:Destroy()
         end
     end
     wait(3) -- Wait 3 seconds before running again
 end
+
 
 
 end)
