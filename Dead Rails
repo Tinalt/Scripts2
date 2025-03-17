@@ -52,8 +52,11 @@ uiStroke.Parent = TextButton
 local Tab1 = window:NewTab("Main")
 local Tab1Section = Tab1:NewSection("Main")
 
-local Tab2 = window:NewTab("Credits")
-local Tab2Section = Tab2:NewSection("Credits")
+local Tab2 = window:NewTab("Misc")
+local Tab2Section = Tab2:NewSection("Misc")
+
+local Tab3 = window:NewTab("Credits")
+local Tab3Section = Tab3:NewSection("Credits")
 
 --
 
@@ -90,7 +93,7 @@ loadstring(game:HttpGet("https://leafhub.dev/script.lua"))()
 end)
 
 
-Tab1Section:NewButton("Instant Heal Button [Bandage]","INFOHERE",function()
+Tab2Section:NewButton("Instant Heal Button [Bandage]","INFOHERE",function()
 
 local gui = Instance.new("ScreenGui")
 gui.Name = "patrickGui"
@@ -136,8 +139,12 @@ uiStroke.Parent = TextButton
 end)
 
 
+Tab2Section:NewButton("AimLock Toggle (Mobile) (OP)","INFOHERE",function()
 
-Tab1Section:NewButton("Auto Delete Walls","INFOHERE",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tinalt/Scripts2/refs/heads/main/DR%20Aim"))()
+  end)
+
+Tab2Section:NewButton("Auto Delete Walls","INFOHERE",function()
 
 while true do
     for _, obj in ipairs(workspace:GetDescendants()) do
@@ -157,4 +164,4 @@ end
 end)
 
 
-local Tab2Section = Tab2:NewSection("---Made by Tin---")
+local Tab3Section = Tab3:NewSection("---Made by Tin---")
