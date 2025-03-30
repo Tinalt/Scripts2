@@ -77,10 +77,8 @@ end)
 
 Tab1Section:NewButton("Lunor Hub","INFOHERE",function()
 
----Dead Rails
---- Lunor Hub
-
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Just3itx/Lunor-Loadstrings/refs/heads/main/Loader'))()
+script_key = 'Insert Lunor Key Here';
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Catto-YFCN/Lunor_Dependencies/refs/heads/main/Loader'))()
 
 end)
 
